@@ -1,0 +1,40 @@
+.repeaterItem, .plansItem{
+	position: relative;
+}
+
+.closeRepeaterItem, .closePlanItem{
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-radius: 50%;
+	background: #007bff;
+	z-index: 9;
+	width: 25px;
+	height: 25px;
+	color: #fff;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.uploadImgClose{
+	position: relative;
+}
+.uploadImgClose::after{
+	content: "Нажмите на картинку, чтобы удалить";
+	display: none;
+	transition: 0.3s;
+    position: absolute;
+    left: 0;
+    right: 7px;
+    top: 0;
+    bottom: 24px;
+    background: #b1b1b18f;
+    text-align: center;
+    padding: 13px;
+    padding-top: 50px;
+}
+.uploadImgClose:hover::after{
+	display: block;
+	cursor: pointer;
+}
