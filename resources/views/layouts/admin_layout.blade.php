@@ -263,6 +263,29 @@
 									<a href="#" class="nav-link">
 										<i class="fas fa-circle nav-icon"></i>
 										<p>
+											Комнатность
+											<i class="right fas fa-angle-left"></i>
+										</p>
+									</a>
+									<ul class="nav nav-treeview">
+										<li class="nav-item">
+											<a href="{{ route('plan-room.index') }}" class="nav-link">
+												<i class="far fa-circle nav-icon"></i>
+												<p>Все комнатности</p>
+											</a>
+										</li>
+										<li class="nav-item">
+											<a href="{{ route('plan-room.create') }}" class="nav-link">
+												<i class="far fa-circle nav-icon"></i>
+												<p>Добавить комнатность</p>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<i class="fas fa-circle nav-icon"></i>
+										<p>
 											Тип недвижимости
 											<i class="right fas fa-angle-left"></i>
 										</p>

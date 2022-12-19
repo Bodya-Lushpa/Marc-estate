@@ -230,8 +230,12 @@
 									</div>
 									<div class="col-lg-3">
 										<div class="form-group">
-											<label for="exampleInputEmail1">Количество комнат</label>
-											<input type="text" class="form-control" name="plan[0][room]" placeholder="">
+											<label>Количество комнат</label>
+											<select class="form-control select2" name="plan[0][room]" style="width: 100%;">
+												@foreach ($planRooms as $planRoom)
+												<option value="{{ $planRoom->id }}">{{ $planRoom->title }}</option>
+												@endforeach
+											</select>
 										</div>
 										<div class="form-group">
 											<label for="exampleInputEmail1">Цена</label>

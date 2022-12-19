@@ -7,35 +7,14 @@
 require('./bootstrap');
 
 import Vue from 'vue'
-import VueRouter from 'vue-router'
 
-Vue.use(VueRouter)
 Vue.component("news", () => import("./components/news/News"));
 Vue.component("card-news", () => import("./components/news/Card"));
-
-
-import App from './components/App.vue'
-import Home from './components/Home.vue'
-import About from './components/About.vue'
-
-const router = new VueRouter({
-	mode: 'history',
-	routes: [
-		{
-			path: '/',
-			name: 'home',
-			component: Home
-		},
-		{
-			path: '/about',
-			name: 'about',
-			component: About
-		},
-	]
-});
+Vue.component("projects", () => import("./components/project/Projects"));
+Vue.component("project-card", () => import("./components/project/Card"));
+Vue.component("top-project-home", () => import("./components/TopProjectsHome"));
+Vue.component("news-home", () => import("./components/NewsHome"));
 
 const app = new Vue({
-	el: '#app',
-	components: {App},
-	router
+	el: '#app'
 })

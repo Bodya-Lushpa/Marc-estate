@@ -17,7 +17,7 @@
 					</div>
 					<div class="lower-content">
 						<ul class="info">
-							<li>{{ post.created_at }}</li>
+							<li>{{ post.created_at | moment }}</li>
 						</ul>
 						<h3>
 							<a :href="('/news/' + post.slug)">{{ post.title }}</a>
@@ -59,6 +59,7 @@
 
 <script>
 import axios from 'axios';
+import moment from 'moment';
 
 export default {
 	data(){
@@ -71,6 +72,12 @@ export default {
 		.then(response => {
 			this.news = response.data;
 		})
+	},
+	filters: {
+		moment: function (date) {
+			moment.locale('kk');
+			return moment(date).format('L');
+		}
 	}
 }
 </script>

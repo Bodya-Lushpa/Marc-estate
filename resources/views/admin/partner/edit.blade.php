@@ -38,7 +38,7 @@
 				<div class="card card-primary">
 					<!-- /.card-header -->
 					<!-- form start -->
-					<form action="{{ route('type-real.update', $typeReal['id']) }}" method="POST">
+					<form action="{{ route('partner.update', $partner['id']) }}" method="POST">
 						@csrf
 						@method('PUT')
 						<div class="card-body">
@@ -46,7 +46,20 @@
 								<div class="col-lg-6">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Название</label>
-										<input type="text" class="form-control" name="title" value="{{ $typeReal['title'] }}" placeholder="Введите название типа недвижимости" required>
+										<input type="text" class="form-control" name="title" value="{{ $partner['title'] }}" placeholder="Введите название типа недвижимости" required>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="form-group">
+										<label for="exampleInputEmail1">Изображение</label>
+										<div class="uploadImgWrap1 d-flex">
+											<div class="uploadImgClose"><img src="{{ $partner['path'] }}" alt="" class="uploadImg d-block mb-4 mr-2">
+												<input type="text" class="d-none" name="img[]" value="{{ $partner['path'] }}">
+											</div>
+										</div>
+										<div class="d-flex">
+											<a href="" class="popup_selector ml-2 btn btn-block btn-info w-25" data-inputid="uploadImgWrap1">Выбрать</a>
+										</div>
 									</div>
 								</div>
 

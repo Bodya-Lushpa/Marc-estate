@@ -50,6 +50,7 @@
 						<tr>
 							<td>{{ $partner['id'] }}</td>
 							<td>{{ $partner['title'] }}</td>
+							<td>{{ $partner['created_at'] }}</td>
 							<td class="text-right">
 								<div class="d-flex justify-content-end">
 									<a href="{{ route('partner.edit', $partner['id']) }}" type="button" class="mr-2 btn btn-success toastsDefaultSuccess"><i class="fas fa-pen"></i></a>

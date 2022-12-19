@@ -7,8 +7,9 @@
 <div class="content-header">
 	<div class="container-fluid">
 		<div class="row mb-2">
-			<div class="col-sm-6">
+			<div class="col-sm-6 d-flex">
 				<h1 class="m-0">Все новости</h1>
+				<a href="{{ route('news.create') }}" class="btn bg-gradient-success ml-4">Добавить</a>
 			</div><!-- /.col -->
 			<div class="col-sm-6">
 				<ol class="breadcrumb float-sm-right">

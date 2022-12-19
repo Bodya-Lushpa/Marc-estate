@@ -27,17 +27,17 @@
                 <div class="upper-box">
                   <div class="image-box">
                     <figure class="image">
-                      <img src="/images/resource/blog-detail.jpg" alt="" />
+                      <img :src="news.img" alt="" />
                     </figure>
                   </div>
                 </div>
 
                 <div class="lower-content">
                   <ul class="info">
-                    <li><span>{{ news.created_at }}</span></li>
+                    <li><span>{{ news.created_at | moment }}</span></li>
                   </ul>
                   <h2>{{ news.title }}</h2>
-									<div>{{ news.text }}</div>
+									<div v-html="news.text"></div>
                 </div>
 
                 <!-- Post Share Option -->
@@ -341,6 +341,10 @@
 
 <script>
 import axios from 'axios';
+import moment from 'moment';
+import $ from "jquery";
+import slider from '/js/jquery-ui.js'
+import "jquery-ui";
 
 export default {
 	props: {
@@ -356,7 +360,23 @@ export default {
 		.then(response => {
 			this.news = response.data;
 			console.log(response);
-		})
+		});
+		$( ".price-range-slider" ).slider({
+			range: true,
+			min: 0,
+			max: 10000,
+			values: [ 1000, 8000 ],
+			slide: function( event, ui ) {
+			$( "input.price-amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+			}
+		});
+		$( "input.price-amount" ).val( $( ".price-range-slider" ).slider( "values", 0 ) + " - $" + $( ".price-range-slider" ).slider( "values", 1 ) );	
+	},
+	filters: {
+		moment: function (date) {
+			moment.locale('kk');
+			return moment(date).format('L');
+		}
 	}
 }
 </script>

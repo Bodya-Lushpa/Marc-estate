@@ -41,7 +41,8 @@ class NewsController extends Controller
 	{
 		$news = new News();
 		$news->title = $request->title;
-		$news->img = '/' . $request->img;
+
+		$news->img = $request->img[0];
 		$news->text = $request->text;
 		$news->save();
 

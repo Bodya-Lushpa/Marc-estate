@@ -28,6 +28,10 @@ class Project extends Model
 	{
 		return $this->hasMany('App\Models\ProjectImg');
 	}
+	public function status()
+	{
+		return $this->belongsTo('App\Models\StatusProject');
+	}
 	public function country()
 	{
 		return $this->belongsTo('App\Models\Country');

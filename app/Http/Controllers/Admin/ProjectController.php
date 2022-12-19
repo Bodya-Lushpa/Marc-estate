@@ -13,6 +13,7 @@ use App\Models\ProjectTypereal;
 use App\Models\StatusProject;
 use App\Models\TypeReal;
 use App\Models\Plan;
+use App\Models\PlanRoom;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -41,11 +42,13 @@ class ProjectController extends Controller
 		$statusProjects = StatusProject::all();
 		$cities = City::all();
 		$counties = Country::all();
+		$planRooms = PlanRoom::all();
 		return view('admin.projects.create', [
 			'statusProjects' => $statusProjects,
 			'cities' => $cities,
 			'typeReals' => $typeReals,
-			'counties' => $counties
+			'counties' => $counties,
+			'planRooms' => $planRooms
 		]);
 	}
 
@@ -71,7 +74,7 @@ class ProjectController extends Controller
 		$projectImgs = [];
 		if ($request->img) {
 			foreach ($request->img as $key => $value) {
-				array_push($projectImgs, new ProjectImg(['img' => '/' . $value]));
+				array_push($projectImgs, new ProjectImg(['img' => $value]));
 			}
 			$project->images()->saveMany($projectImgs);
 		}
@@ -139,6 +142,7 @@ class ProjectController extends Controller
 		$counties = Country::where('id', '!=', $project->country_id)->get();
 		$cityActive = City::where('id', $project->city_id)->first();
 		$cities = City::where('id', '!=', $project->city_id)->get();
+		$planRooms = PlanRoom::all();
 		return view('admin.projects.edit', [
 			'project' => $project,
 			'statusProjectsActive' => $statusProjectsActive,
@@ -149,6 +153,7 @@ class ProjectController extends Controller
 			'cities' => $cities,
 			'typeReals' => $typeReals,
 			'typeRealsActive' => $typeRealsActive,
+			'planRooms' => $planRooms,
 		]);
 	}
 

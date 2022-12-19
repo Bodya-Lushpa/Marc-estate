@@ -536,10 +536,10 @@
 		$('.custom-select-box').selectmenu().selectmenu('menuWidget').addClass('overflow');
 	}
 
-	//Gallery Filters
-	 if($('.filter-list').length){
-	 	 $('.filter-list').mixItUp({});
-	 }
+	// //Gallery Filters
+	//  if($('.filter-list').length){
+	//  	 $('.filter-list').mixItUp({});
+	//  }
 
 
 	//Fact Counter + Text Count

@@ -8,10 +8,7 @@
 	<!-- CSRF Token -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
-	<title>{{ config('app.name', 'Laravel') }}</title>
-
-	<!-- Scripts -->
-	<script src="{{ asset('js/app.js') }}" defer></script>
+	<title>{{ config('app.name', 'Marc estate') }}</title>
 
 	<!-- Fonts -->
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -180,8 +177,8 @@
 			</header>
 			<!--End Main Header -->
 
-			<!-- <app></app> -->
 			@yield('content')
+
 			<!-- Main Footer -->
 			<footer class="main-footer" style="background-image: url('/images/background/3.jpg')">
 				<div class="auto-container">
@@ -325,19 +322,19 @@
 	<script src="/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
 	<script src="/js/main-slider-script.js"></script>
 	<!--End Revolution Slider-->
-	<script src="/js/jquery.js"></script>
-	<script src="/js/popper.min.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/jquery-ui.js"></script>
 	<script src="/js/jquery.fancybox.js"></script>
 	<script src="/js/owl.js"></script>
 	<script src="/js/wow.js"></script>
 	<script src="/js/isotope.js"></script>
-	<script src="/js/mixitup.js"></script>
+	<!-- <script src="/js/mixitup.js"></script> -->
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	<script src="/js/appear.js"></script>
 	<script src="/js/script.js"></script>
-	<!-- Color Setting -->
-	<script src="/js/color-settings.js"></script>
+
+	<!-- Scripts -->
+	<script src="{{ asset('js/app.js') }}" defer></script>
+
 
 </body>
 

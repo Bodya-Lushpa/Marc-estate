@@ -109,6 +109,8 @@ class PartnerController extends Controller
 	 */
 	public function destroy(Partner $partner)
 	{
-		//
+		$partner->delete();
+
+		return redirect()->back()->withSuccess('Партнер успешно удален');
 	}
 }

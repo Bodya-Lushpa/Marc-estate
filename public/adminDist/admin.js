@@ -44,6 +44,7 @@ $(document).ready(function () {
 	$('.planItemAdd').on('click', function(e){
 		e.preventDefault();
 		var card = $(this).closest('.card');
+		var options = $('.plansItem').find('.form-control.select2').html();
 		var repeaterItem = "<div class='plansItem row'>\
 		<a href='#' class='btn btn-tool closePlanItem'><i class='fas fa-times'></i></a>\
 		<div class='col-lg-3'>\
@@ -56,8 +57,9 @@ $(document).ready(function () {
 		</div>\
 		<div class='col-lg-3'>\
 			<div class='form-group'>\
-				<label for='exampleInputEmail1'>Количество комнат</label>\
-				<input type='text' class='form-control' name=\"plan[" + inputFile + "][room]\" placeholder=''>\
+				<label>Количество комнат</label>\
+				<select class='form-control select2' name=\"plan[" + inputFile + "][room]\"  style='width: 100%;'>"+ options +"\
+				</select>\
 			</div>\
 			<div class='form-group'>\
 				<label for='exampleInputEmail1'>Цена</label>\

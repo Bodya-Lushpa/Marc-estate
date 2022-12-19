@@ -250,8 +250,16 @@
 									</div>
 									<div class="col-lg-3">
 										<div class="form-group">
-											<label for="exampleInputEmail1">Количество комнат</label>
-											<input type="text" class="form-control" name="plan[{{ $key }}][room]" value="{{ $plan->rooms }}">
+											<label>Количество комнат</label>
+											<select class="form-control select2" name="plan[{{ $key }}][room]" style="width: 100%;">
+												@foreach ($planRooms as $planRoom)
+												@if($planRoom->id == $plan->rooms)
+												<option value="{{ $planRoom->id }}" selected>{{ $planRoom->title }}</option>
+												@else
+												<option value="{{ $planRoom->id }}">{{ $planRoom->title }}</option>
+												@endif
+												@endforeach
+											</select>
 										</div>
 										<div class="form-group">
 											<label for="exampleInputEmail1">Цена</label>

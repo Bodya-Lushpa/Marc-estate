@@ -51,10 +51,10 @@
 								<div class="col-lg-7">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Основное изображение</label>
-										<img src="" alt="" class="uploadImg d-block mb-4">
+										<div class="uploadImgWrap1 d-flex"></div>
+
 										<div class="d-flex">
-											<input type="text" class="form-control  w-75" id="feature_image" name="img" value="" readonly>
-											<a href="" class="popup_selector ml-2 btn btn-block btn-info w-25" data-inputid="feature_image">Выбрать</a>
+											<a href="" class="popup_selector ml-2 btn btn-block btn-info w-25" data-inputid="uploadImgWrap1">Выбрать</a>
 										</div>
 									</div>
 								</div>

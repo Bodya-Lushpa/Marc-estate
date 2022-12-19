@@ -3244,7 +3244,7 @@ a.ui-button:active, .ui-button:active,
 
 .property-block{
 	position: relative;
-	margin-bottom: 40px;
+	margin-bottom: 70px;
 }
 
 .property-block .inner-box{
@@ -5088,7 +5088,7 @@ a.ui-button:active, .ui-button:active,
 	display: none;
 }
 
-.property-filter-section .mixitup-gallery .filters li.active,
+.property-filter-section .mixitup-gallery .filters li.mixitup-control-active,
 .property-filter-section .mixitup-gallery .filters li:hover{
 	color: #126977;
 }
@@ -5098,9 +5098,9 @@ a.ui-button:active, .ui-button:active,
 	margin-bottom: 60px;
 }
 
-.property-filter-section .property-block.mix{
+/* .property-filter-section .property-block.mix{
 	display: none;
-}
+} */
 
 .property-filter-section .styled-pagination{
 	margin-top: 40px;
@@ -7152,7 +7152,7 @@ a.ui-button:active, .ui-button:active,
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	padding: 120px 0 80px;
+	padding: 80px 0 65px;
 }
 
 .call-to-action:before{
@@ -8101,7 +8101,7 @@ a.ui-button:active, .ui-button:active,
 
 .clients-section{
 	position: relative;
-	padding: 60px 0;
+	padding: 40px 0;
 	background-color: #222222;
 }
 

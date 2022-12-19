@@ -34,6 +34,11 @@ Route::get('/news/{slug}', function ($slug) {
 		'slug' => $slug
 	]);
 });
+Route::get('/project/{slug}', function ($slug) {
+	return  view('site.project.card', [
+		'slug' => $slug
+	]);
+});
 
 Auth::routes();
 
@@ -52,6 +57,7 @@ Route::prefix('admin')->group(function () {
 			Route::resource('country', App\Http\Controllers\Admin\CountryController::class);
 			Route::resource('type-real', App\Http\Controllers\Admin\TypeRealController::class);
 			Route::resource('partner', App\Http\Controllers\Admin\PartnerController::class);
+			Route::resource('plan-room', App\Http\Controllers\Admin\PlanRoomController::class);
 		});
 
 		Route::resource('project', App\Http\Controllers\Admin\ProjectController::class);
