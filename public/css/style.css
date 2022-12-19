@@ -2189,7 +2189,7 @@ img{
 	width:100%;
 	height:100%;
 	background:#000000;
-	opacity: .80;
+	opacity: .50;
 	position:absolute;
 }
 
@@ -3589,6 +3589,11 @@ a.ui-button:active, .ui-button:active,
 	line-height: 24px;
 	color: #126977;
 	font-weight: 400;
+	margin-right: 5px;
+}
+.owl-carousel .owl-stage{
+	display: flex;
+	align-items: center;
 }
 
 .property-block .tags li a{
@@ -6511,6 +6516,7 @@ a.ui-button:active, .ui-button:active,
 	display: block;
 	width: 100%;
 	height: auto;
+	object-fit: cover;
 }
 
 .popular-item .info-box{
@@ -9852,7 +9858,7 @@ a.ui-button:active, .ui-button:active,
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	padding: 40px 0 0;
+	padding: 25px 0 0;
 }
 
 .main-footer:before{
@@ -9984,8 +9990,7 @@ a.ui-button:active, .ui-button:active,
 
 .main-footer .widgets-section{
 	position:relative;
-	padding: 75px 0 40px;
-	border-top: 1px solid #555555;
+	padding: 25px 0 5px;
 }
 
 .main-footer .footer-column{
@@ -9994,7 +9999,7 @@ a.ui-button:active, .ui-button:active,
 
 .main-footer .footer-widget{
 	position:relative;
-	margin-bottom:40px;
+	margin-bottom:26px;
 }
 
 .main-footer .footer-column .widget-title{
@@ -10020,21 +10025,14 @@ a.ui-button:active, .ui-button:active,
 .main-footer .contact-list li{
 	position: relative;
 	font-size: 15px;
-	line-height: 36px;
+	line-height: 24px;
 	color: #ffffff;
 	font-weight: 400;
-	padding-left: 40px;
-}
-
-.main-footer .contact-list li:first-child{
-	margin-bottom: 30px;
 }
 
 .main-footer .contact-list li span{
-	position: absolute;
-	left: 0;
-	top: 0;
-	font-size:18px;
+	margin-right: 15px;
+  font-size: 18px;
 	line-height: 36px;
 	color: #126977;
 }
@@ -10310,7 +10308,7 @@ a.ui-button:active, .ui-button:active,
 
 .sidebar-page-container{
 	position: relative;
-	padding: 120px 0 70px;
+	padding: 70px 0 70px;
 }
 
 .sidebar-page-container .sidebar-side,
@@ -10683,6 +10681,7 @@ a.ui-button:active, .ui-button:active,
 	top: 0;
 	width: 120px;
 	margin-bottom: 10px;
+	height: 80px;
 }
 
 .recent-properties .post-thumb .status{
@@ -10706,6 +10705,8 @@ a.ui-button:active, .ui-button:active,
 	position: relative;
 	display: block;
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .recent-properties .post .location{

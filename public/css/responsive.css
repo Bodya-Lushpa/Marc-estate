@@ -37,6 +37,7 @@
 
 	.header-style-one .header-lower .logo{
 		padding: 20px 0;
+		width: 68%;
 	}
 
 	.header-style-one .header-lower .logo:after, 
@@ -423,6 +424,10 @@
 
 @media only screen and (max-width: 767px){	
 
+	.header-style-one .header-lower .logo-box:before{
+		background-color: #fff!important;
+	}
+
 	.main-header .header-lower{
 		display: block;
 	}
@@ -582,6 +587,15 @@
 		line-height: 40px;
 		color: #222222;
 		padding: 5px 0;
+		position: relative;
+		top: 10px;
+	}
+	.popular-item .image img{
+		height: 200px!important;
+	}
+	.main-footer .contact-list li{
+		margin-bottom: 10px;
+		text-align: center;
 	}
 
 	
@@ -757,7 +771,10 @@
 	}
 
 	.main-footer{
-		padding-top: 70px;
+		padding-top: 30px;
+	}
+	.main-footer .footer-bottom .copyright-text p{
+		font-size: 12px;
 	}
 
 
@@ -1089,6 +1106,7 @@
 	.recent-properties .post-thumb{
 		position: relative;
 		width: 100%;
+		height: auto;
 	}
 
 	.banner-section .title-box{

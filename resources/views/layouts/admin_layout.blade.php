@@ -35,6 +35,8 @@
 	<link rel="stylesheet" href="/adminDist/plugins/summernote/summernote-bs4.min.css">
 	<link rel="stylesheet" href="/adminDist/dist/css/colorbox.css">
 	<link rel="stylesheet" href="/adminDist/admin.css">
+	<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+	<link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 	</link>
 </head>
 

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,12 +43,17 @@ Route::get('/project/{slug}', function ($slug) {
 
 Auth::routes();
 
+// Route::get('/register', function () {
+// 	return redirect('/login');
+// });
+
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::prefix('admin')->group(function () {
 
 	Route::group(['middleware' => ['role:admin|manager']], function () {
 		Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('homeAdmin');
+		Route::resource('project', App\Http\Controllers\Admin\ProjectController::class);
 
 		Route::group(['middleware' => ['role:admin']], function () {
 			Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
@@ -59,7 +65,5 @@ Route::prefix('admin')->group(function () {
 			Route::resource('partner', App\Http\Controllers\Admin\PartnerController::class);
 			Route::resource('plan-room', App\Http\Controllers\Admin\PlanRoomController::class);
 		});
-
-		Route::resource('project', App\Http\Controllers\Admin\ProjectController::class);
 	});
 });

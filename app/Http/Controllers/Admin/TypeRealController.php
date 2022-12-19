@@ -15,7 +15,7 @@ class TypeRealController extends Controller
 	 */
 	public function index()
 	{
-		$typeReals = TypeReal::all();
+		$typeReals = TypeReal::orderBy('created_at', 'desc')->get();
 		return view('admin.typeReal.index', [
 			'typeReals' => $typeReals
 		]);

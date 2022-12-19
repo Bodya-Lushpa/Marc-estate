@@ -67,7 +67,6 @@
 </template>
 
 <script>
-import mixitup from 'mixitup';
 import axios from 'axios';
 import moment from 'moment';
 
@@ -82,8 +81,6 @@ export default {
 		.then(response => {
 			this.projects = response.data;
 		});
-    var containerEl = document.querySelector('.filter-list');
-    var mixer = mixitup(containerEl);
   },
 	filters: {
 		moment: function (date) {

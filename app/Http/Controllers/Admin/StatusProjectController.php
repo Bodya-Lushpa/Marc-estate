@@ -15,7 +15,7 @@ class StatusProjectController extends Controller
 	 */
 	public function index()
 	{
-		$statusProjects = StatusProject::all();
+		$statusProjects = StatusProject::orderBy('created_at', 'desc')->get();
 		return view('admin.statusProject.index', [
 			'statusProjects' => $statusProjects
 		]);

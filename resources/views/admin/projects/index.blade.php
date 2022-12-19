@@ -13,7 +13,7 @@
 			</div><!-- /.col -->
 			<div class="col-sm-6">
 				<ol class="breadcrumb float-sm-right">
-					<li class="breadcrumb-item"><a href="{{ route('homeAdmin') }}">Главная</a></li>
+					<li class="breadcrumb-item"><a href="{{ route('homeAdmin') }}" class="text-info">Главная</a></li>
 					<li class="breadcrumb-item active">Все проекты</li>
 				</ol>
 			</div><!-- /.col -->
@@ -50,7 +50,7 @@
 					<tbody>
 						@foreach ($projects as $key => $project)
 						<tr>
-							<td>{{ $key }}</td>
+							<td>{{ $key+1 }}</td>
 							<td>{{ $project['title'] }}</td>
 							<td>{{ $project->country->title }}</td>
 							<td>{{ $project->city->title }}</td>

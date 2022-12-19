@@ -12,7 +12,7 @@
 			</div><!-- /.col -->
 			<div class="col-sm-6">
 				<ol class="breadcrumb float-sm-right">
-					<li class="breadcrumb-item"><a href="{{ route('homeAdmin') }}">Главная</a></li>
+					<li class="breadcrumb-item"><a href="{{ route('homeAdmin') }}" class="text-info">Главная</a></li>
 					<li class="breadcrumb-item active">Все менеджеры</li>
 				</ol>
 			</div><!-- /.col -->
@@ -46,9 +46,9 @@
 						</tr>
 					</thead>
 					<tbody>
-						@foreach ($users as $user)
+						@foreach ($users as $key => $user)
 						<tr>
-							<td>{{ $user['id'] }}</td>
+							<td>{{ $key+1 }}</td>
 							<td>{{ $user['name'] }}</td>
 							<td>{{ $user['email'] }}</td>
 							<td>{{ $user['created_at'] }}</td>

@@ -86,7 +86,7 @@
 <!-- About Us -->
 
 <!-- Fun Fact -->
-<section class="fun-facts-section" style="background-image: url(images/background/6.jpg)">
+<section class="fun-facts-section" style="background-image: url(/images/background/pexels-pixabay-262347.jpg)">
 	<div class="auto-container">
 		<div class="video-box">
 			<figure class="image">
@@ -270,7 +270,7 @@
 <!--End Services Section -->
 
 <!-- Process Section -->
-<section class="process-section" style="background-image: url(images/background/9.jpg)">
+<section class="process-section" style="background-image: url(/images/background/pexels-mikhail-nilov-8297487.jpg)">
 	<div class="auto-container">
 		<div class="sec-title light">
 			<span class="title">FIND YOUR HOUSE IN YOUR CITY</span>
@@ -431,56 +431,6 @@
 </section>
 <!-- End Why Choose Us -->
 
-<!--Clients Section-->
-<section class="clients-section style-three">
-	<div class="auto-container">
-		<div class="sponsors-outer">
-			<!--Sponsors Carousel-->
-			<ul class="sponsors-carousel owl-carousel owl-theme">
-				<li class="slide-item">
-					<figure class="image-box">
-						<a href="#"><img src="images/clients/1.png" alt="" /></a>
-					</figure>
-				</li>
-				<li class="slide-item">
-					<figure class="image-box">
-						<a href="#"><img src="images/clients/2.png" alt="" /></a>
-					</figure>
-				</li>
-				<li class="slide-item">
-					<figure class="image-box">
-						<a href="#"><img src="images/clients/3.png" alt="" /></a>
-					</figure>
-				</li>
-				<li class="slide-item">
-					<figure class="image-box">
-						<a href="#"><img src="images/clients/4.png" alt="" /></a>
-					</figure>
-				</li>
-				<li class="slide-item">
-					<figure class="image-box">
-						<a href="#"><img src="images/clients/1.png" alt="" /></a>
-					</figure>
-				</li>
-				<li class="slide-item">
-					<figure class="image-box">
-						<a href="#"><img src="images/clients/2.png" alt="" /></a>
-					</figure>
-				</li>
-				<li class="slide-item">
-					<figure class="image-box">
-						<a href="#"><img src="images/clients/3.png" alt="" /></a>
-					</figure>
-				</li>
-				<li class="slide-item">
-					<figure class="image-box">
-						<a href="#"><img src="images/clients/4.png" alt="" /></a>
-					</figure>
-				</li>
-			</ul>
-		</div>
-	</div>
-</section>
-<!--End Clients Section-->
+<client-section></client-section>
 
 @endsection

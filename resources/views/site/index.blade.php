@@ -8,7 +8,7 @@
 			<ul>
 				<!-- Slide 1 -->
 				<li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="images/main-slider/image-2.jpg" data-title="Slide Title" data-transition="parallaxvertical">
-					<img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="images/main-slider/image-1.jpg" />
+					<img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="/images/background/pexels-charles-parker-5847347.jpg" />
 
 					<div class="tp-caption" style="display: none" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-whitespace="nowrap" data-width="auto" data-text-align="center" data-hoffset="['10','50','0','0']" data-voffset="['-20','-20','-20','-20']" data-x="['right','right','center','center']" data-y="['middle','middle','middle','middle']" data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"x:50px;opacity:0;","ease":"Power3.easeInOut"}]'>
 						<div class="content-box">
@@ -326,7 +326,7 @@
 			<div class="popular-item masonry-item medium-item">
 				<div class="image-box">
 					<figure class="image">
-						<img src="images/gallery/1-1.jpg" alt="" />
+						<img src="/images/background/pexels-oleksandr-pidvalnyi-12940603.jpg" alt="" style="height: 295px;" />
 					</figure>
 					<div class="info-box">
 						<span class="category">Apartment</span>
@@ -345,7 +345,7 @@
 			<div class="popular-item masonry-item medium-item">
 				<div class="image-box">
 					<figure class="image">
-						<img src="images/gallery/1-2.jpg" alt="" />
+						<img src="/images/background/pexels-funda-izgi-13134869.jpg" alt="" style="height: 420px;" />
 					</figure>
 					<div class="info-box">
 						<span class="category">House</span>
@@ -364,7 +364,7 @@
 			<div class="popular-item masonry-item medium-item">
 				<div class="image-box">
 					<figure class="image">
-						<img src="images/gallery/1-3.jpg" alt="" />
+						<img src="/images/background/pexels-emrah-ayvali-6198387.jpg" alt="" style="height: 295px;" />
 					</figure>
 					<div class="info-box">
 						<span class="category">Restaurant</span>
@@ -383,7 +383,7 @@
 			<div class="popular-item masonry-item small-item">
 				<div class="image-box">
 					<figure class="image">
-						<img src="images/gallery/1-4.jpg" alt="" />
+						<img src="/images/background/pexels-serkan-pulat-10534187.jpg" alt="" style="height: 170px;" />
 					</figure>
 					<div class="info-box">
 						<span class="category">Farm</span>
@@ -402,7 +402,7 @@
 			<div class="popular-item masonry-item small-item">
 				<div class="image-box">
 					<figure class="image">
-						<img src="images/gallery/1-5.jpg" alt="" />
+						<img src="/images/background/pexels-azra-tuba-demir-10463590.jpg" alt="" style="height: 170px;" />
 					</figure>
 					<div class="info-box">
 						<span class="category">Villa</span>
@@ -443,58 +443,8 @@
 </section>
 <!--End Call To Action -->
 
-
-<!--Clients Section-->
-<section class="clients-section">
-	<div class="auto-container">
-		<div class="sponsors-outer">
-			<!--Sponsors Carousel-->
-			<ul class="sponsors-carousel owl-carousel owl-theme">
-				<li class="slide-item">
-					<figure class="image-box">
-						<a href="#"><img src="images/clients/1-1.png" alt="" /></a>
-					</figure>
-				</li>
-				<li class="slide-item">
-					<figure class="image-box">
-						<a href="#"><img src="images/clients/1-2.png" alt="" /></a>
-					</figure>
-				</li>
-				<li class="slide-item">
-					<figure class="image-box">
-						<a href="#"><img src="images/clients/1-3.png" alt="" /></a>
-					</figure>
-				</li>
-				<li class="slide-item">
-					<figure class="image-box">
-						<a href="#"><img src="images/clients/1-4.png" alt="" /></a>
-					</figure>
-				</li>
-				<li class="slide-item">
-					<figure class="image-box">
-						<a href="#"><img src="images/clients/1-1.png" alt="" /></a>
-					</figure>
-				</li>
-				<li class="slide-item">
-					<figure class="image-box">
-						<a href="#"><img src="images/clients/1-2.png" alt="" /></a>
-					</figure>
-				</li>
-				<li class="slide-item">
-					<figure class="image-box">
-						<a href="#"><img src="images/clients/1-3.png" alt="" /></a>
-					</figure>
-				</li>
-				<li class="slide-item">
-					<figure class="image-box">
-						<a href="#"><img src="images/clients/1-4.png" alt="" /></a>
-					</figure>
-				</li>
-			</ul>
-		</div>
-	</div>
-</section>
-<!--End Clients Section-->
+<client-section></client-section>
 
 <news-home></news-home>
+
 @endsection

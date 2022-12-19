@@ -453,66 +453,8 @@
                   </ul>
                 </div>
 
-                <!-- Recent Properties -->
-                <div class="sidebar-widget recent-properties">
-                  <div class="sidebar-title"><h2>Недавно добавленные</h2></div>
-                  <div class="widget-content">
-                    <!-- Post -->
-                    <article class="post">
-                      <div class="post-thumb">
-                        <a href="blog-detail.html">
-                          <img
-                            src="/images/resource/property-thumb-1.jpg"
-                            alt=""
-                          />
-                          <span class="status">Rent</span>
-                        </a>
-                      </div>
-                      <span class="location">Lundon, UK</span>
-                      <h3>
-                        <a href="blog-detail.html">Laxury Balles Villa</a>
-                      </h3>
-                      <div class="price">$ 760,000</div>
-                    </article>
+								<recently-added></recently-added>
 
-                    <!-- Post -->
-                    <article class="post">
-                      <div class="post-thumb">
-                        <a href="blog-detail.html">
-                          <img
-                            src="/images/resource/property-thumb-2.jpg"
-                            alt=""
-                          />
-                          <span class="status">Rent</span>
-                        </a>
-                      </div>
-                      <span class="location">Lundon, UK</span>
-                      <h3>
-                        <a href="blog-detail.html">Laxury Balles Villa</a>
-                      </h3>
-                      <div class="price">$ 760,000</div>
-                    </article>
-
-                    <!-- Post -->
-                    <article class="post">
-                      <div class="post-thumb">
-                        <a href="blog-detail.html">
-                          <img
-                            src="/images/resource/property-thumb-3.jpg"
-                            alt=""
-                          />
-                          <span class="status hot">hot</span>
-                        </a>
-                      </div>
-                      <span class="location">Lundon, UK</span>
-                      <h3>
-                        <a href="blog-detail.html">Laxury Balles Villa</a>
-                      </h3>
-                      <div class="price">$ 760,000</div>
-                    </article>
-
-                  </div>
-                </div>
               </aside>
             </div>
           </div>
@@ -555,7 +497,7 @@ export default {
 					.owlCarousel({
 						loop:false,
 						items: 1,
-						margin: 0,
+						margin: 20,
 						nav: false,
 						navText: [ '<span class="icon fa fa-angle-left"></span>', '<span class="icon fa fa-angle-right"></span>' ],
 						dots: false,

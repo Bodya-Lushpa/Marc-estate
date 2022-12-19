@@ -13,7 +13,7 @@
 			</div><!-- /.col -->
 			<div class="col-sm-6">
 				<ol class="breadcrumb float-sm-right">
-					<li class="breadcrumb-item"><a href="{{ route('homeAdmin') }}">Главная</a></li>
+					<li class="breadcrumb-item"><a href="{{ route('homeAdmin') }}" class="text-info">Главная</a></li>
 					<li class="breadcrumb-item active">Добавление новости</li>
 				</ol>
 			</div><!-- /.col -->
@@ -47,9 +47,9 @@
 						</tr>
 					</thead>
 					<tbody>
-						@foreach ($news as $post)
+						@foreach ($news as $key => $post)
 						<tr>
-							<td>{{ $post['id'] }}</td>
+							<td>{{ $key + 1 }}</td>
 							<td>{{ $post['title'] }}</td>
 							<td><img src="{{ $post['img'] }}" width="100"></td>
 							<td>{{ $post['created_at'] }}</td>

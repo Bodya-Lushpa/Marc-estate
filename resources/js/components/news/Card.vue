@@ -3,14 +3,14 @@
 		      <!--Page Title-->
 					<section
         class="page-title"
-        style="background-image: url('/images/background/16.jpg')"
+        style="background-image: url('/images/background/pexels-kaboompics-com-6053.jpg')"
       >
         <div class="auto-container">
           <div class="inner-container clearfix">
-            <h1>News Detail</h1>
+            <h1>Новости</h1>
             <ul class="bread-crumb clearfix">
-              <li><a href="index.html">Home</a></li>
-              <li>News Detail</li>
+              <li><a href="/">Главная</a></li>
+              <li>{{ news.title }}</li>
             </ul>
           </div>
         </div>

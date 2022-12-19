@@ -14,6 +14,8 @@ Vue.component("projects", () => import("./components/project/Projects"));
 Vue.component("project-card", () => import("./components/project/Card"));
 Vue.component("top-project-home", () => import("./components/TopProjectsHome"));
 Vue.component("news-home", () => import("./components/NewsHome"));
+Vue.component("client-section", () => import("./components/ClientsSection"));
+Vue.component("recently-added", () => import("./components/RecentlyAdded"));
 
 const app = new Vue({
 	el: '#app'

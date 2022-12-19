@@ -131,11 +131,11 @@
 							<nav class="main-menu">
 								<div class="navbar-collapse show collapse clearfix">
 									<ul class="navigation clearfix">
-										<li class="current"><a href="{{ route('home') }}">Главная</a></li>
-										<li><a href="{{ route('about') }}">О нас</a></li>
-										<li><a href="{{ route('project') }}">Проекты</a></li>
-										<li><a href="{{ route('news') }}">Новости</a></li>
-										<li><a href="{{ route('contact') }}">Контакты</a></li>
+										<li class="{{ request()->routeIs('home') ? 'current' : '' }}"><a href="{{ route('home') }}">Главная</a></li>
+										<li class="{{ request()->routeIs('about') ? 'current' : '' }}"><a href="{{ route('about') }}">О нас</a></li>
+										<li class="{{ request()->routeIs('project') ? 'current' : '' }}"><a href="{{ route('project') }}">Проекты</a></li>
+										<li class="{{ request()->routeIs('news') ? 'current' : '' }}"><a href="{{ route('news') }}">Новости</a></li>
+										<li class="{{ request()->routeIs('contact') ? 'current' : '' }}"><a href="{{ route('contact') }}">Контакты</a></li>
 									</ul>
 								</div>
 							</nav>
@@ -158,7 +158,7 @@
 												<div class="form-container">
 													<form method="post" action="blog.html">
 														<div class="form-group">
-															<input type="search" name="field-name" value="" placeholder="Search Here" required="" />
+															<input type="search" name="field-name" value="" placeholder="Поиск" required="" />
 															<button type="submit" class="search-btn">
 																<span class="la la-search"></span>
 															</button>
@@ -180,28 +180,28 @@
 			@yield('content')
 
 			<!-- Main Footer -->
-			<footer class="main-footer" style="background-image: url('/images/background/3.jpg')">
+			<footer class="main-footer" style="background-image: url('/images/background/view-new-york-city-night-time.jpg')">
 				<div class="auto-container">
 					<!--Widgets Section-->
 					<div class="widgets-section">
 						<div class="row">
 							<!--Big Column-->
-							<div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
-								<div class="row">
+							<div class="big-column col-lg-12 col-md-12 col-sm-12">
+								<div class="row align-items-center">
 									<!--Footer Column-->
-									<div class="footer-column col-lg-6 col-md-6 col-sm-12">
+									<div class="footer-column col-lg-12 col-md-12 col-sm-12">
 										<div class="footer-widget contact-widget">
-											<h2 class="widget-title">Связаться</h2>
 											<div class="widget-content">
-												<ul class="contact-list">
-													<li>
-														<span class="la la-map-marker"></span> Казахстан,
-														пр, Сейфулина 597а, <br />Турция, Стамбул, ул Абая 15.
+												<ul class="contact-list d-md-flex align-items justify-content-md-between">
+													<li class="d-flex align-items-center justify-content-center">
+														<span class="la la-map-marker"></span>
+														<div>Казахстан, пр, Сейфулина 597а, Турция, Стамбул, ул Абая 15.</div>
 													</li>
-													<li>
-														<span class="la la-phone"></span>+ 7 777 552 99 99
+													<li class="d-flex align-items-center justify-content-center">
+														<span class="la la-phone"></span>
+														<div>+ 7 777 552 99 99</div>
 													</li>
-													<li>
+													<li class="d-flex align-items-center justify-content-center">
 														<span class="la la-envelope"></span><a href="#">info@markestate.kz</a>
 													</li>
 												</ul>
@@ -209,61 +209,9 @@
 										</div>
 									</div>
 
-									<!--Footer Column-->
-									<div class="footer-column col-lg-6 col-md-6 col-sm-12">
-										<div class="footer-widget cities-widget">
-											<h2 class="widget-title">Недвижимость</h2>
-											<div class="widget-content">
-												<ul class="list clearfix">
-													<li><a href="properties.html">Athina</a></li>
-													<li><a href="properties.html">Austin</a></li>
-													<li><a href="properties.html">Baytown</a></li>
-													<li><a href="properties.html">Brampton</a></li>
-													<li><a href="properties.html">Cedar Hill</a></li>
-													<li><a href="properties.html">Chester</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
 								</div>
 							</div>
 
-							<!--Big Column-->
-							<div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
-								<div class="row clearfix">
-									<div class="footer-column col-xl-8 col-lg-6 col-md-6 col-sm-12">
-										<!--Footer Column-->
-										<div class="footer-widget popular-posts">
-											<h2 class="widget-title">Популярное</h2>
-											<!--Footer Column-->
-											<div class="widget-content">
-												<div class="post">
-													<div class="thumb">
-														<a href="blog-detail.html"><img src="/images/resource/post-thumb-1.jpg" alt="" /></a>
-													</div>
-													<h4>
-														<a href="blog-detail.html">Modern Design Building
-														</a>
-													</h4>
-													<span class="date">1 October, 2020</span>
-												</div>
-
-												<div class="post">
-													<div class="thumb">
-														<a href="blog-detail.html"><img src="/images/resource/post-thumb-2.jpg" alt="" /></a>
-													</div>
-													<h4>
-														<a href="blog-detail.html">Real Eatate Expo 2020</a>
-													</h4>
-													<span class="date">10 October, 2020</span>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<!--Footer Column-->
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
