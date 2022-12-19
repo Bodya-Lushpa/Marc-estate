@@ -4547,6 +4547,11 @@ a.ui-button:active, .ui-button:active,
 	margin: 0 auto;
 	padding: 0 30px;
 }
+.property-detail .carousel-outer .thumbs-carousel .owl-item img{
+	height: 100px;
+	object-fit: cover;
+	width: 100%;
+}
 
 .property-detail .thumbs-carousel .owl-nav{
 	position: absolute;
@@ -10308,7 +10313,7 @@ a.ui-button:active, .ui-button:active,
 
 .sidebar-page-container{
 	position: relative;
-	padding: 70px 0 70px;
+	padding: 95px 0 70px;
 }
 
 .sidebar-page-container .sidebar-side,
