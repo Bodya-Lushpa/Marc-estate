@@ -44,7 +44,7 @@ $(document).ready(function () {
 	$('.planItemAdd').on('click', function(e){
 		e.preventDefault();
 		var card = $(this).closest('.card');
-		var options = $('.plansItem').find('.form-control.select2').html();
+		var options = $('.plansWrap').find('.select2exempleSelectRoom').html();
 		var repeaterItem = "<div class='plansItem row'>\
 		<a href='#' class='btn btn-tool closePlanItem'><i class='fas fa-times'></i></a>\
 		<div class='col-lg-3'>\

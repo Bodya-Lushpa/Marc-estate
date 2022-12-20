@@ -232,6 +232,12 @@
 						</div>
 						<div class="card-body">
 							<div class="plansWrap">
+								<select class="form-control select2exempleSelectRoom" style="display: none!important">
+									@foreach ($planRooms as $planRoom)
+									<option value="{{ $planRoom->id }}">{{ $planRoom->title }}</option>
+									@endforeach
+								</select>
+
 								@foreach($project->plans as $key => $plan)
 								<div class="plansItem row">
 									<a href="#" class="btn btn-tool closePlanItem"><i class="fas fa-times"></i></a>
