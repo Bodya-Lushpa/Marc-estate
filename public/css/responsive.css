@@ -40,6 +40,9 @@
 		width: 100%;
 		z-index: 9;
 	}
+	.main-slider{
+		margin-top: 90px;
+	}
 
 	.header-style-one .header-lower .logo:after, 
 	.header-style-one .header-lower .logo:before{
@@ -424,6 +427,11 @@
 }
 
 @media only screen and (max-width: 767px){	
+
+	.main-slider .title-box{
+		text-align: center;
+	}
+
 
 	.header-style-one .header-lower .logo-box:before{
 		background-color: #fff!important;

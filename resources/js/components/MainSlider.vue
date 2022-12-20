@@ -6,72 +6,19 @@
 				<div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
 					<ul>
 						<!-- Slide 1 -->
-						<li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="images/main-slider/image-2.jpg" data-title="Slide Title" data-transition="parallaxvertical">
-							<img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="/images/background/pexels-charles-parker-5847347.jpg" />
+						<li v-for="project in this.projects" data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" :data-index="project.id" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="images/main-slider/image-2.jpg" data-title="Slide Title" data-transition="parallaxvertical">
+							<img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" :src="project.images[0].img" />
 
 							<div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-whitespace="nowrap" data-width="auto" data-text-align="center" data-hoffset="['10','50','0','0']" data-voffset="['-20','-20','-20','-20']" data-x="['right','right','center','center']" data-y="['middle','middle','middle','middle']" data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"x:50px;opacity:0;","ease":"Power3.easeInOut"}]'>
 								<div class="content-box">
 									<div class="inner-box">
 										<div class="title-box">
-											<h3>Luxurious Home</h3>
-											<p>9658 Lorem Ave, San Diego, USA</p>
+											<h3>{{ project.title }}</h3>
+											<p>{{ project.address }}</p>
 										</div>
-										<ul class="info-list">
-											<li><span>2340</span>Area Sq-ft</li>
-											<li><span>04</span>Bed Room</li>
-											<li><span>02</span>Kitchen</li>
-										</ul>
-										<div class="price">$42, 201,00</div>
+										<div class="price">${{ project.price }}</div>
 										<div class="btn-box">
-											<a href="agent-detail.html" class="theme-btn btn-style-one">CONTACT AGENT</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<!-- Slide 2 -->
-						<li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1909" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="images/main-slider/image-2.jpg" data-title="Slide Title" data-transition="parallaxvertical">
-							<img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="/images/background/view-new-york-city-night-time.jpg" />
-
-							<div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-whitespace="nowrap" data-width="auto" data-text-align="center" data-hoffset="['10','50','0','0']" data-voffset="['-20','-20','-20','-20']" data-x="['right','right','center','center']" data-y="['middle','middle','middle','middle']" data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"x:50px;opacity:0;","ease":"Power3.easeInOut"}]'>
-								<div class="content-box">
-									<div class="inner-box">
-										<div class="title-box">
-											<h3>Luxurious Home2</h3>
-											<p>9658 Lorem Ave, San Diego, USA</p>
-										</div>
-										<ul class="info-list">
-											<li><span>2340</span>Area Sq-ft</li>
-											<li><span>04</span>Bed Room</li>
-											<li><span>02</span>Kitchen</li>
-										</ul>
-										<div class="price">$42, 201,00</div>
-										<div class="btn-box">
-											<a href="agent-detail.html" class="theme-btn btn-style-one">CONTACT AGENT</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<!-- Slide 3 -->
-						<li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1919" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="images/main-slider/image-2.jpg" data-title="Slide Title" data-transition="parallaxvertical">
-							<img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="/images/background/pexels-charles-parker-5847347.jpg" />
-
-							<div class="tp-caption" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingtop="[0,0,0,0]" data-responsive_offset="on" data-type="text" data-height="none" data-whitespace="nowrap" data-width="auto" data-text-align="center" data-hoffset="['10','50','0','0']" data-voffset="['-20','-20','-20','-20']" data-x="['right','right','center','center']" data-y="['middle','middle','middle','middle']" data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"x:50px;opacity:0;","ease":"Power3.easeInOut"}]'>
-								<div class="content-box">
-									<div class="inner-box">
-										<div class="title-box">
-											<h3>Luxurious Home3</h3>
-											<p>9658 Lorem Ave, San Diego, USA</p>
-										</div>
-										<ul class="info-list">
-											<li><span>2340</span>Area Sq-ft</li>
-											<li><span>04</span>Bed Room</li>
-											<li><span>02</span>Kitchen</li>
-										</ul>
-										<div class="price">$42, 201,00</div>
-										<div class="btn-box">
-											<a href="agent-detail.html" class="theme-btn btn-style-one">CONTACT AGENT</a>
+											<a :href="'project/' + project.slug" class="theme-btn btn-style-one">ПОДРОБНЕЕ</a>
 										</div>
 									</div>
 								</div>
@@ -90,7 +37,6 @@ import axios from 'axios';
 import moment from 'moment';
 import $ from "jquery";
 import "/plugins/revolution/js/jquery.themepunch.revolution.min.js";
-import "/plugins/revolution/js/jquery.themepunch.tools.min.js";
 import "/plugins/revolution/js/extensions/revolution.extension.actions.min.js";
 import "/plugins/revolution/js/extensions/revolution.extension.carousel.min.js";
 import "/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js";
@@ -112,6 +58,8 @@ export default {
 		.then(response => {
 			this.projects = response.data;
 		});
+  },
+	updated (){
 		(function($) {
 				 $("#rev_slider_one").show().revolution({
 							sliderType:"standard",
@@ -157,7 +105,7 @@ export default {
                 },
                  responsiveLevels:[1200,1040,778,480],
                  visibilityLevels:[1200,1040,778,480],
-                 gridwidth:[1170,1040,778,600],
+                 gridwidth:[1170,1040,778,540],
                  gridheight:[650,650,650,650],
                  lazyType:"none",
                  parallax: {
@@ -185,7 +133,7 @@ export default {
                  }
              });
 		})(window.jQuery);
-  },
+	},
 	filters: {
 		moment: function (date) {
 			moment.locale('kk');

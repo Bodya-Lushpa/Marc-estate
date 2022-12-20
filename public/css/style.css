@@ -2046,7 +2046,7 @@ img{
 }
 
 .sticky-header .logo{
-	padding: 10px 0;
+	padding: 13px 0;
 }
 
 .sticky-header .main-menu .navigation > li{
@@ -2264,6 +2264,7 @@ img{
 .main-slider{
 	position:relative;
 	z-index:10;
+	margin-top: 77px;
 }
 
 .main-slider .tp-caption{
@@ -2295,7 +2296,7 @@ img{
 	top: 0;
 	width: 0;
 	height: 0;
-	border-bottom: 381px solid #ffffff;
+	border-bottom: 290px solid #ffffff;
 	border-left: 115px solid transparent;
 	content: "";
 }
@@ -2313,7 +2314,7 @@ img{
 	top: 25px;
 	width: 0;
 	height: 0;
-	border-bottom: 381px solid #ffffff;
+	border-bottom: 290px solid #ffffff;
 	border-left: 115px solid transparent;
 	opacity: .45;
 	content: "";
