@@ -16,6 +16,7 @@ $(document).on('click','.popup_selector',function (event) {
 });
 // function to update the file selected by elfinder
 function processSelectedFile(filePath, requestingField) {
+	console.log('elfinderTest');
 	filePaths = [];
 	filePath.forEach(function(file, index) {
 		filePaths[index] = file.path;
