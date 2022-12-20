@@ -22,13 +22,15 @@ function processSelectedFile(filePath, requestingField) {
 	});
 	var pefixFiels = requestingField.split('_');
 	var pefixFielsNumber = requestingField.split('g');
+	console.log('elfinderTest');
 	console.log(filePath);
-	if(pefixFiels[0] == 'plan'){
-			$('.' + requestingField).html(" ");
-			$('.' + requestingField).append( "<div class='uploadImgClose'><img src='/" + filePath[0]['path'] + "' alt='' class='uploadImg d-block mb-4 mr-2 w-100'><input type='text' class='d-none' name=\"plan[" + pefixFielsNumber[1] + "][img]\" value=' /" + filePath[0]['path'] + "'></div>" ).trigger('change');
-	}else{
-		filePaths.forEach(element => {
-			$('.' + requestingField).append( "<div class='uploadImgClose w-25 mr-2'><img src='/" + element + "' alt='' class='uploadImg d-block mb-4 mr-2 w-100'><input type='text' class='d-none' name='img[]' value=' /" + element + "'></div>" ).trigger('change');
-		});
-	}
+	console.log(requestingField);
+	// if(pefixFiels[0] == 'plan'){
+	// 		$('.' + requestingField).html(" ");
+	// 		$('.' + requestingField).append( "<div class='uploadImgClose'><img src='/" + filePath[0]['path'] + "' alt='' class='uploadImg d-block mb-4 mr-2 w-100'><input type='text' class='d-none' name=\"plan[" + pefixFielsNumber[1] + "][img]\" value=' /" + filePath[0]['path'] + "'></div>" ).trigger('change');
+	// }else{
+	// 	filePaths.forEach(element => {
+	// 		$('.' + requestingField).append( "<div class='uploadImgClose w-25 mr-2'><img src='/" + element + "' alt='' class='uploadImg d-block mb-4 mr-2 w-100'><input type='text' class='d-none' name='img[]' value=' /" + element + "'></div>" ).trigger('change');
+	// 	});
+	// }
 }
