@@ -38,6 +38,7 @@
 	.header-style-one .header-lower .logo{
 		padding: 20px 0;
 		width: 68%;
+		z-index: 9;
 	}
 
 	.header-style-one .header-lower .logo:after, 
@@ -701,8 +702,12 @@
 		color:#ffffff;
 		font-weight:500;
 		font-size:15px;
-		background:#25262c;
+		background:#136777;
 		text-align:left;
+	}
+
+	.about-us.style-two{
+		padding-top: 110px;
 	}
 	
 	.main-menu .navbar-collapse > .navigation > li > a:hover,
@@ -717,7 +722,7 @@
 	.main-menu .navbar-collapse > .navigation > li.current > a,
 
 	.main-menu .navbar-collapse > .navigation > li.current-menu-item > a{
-		background:#25262c;
+		background: #116877;
 		color:#ffffff !important;
 	}
 	
@@ -804,7 +809,7 @@
 	.testimonial-section,
 	.popular-places-section,
 	.about-us{
-		padding: 70px 0;
+		padding: 110px 0 50px;
 	}
 
 	.testimonial-page-section{
@@ -816,7 +821,7 @@
 	}
 
 	.upper-info-box .about-property{
-		margin-bottom: 25px;
+		margin-bottom: 20px;
 	}
 
 	.upper-info-box .price-column .price, .upper-info-box .price-column .title{
@@ -829,7 +834,7 @@
 
 	.agents-section.alternate,
 	.property-filter-section{
-		padding: 70px 0 0;
+		padding: 110px 0 0;
 	}
 
 	.main-footer .widgets-section{

@@ -4,4 +4,6 @@
 
 <card-news slug="{{ $slug }}"></card-news>
 
+<client-section></client-section>
+
 @endsection
