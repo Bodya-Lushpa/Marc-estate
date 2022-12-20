@@ -17,6 +17,8 @@ Vue.component("news-home", () => import("./components/NewsHome"));
 Vue.component("client-section", () => import("./components/ClientsSection"));
 Vue.component("recently-added", () => import("./components/RecentlyAdded"));
 Vue.component("main-slider", () => import("./components/MainSlider"));
+Vue.component("search-projects-filter", () => import("./components/SearchProjectsFilter"));
+Vue.component("type-real", () => import("./components/TypeReal"));
 
 const app = new Vue({
 	el: '#app'

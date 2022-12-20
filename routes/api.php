@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\TypeRealController;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\PartnerController;
 use App\Http\Controllers\Api\ProjectController;
@@ -25,4 +26,5 @@ Route::apiResources([
 	'news' => NewsController::class,
 	'projects' => ProjectController::class,
 	'partner' => PartnerController::class,
+	'type-real' => TypeRealController::class,
 ]);

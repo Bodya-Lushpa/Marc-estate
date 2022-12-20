@@ -79,127 +79,9 @@
             <div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
               <aside class="sidebar default-sidebar">
 
-                <!-- Categories -->
-                <div class="sidebar-widget search-properties">
-                  <div class="sidebar-title"><h2>ПОИСК НЕДВИЖИМОСТИ</h2></div>
-                  <!-- Property Search Form -->
-                  <div class="property-search-form style-three">
-                    <form method="post" action="index.html">
-                      <div class="row no-gutters">
-                        <!-- Form Group -->
-                        <div class="form-group">
-                          <select class="custom-select-box">
-                            <option>Location</option>
-                            <option>New York</option>
-                            <option>Los Angeles</option>
-                            <option>Chicago</option>
-                            <option>Houston</option>
-                          </select>
-                        </div>
+								<search-projects-filter></search-projects-filter>
 
-                        <!-- Form Group -->
-                        <div class="form-group">
-                          <select class="custom-select-box">
-                            <option>Property Type</option>
-                            <option>Residential</option>
-                            <option>Commercial</option>
-                            <option>Industrial</option>
-                            <option>Apartments</option>
-                          </select>
-                        </div>
-
-                        <!-- Form Group -->
-                        <div class="form-group">
-                          <select class="custom-select-box">
-                            <option>Property Status</option>
-                            <option>For Rent</option>
-                            <option>For Sale</option>
-                          </select>
-                        </div>
-
-                        <!-- Form Group -->
-                        <div class="form-group">
-                          <select class="custom-select-box">
-                            <option>Any Bedrooms</option>
-                            <option>01 Bedroom</option>
-                            <option>02 Bedrooms</option>
-                            <option>03 Bedrooms</option>
-                            <option>04 Bedrooms</option>
-                            <option>05 Bedrooms</option>
-                          </select>
-                        </div>
-
-                        <!-- Form Group -->
-                        <div class="form-group">
-                          <select class="custom-select-box">
-                            <option>Any Bathrooms</option>
-                            <option>01 Bathroom</option>
-                            <option>02 Bathrooms</option>
-                            <option>03 Bathrooms</option>
-                            <option>04 Bathrooms</option>
-                            <option>05 Bathrooms</option>
-                          </select>
-                        </div>
-
-                        <!-- Form Group -->
-                        <div class="form-group">
-                          <div class="range-slider-one clearfix">
-                            <label>Price Filter</label>
-                            <div class="price-range-slider"></div>
-                            <div class="input">
-                              <input
-                                type="text"
-                                class="price-amount"
-                                name="field-name"
-                                readonly
-                              />
-                            </div>
-                            <div class="title">US Doller</div>
-                          </div>
-                        </div>
-
-                        <!-- Form Group -->
-                        <div class="form-group">
-                          <button type="submit" class="theme-btn btn-style-one">
-                            Поиск
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  <!-- End Form -->
-                </div>
-
-                <!-- Categories -->
-                <div class="sidebar-widget categories">
-                  <div class="sidebar-title"><h2>ТИП НЕДВИЖИМОСТИ</h2></div>
-                  <ul class="cat-list">
-                    <li>
-                      <a href="#">Apartments <span>22</span></a>
-                    </li>
-                    <li>
-                      <a href="#">Villas <span>45</span></a>
-                    </li>
-                    <li>
-                      <a href="#">Open Houses <span>62</span></a>
-                    </li>
-                    <li>
-                      <a href="#">Offices <span>70</span></a>
-                    </li>
-                    <li>
-                      <a href="#">Residentals <span>90</span></a>
-                    </li>
-                    <li>
-                      <a href="#">Co-Working <span>65</span></a>
-                    </li>
-                    <li>
-                      <a href="#">Flat <span>48</span></a>
-                    </li>
-                    <li>
-                      <a href="#">Cottage <span>24</span></a>
-                    </li>
-                  </ul>
-                </div>
+                <type-real></type-real>
 
 								<recently-added></recently-added>
               </aside>
@@ -214,9 +96,6 @@
 <script>
 import axios from 'axios';
 import moment from 'moment';
-import $ from "jquery";
-import slider from '/js/jquery-ui.js'
-import "jquery-ui";
 
 export default {
 	props: {
