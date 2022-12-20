@@ -48,7 +48,7 @@
 										<img :src="project.images[0].img" alt="" />
 									</figure>
 									<span class="for">ПРОДАЖА</span>
-									<span class="featured">Популярное</span>
+									<span class="featured" v-if="project.is_top">Популярное</span>
 									<ul class="option-box">
 										<li>
 											<a :href="project.images[0].img" class="lightbox-image" data-fancybox="property"><i class="la la-camera"></i></a>

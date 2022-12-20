@@ -500,20 +500,8 @@
 
 	defaultMasonry();
 
-	//Price Range Slider
-	if($('.price-range-slider').length){
-		$( ".price-range-slider" ).slider({
-			range: true,
-			min: 0,
-			max: 10000,
-			values: [ 1000, 8000 ],
-			slide: function( event, ui ) {
-			$( "input.price-amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
-			}
-		});
-		
-		$( "input.price-amount" ).val( $( ".price-range-slider" ).slider( "values", 0 ) + " - $" + $( ".price-range-slider" ).slider( "values", 1 ) );	
-	}
+
+	
 
 	//Price Range Slider
 	if($('.area-range-slider').length){

@@ -12,12 +12,12 @@
                             :src="project.images[0].img"
                             alt=""
                           />
-                          <span class="status">Rent</span>
+                          <span class="status">ПРОДАЖА</span>
                         </a>
                       </div>
                       <span class="location">{{ project.city.title }}, {{ project.country.title }}</span>
                       <h3>
-                        <a href="blog-detail.html">{{ project.title }}</a>
+                        <a :href="('/project/' + project.slug)">{{ project.title }}</a>
                       </h3>
                       <div class="price">$ {{ project.price }}</div>
                     </article>

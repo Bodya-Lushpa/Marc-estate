@@ -70,6 +70,9 @@ class ProjectController extends Controller
 		$project->country_id = $request->country_id;
 		$project->city_id = $request->city_id;
 		$project->description = $request->description;
+		$project->images_for_slider = $request->images_for_slider;
+		$request->is_slider ? $project->is_slider = 1 : $project->is_slider = 0;
+		$request->is_top ? $project->is_top = 1 : $project->is_top = 0;
 		$project->save();
 		$projectImgs = [];
 		if ($request->img) {

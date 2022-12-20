@@ -12,7 +12,7 @@
 	<!-- Property Block -->
 	<div
 						v-for="(project, index) in projects"
-						v-if="index<6"
+						v-if="project.is_top"
 						class="property-block all mix restaurent apprtment form col-xl-4 col-lg-6 col-md-6 col-sm-12">
 							<div class="inner-box">
 								<div class="image-box">
@@ -20,7 +20,7 @@
 										<img :src="project.images[0].img" alt="" />
 									</figure>
 									<span class="for">ПРОДАЖА</span>
-									<span class="featured">Популярное</span>
+									<span class="featured" v-if="project.is_top">Популярное</span>
 									<ul class="option-box">
 										<li>
 											<a :href="project.images[0].img" class="lightbox-image" :data-fancybox="'property' + project.id"><i class="la la-camera"></i></a>

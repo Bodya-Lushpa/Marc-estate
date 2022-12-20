@@ -43,10 +43,26 @@
 
 						<div class="card-body">
 							<div class="row">
-								<div class="col-lg-12">
+								<div class="col-lg-7">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Название</label>
 										<input type="text" class="form-control" name="title" placeholder="Введите название проекта" required>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="form-group mt-4 ml-4">
+										<div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+											<input type="checkbox" name="is_slider" class="custom-control-input" id="customSwitch3">
+											<label class="custom-control-label" for="customSwitch3">В слайдер на главную</label>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-2">
+									<div class="form-group mt-4">
+										<div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+											<input type="checkbox" name="is_top" class="custom-control-input" id="customSwitch4">
+											<label class="custom-control-label" for="customSwitch4">Популярные</label>
+										</div>
 									</div>
 								</div>
 								<div class="col-lg-4">
@@ -111,13 +127,23 @@
 									</div>
 								</div>
 								<div class="col-lg-12">
-
 									<div class="form-group">
 										<label for="exampleInputEmail1">Основное изображение</label>
 										<div class="uploadImgWrap1 d-flex"></div>
 
 										<div class="d-flex">
 											<a href="" class="popup_selector  btn btn-block btn-info w-25" data-inputid="uploadImgWrap1">Выбрать</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-12">
+									<div class="form-group">
+										<label for="exampleInputEmail1">Изображение для слайдера</label>
+										<div class="imagesForSlider_img1 d-flex"></div>
+
+										<div class="d-flex">
+											<a href="" class="popup_selector  btn btn-block btn-info w-25" data-inputid="imagesForSlider_img1">Выбрать</a>
 										</div>
 									</div>
 								</div>

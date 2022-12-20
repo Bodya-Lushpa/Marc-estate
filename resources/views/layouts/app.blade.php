@@ -266,7 +266,6 @@
 	<script src="/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 	<script src="/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
 	<script src="/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
-	<script src="/js/main-slider-script.js"></script>
 	<!--End Revolution Slider-->
 	<script src="/js/jquery-ui.js"></script>
 	<script src="/js/jquery.fancybox.js"></script>
