@@ -48,13 +48,13 @@
 										<input type="text" class="form-control" name="title" placeholder="Введите название новости" required>
 									</div>
 								</div>
-								<div class="col-lg-7">
+								<div class="col-lg-12">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Основное изображение</label>
 										<div class="uploadImgWrap1 d-flex"></div>
 
 										<div class="d-flex">
-											<a href="" class="popup_selector ml-2 btn btn-block btn-info w-25" data-inputid="uploadImgWrap1">Выбрать</a>
+											<a href="" class="popup_selector  btn btn-block btn-info w-25" data-inputid="uploadImgWrap1">Выбрать</a>
 										</div>
 									</div>
 								</div>

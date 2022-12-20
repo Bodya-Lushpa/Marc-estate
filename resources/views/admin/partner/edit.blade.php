@@ -53,12 +53,12 @@
 									<div class="form-group">
 										<label for="exampleInputEmail1">Изображение</label>
 										<div class="uploadImgWrap1 d-flex">
-											<div class="uploadImgClose"><img src="{{ $partner['path'] }}" alt="" class="uploadImg d-block mb-4 mr-2">
+											<div class="uploadImgClose w-25 mr-2"><img src="{{ $partner['path'] }}" alt="" class="uploadImg d-block mb-4 mr-2 w-100">
 												<input type="text" class="d-none" name="img[]" value="{{ $partner['path'] }}">
 											</div>
 										</div>
 										<div class="d-flex">
-											<a href="" class="popup_selector ml-2 btn btn-block btn-info w-25" data-inputid="uploadImgWrap1">Выбрать</a>
+											<a href="" class="popup_selector  btn btn-block btn-info w-25" data-inputid="uploadImgWrap1">Выбрать</a>
 										</div>
 									</div>
 								</div>

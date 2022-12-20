@@ -83,7 +83,7 @@ class NewsController extends Controller
 	public function update(Request $request, News $news)
 	{
 		$news->title = $request->title;
-		$news->img = '/' . $request->img;
+		$news->img = $request->img[0];
 		$news->text = $request->text;
 		$news->save();
 

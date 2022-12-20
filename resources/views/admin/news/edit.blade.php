@@ -49,14 +49,17 @@
 										<input type="text" class="form-control" name="title" value="{{ $news['title'] }}" placeholder="Введите название новости" required>
 									</div>
 								</div>
-								<div class="col-lg-7">
+								<div class="col-lg-12">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Основное изображение</label>
-										<img src="{{ $news['img'] }}" alt="" class="uploadImg d-block mb-4">
-										<div class="d-flex">
-											<input type="text" class="form-control  w-75" id="feature_image" name="img" value="{{ $news['img'] }}" readonly>
-											<a href="" class="popup_selector ml-2 btn btn-block btn-info w-25" data-inputid="feature_image">Выбрать</a>
+
+										<div class="uploadImgWrap1 d-flex">
+											<div class="uploadImgClose w-25 mr-2"><img src="{{ $news->img }}" alt="" class="uploadImg d-block mb-4 mr-2 w-100"><input type="text" class="d-none" name="img[]" value="{{ $news->img }}"></div>
 										</div>
+										<div class="d-flex">
+											<a href="" class="popup_selector  btn btn-block btn-info w-25" data-inputid="uploadImgWrap1">Выбрать</a>
+										</div>
+
 									</div>
 								</div>
 								<div class="col-lg-12">
