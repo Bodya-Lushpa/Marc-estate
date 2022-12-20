@@ -112,6 +112,7 @@
                             </div>
                             <div class="float-left">
                               <p class="plan-item__room">от {{ plan.price }} т</p>
+                              <p class="plan-item__room">от {{ plan.area }} км2</p>
                               <p>
                                 {{ plan.description }}
                               </p>

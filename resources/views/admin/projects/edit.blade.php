@@ -268,8 +268,12 @@
 											</select>
 										</div>
 										<div class="form-group">
+											<label for="exampleInputEmail1">Площадь</label>
+											<input type="text" class="form-control" name="plan[{{ $key }}][area]" value="{{ $plan->area }}" required>
+										</div>
+										<div class="form-group">
 											<label for="exampleInputEmail1">Цена</label>
-											<input type="text" class="form-control" name="plan[{{ $key }}][price]" value="{{ $plan->price }}">
+											<input type="text" class="form-control" name="plan[{{ $key }}][price]" value="{{ $plan->price }}" required>
 										</div>
 									</div>
 									<div class="col-lg-6">

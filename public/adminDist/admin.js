@@ -25,7 +25,8 @@ $(document).ready(function () {
 		}
 	});
 
-	var inputFile = 2;
+	var inputFile = $('.plansItem').length;
+	console.log(inputFile);
 
 	$('.repeaterItemAdd').on('click', function(e){
 		e.preventDefault();
@@ -60,6 +61,10 @@ $(document).ready(function () {
 				<label>Количество комнат</label>\
 				<select class='form-control select2' name=\"plan[" + inputFile + "][room]\"  style='width: 100%;'>"+ options +"\
 				</select>\
+			</div>\
+			<div class='form-group'>\
+				<label>Площадь</label>\
+				<input type='text' class='form-control' name='plan[" + inputFile + "][area]' required>\
 			</div>\
 			<div class='form-group'>\
 				<label for='exampleInputEmail1'>Цена</label>\

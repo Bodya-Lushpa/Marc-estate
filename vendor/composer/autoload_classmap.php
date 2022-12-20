@@ -24,6 +24,7 @@ return array(
     'App\\Http\\Controllers\\Admin\\TypeRealController' => $baseDir . '/app/Http/Controllers/Admin/TypeRealController.php',
     'App\\Http\\Controllers\\Admin\\UserController' => $baseDir . '/app/Http/Controllers/Admin/UserController.php',
     'App\\Http\\Controllers\\Api\\NewsController' => $baseDir . '/app/Http/Controllers/Api/NewsController.php',
+    'App\\Http\\Controllers\\Api\\PartnerController' => $baseDir . '/app/Http/Controllers/Api/PartnerController.php',
     'App\\Http\\Controllers\\Api\\ProjectController' => $baseDir . '/app/Http/Controllers/Api/ProjectController.php',
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',

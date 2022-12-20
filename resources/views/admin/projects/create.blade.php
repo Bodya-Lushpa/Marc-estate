@@ -244,8 +244,12 @@
 											</select>
 										</div>
 										<div class="form-group">
+											<label for="exampleInputEmail1">Площадь</label>
+											<input type="text" class="form-control" name="plan[0][area]" required>
+										</div>
+										<div class="form-group">
 											<label for="exampleInputEmail1">Цена</label>
-											<input type="text" class="form-control" name="plan[0][price]" placeholder="">
+											<input type="text" class="form-control" name="plan[0][price]" required>
 										</div>
 									</div>
 									<div class="col-lg-6">

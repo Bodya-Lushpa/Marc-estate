@@ -945,7 +945,7 @@ img{
 ===================================================*/
 
 .header-style-one{
-	position: relative;
+	position: fixed;
 }
 
 .header-style-one .header-lower .inner-container,
@@ -3369,7 +3369,8 @@ a.ui-button:active, .ui-button:active,
 .property-block .image-box .image img{
 	display: block;
 	width: 100%;
-	height: auto;
+	height: 220px;
+	object-fit: cover;
 }
 
 .property-block .image-box .for{
@@ -11618,7 +11619,7 @@ p.plan-item__room{
 	margin-bottom: 20px;
 }
 .pan-item{
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 .plan-item__title-block{
 	display: flex;

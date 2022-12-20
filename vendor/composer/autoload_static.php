@@ -615,6 +615,7 @@ class ComposerStaticInit029140271f8c54e4773ca9bae66de49c
         'App\\Http\\Controllers\\Admin\\TypeRealController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/TypeRealController.php',
         'App\\Http\\Controllers\\Admin\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/UserController.php',
         'App\\Http\\Controllers\\Api\\NewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/NewsController.php',
+        'App\\Http\\Controllers\\Api\\PartnerController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/PartnerController.php',
         'App\\Http\\Controllers\\Api\\ProjectController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/ProjectController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',

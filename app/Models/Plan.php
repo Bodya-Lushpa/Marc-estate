@@ -9,7 +9,7 @@ class Plan extends Model
 {
 	use HasFactory;
 
-	protected $fillable = ['img', 'rooms', 'description', 'price'];
+	protected $fillable = ['img', 'rooms', 'description', 'price', 'area'];
 
 	public function room()
 	{
