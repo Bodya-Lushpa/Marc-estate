@@ -81,7 +81,7 @@
 
                 <!-- Categories -->
                 <div class="sidebar-widget search-properties">
-                  <div class="sidebar-title"><h2>Search Properties</h2></div>
+                  <div class="sidebar-title"><h2>ПОИСК НЕДВИЖИМОСТИ</h2></div>
                   <!-- Property Search Form -->
                   <div class="property-search-form style-three">
                     <form method="post" action="index.html">
@@ -161,7 +161,7 @@
                         <!-- Form Group -->
                         <div class="form-group">
                           <button type="submit" class="theme-btn btn-style-one">
-                            Search
+                            Поиск
                           </button>
                         </div>
                       </div>
@@ -172,7 +172,7 @@
 
                 <!-- Categories -->
                 <div class="sidebar-widget categories">
-                  <div class="sidebar-title"><h2>Category Properties</h2></div>
+                  <div class="sidebar-title"><h2>ТИП НЕДВИЖИМОСТИ</h2></div>
                   <ul class="cat-list">
                     <li>
                       <a href="#">Apartments <span>22</span></a>
@@ -201,83 +201,7 @@
                   </ul>
                 </div>
 
-                <!-- Recent Properties -->
-                <div class="sidebar-widget recent-properties">
-                  <div class="sidebar-title"><h2>Recent Properties</h2></div>
-                  <div class="widget-content">
-                    <!-- Post -->
-                    <article class="post">
-                      <div class="post-thumb">
-                        <a href="blog-detail.html">
-                          <img
-                            src="/images/resource/property-thumb-1.jpg"
-                            alt=""
-                          />
-                          <span class="status">Rent</span>
-                        </a>
-                      </div>
-                      <span class="location">Lundon, UK</span>
-                      <h3>
-                        <a href="blog-detail.html">Laxury Balles Villa</a>
-                      </h3>
-                      <div class="price">$ 760,000</div>
-                    </article>
-
-                    <!-- Post -->
-                    <article class="post">
-                      <div class="post-thumb">
-                        <a href="blog-detail.html">
-                          <img
-                            src="/images/resource/property-thumb-2.jpg"
-                            alt=""
-                          />
-                          <span class="status">Rent</span>
-                        </a>
-                      </div>
-                      <span class="location">Lundon, UK</span>
-                      <h3>
-                        <a href="blog-detail.html">Laxury Balles Villa</a>
-                      </h3>
-                      <div class="price">$ 760,000</div>
-                    </article>
-
-                    <!-- Post -->
-                    <article class="post">
-                      <div class="post-thumb">
-                        <a href="blog-detail.html">
-                          <img
-                            src="/images/resource/property-thumb-3.jpg"
-                            alt=""
-                          />
-                          <span class="status hot">hot</span>
-                        </a>
-                      </div>
-                      <span class="location">Lundon, UK</span>
-                      <h3>
-                        <a href="blog-detail.html">Laxury Balles Villa</a>
-                      </h3>
-                      <div class="price">$ 760,000</div>
-                    </article>
-
-                    <!-- Post -->
-                    <article class="post">
-                      <div class="post-thumb">
-                        <a href="blog-detail.html">
-                          <img
-                            src="/images/resource/property-thumb-4.jpg"
-                            alt=""
-                          />
-                          <span class="status">Rent</span>
-                        </a>
-                      </div>
-                      <span class="location">Lundon, UK</span>
-                      <h3>
-                        <a href="blog-detail.html">Laxury Balles Villa</a>
-                      </h3>
-                      <div class="price">$ 760,000</div>
-                    </article>
-                  </div>
-                </div>
+								<recently-added></recently-added>
               </aside>
             </div>
           </div>

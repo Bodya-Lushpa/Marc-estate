@@ -15,11 +15,11 @@
 					</div>
 
 					<div class="text">
-						<strong>WILLIES REAL ESTATE</strong> is the best place for
-						elit, sed do eiusmod tempor dolor sit amet, conse ctetur
-						adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-						lorna aliquatd minimam, quis nostrud exercitation oris nisi ut
-						aliquip ex ea.
+						<strong>Сайт рыбатекст поможет</strong> Сайт рыбатекст поможет
+						дизайнеру, верстальщику, вебмастеру сгенерировать несколько
+						абзацев более менее осмысленного текста рыбы на русском языке,
+						а начинающему оратору отточить навык публичных выступлений в
+						домашних условиях. При создании генератора мы использовали
 					</div>
 
 					<div class="row features">
@@ -27,9 +27,9 @@
 						<div class="feature-block col-lg-6 col-md-6 col-sm-12">
 							<div class="inner-box">
 								<span class="icon flaticon-house-1"></span>
-								<h4><a href="about.html">Buy Property</a></h4>
+								<h4><a href="/about">Купить недвижимость</a></h4>
 								<div class="text">
-									We have the best properties Sale, Buy, and Rent Dealers.
+									У нас есть лучшие агенты по продаже, покупке и аренде недвижимости.
 								</div>
 							</div>
 						</div>
@@ -38,9 +38,9 @@
 						<div class="feature-block col-lg-6 col-md-6 col-sm-12">
 							<div class="inner-box">
 								<span class="icon flaticon-rent"></span>
-								<h4><a href="about.html">REnt Property</a></h4>
+								<h4><a href="/about">АРЕНДА НЕДВИЖИМОСТИ</a></h4>
 								<div class="text">
-									We have the best properties Sale, Buy, and Rent Dealers.
+									У нас есть лучшие агенты по продаже, покупке и аренде недвижимости.
 								</div>
 							</div>
 						</div>
@@ -49,9 +49,9 @@
 						<div class="feature-block col-lg-6 col-md-6 col-sm-12">
 							<div class="inner-box">
 								<span class="icon flaticon-house-5"></span>
-								<h4><a href="about.html">Real Estate Kit</a></h4>
+								<h4><a href="/about">Комплект недвижимости</a></h4>
 								<div class="text">
-									We have the best properties Sale, Buy, and Rent Dealers.
+									У нас есть лучшие агенты по продаже, покупке и аренде недвижимости.
 								</div>
 							</div>
 						</div>
@@ -60,9 +60,9 @@
 						<div class="feature-block col-lg-6 col-md-6 col-sm-12">
 							<div class="inner-box">
 								<span class="icon flaticon-apartment"></span>
-								<h4><a href="about.html">Sale Property</a></h4>
+								<h4><a href="/about">Продажа недвижимости</a></h4>
 								<div class="text">
-									We have the best properties Sale, Buy, and Rent Dealers.
+									У нас есть лучшие агенты по продаже, покупке и аренде недвижимости.
 								</div>
 							</div>
 						</div>
@@ -105,7 +105,7 @@
 							<span class="count-text" data-speed="3000" data-stop="300">0
 							</span>
 						</div>
-						<div class="counter-title">Sold Houses</div>
+						<div class="counter-title">Продано домов</div>
 					</div>
 				</div>
 
@@ -119,7 +119,7 @@
 							<span class="count-text" data-speed="2000" data-stop="470">0
 							</span>
 						</div>
-						<div class="counter-title">Daily Listings</div>
+						<div class="counter-title">Ежедневные списки</div>
 					</div>
 				</div>
 
@@ -133,7 +133,7 @@
 							<span class="count-text" data-speed="2000" data-stop="250">0
 							</span>
 						</div>
-						<div class="counter-title">Expert Agents</div>
+						<div class="counter-title">Агенты эксперты</div>
 					</div>
 				</div>
 
@@ -145,7 +145,7 @@
 							<span class="count-text" data-speed="3000" data-stop="200">0
 							</span>
 						</div>
-						<div class="counter-title">Won Awards</div>
+						<div class="counter-title">Выигранные награды</div>
 					</div>
 				</div>
 			</div>
@@ -158,8 +158,8 @@
 <section class="services-section">
 	<div class="auto-container">
 		<div class="sec-title">
-			<span class="title">we offer the best real estate</span>
-			<h2>Property Services</h2>
+			<span class="title">мы предлагаем лучшую недвижимость</span>
+			<h2>Услуги по недвижимости</h2>
 		</div>
 
 		<div class="row">
@@ -169,13 +169,13 @@
 					<div class="icon-box">
 						<span class="icon flaticon-buildings"></span>
 					</div>
-					<h4><a href="property-detail.html">Houses</a></h4>
+					<h4><a href="{{ route('project') }}">Дома</a></h4>
 					<div class="text">
 						Nonec pede justo fringilla vel aliquet nec vulputate eget arcu
 						in enim justo rhoncus ut imperdiet venenatis vitae justo.
 					</div>
 					<div class="link-box">
-						<a href="property-detail.html">Read More</a>
+						<a href="{{ route('project') }}">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -186,13 +186,13 @@
 					<div class="icon-box">
 						<span class="icon flaticon-apartment-1"></span>
 					</div>
-					<h4><a href="property-detail.html">apartments</a></h4>
+					<h4><a href="{{ route('project') }}">апартаменты</a></h4>
 					<div class="text">
 						Nonec pede justo fringilla vel aliquet nec vulputate eget arcu
 						in enim justo rhoncus ut imperdiet venenatis vitae justo.
 					</div>
 					<div class="link-box">
-						<a href="property-detail.html">Read More</a>
+						<a href="{{ route('project') }}">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -203,13 +203,13 @@
 					<div class="icon-box">
 						<span class="icon flaticon-urban"></span>
 					</div>
-					<h4><a href="property-detail.html">Commercial</a></h4>
+					<h4><a href="{{ route('project') }}">Коммерческая</a></h4>
 					<div class="text">
 						Nonec pede justo fringilla vel aliquet nec vulputate eget arcu
 						in enim justo rhoncus ut imperdiet venenatis vitae justo.
 					</div>
 					<div class="link-box">
-						<a href="property-detail.html">Read More</a>
+						<a href="{{ route('project') }}">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -220,13 +220,13 @@
 					<div class="icon-box">
 						<span class="icon flaticon-house-1"></span>
 					</div>
-					<h4><a href="property-detail.html">Renting & Selling</a></h4>
+					<h4><a href="{{ route('project') }}">Аренда и продажа</a></h4>
 					<div class="text">
 						Nonec pede justo fringilla vel aliquet nec vulputate eget arcu
 						in enim justo rhoncus ut imperdiet venenatis vitae justo.
 					</div>
 					<div class="link-box">
-						<a href="property-detail.html">Read More</a>
+						<a href="{{ route('project') }}">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -237,13 +237,13 @@
 					<div class="icon-box">
 						<span class="icon flaticon-settings-2"></span>
 					</div>
-					<h4><a href="property-detail.html">Management</a></h4>
+					<h4><a href="{{ route('project') }}">Управление</a></h4>
 					<div class="text">
 						Nonec pede justo fringilla vel aliquet nec vulputate eget arcu
 						in enim justo rhoncus ut imperdiet venenatis vitae justo.
 					</div>
 					<div class="link-box">
-						<a href="property-detail.html">Read More</a>
+						<a href="{{ route('project') }}">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -254,13 +254,13 @@
 					<div class="icon-box">
 						<span class="icon flaticon-file-1"></span>
 					</div>
-					<h4><a href="property-detail.html">Property Listing</a></h4>
+					<h4><a href="{{ route('project') }}">Список недвижимости</a></h4>
 					<div class="text">
 						Nonec pede justo fringilla vel aliquet nec vulputate eget arcu
 						in enim justo rhoncus ut imperdiet venenatis vitae justo.
 					</div>
 					<div class="link-box">
-						<a href="property-detail.html">Read More</a>
+						<a href="{{ route('project') }}">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -273,8 +273,8 @@
 <section class="process-section" style="background-image: url(/images/background/pexels-mikhail-nilov-8297487.jpg)">
 	<div class="auto-container">
 		<div class="sec-title light">
-			<span class="title">FIND YOUR HOUSE IN YOUR CITY</span>
-			<h2>WORK PROCESS</h2>
+			<span class="title">НАЙТИ СВОЙ ДОМ В ВАШЕМ ГОРОДЕ</span>
+			<h2>ПРОЦЕСС РАБОТЫ</h2>
 		</div>
 
 		<div class="row">
@@ -284,9 +284,9 @@
 					<div class="icon-box">
 						<span class="la la-user-secret"></span>
 					</div>
-					<h4><a href="about.html">Meet Our Agent</a></h4>
+					<h4><a href="about.html">Познакомьтесь с нашим агентом</a></h4>
 					<div class="text">
-						You Meet our agent and decuse your property Demand
+						Вы встречаетесь с нашим агентом и требуете свою собственность
 					</div>
 				</div>
 			</div>
@@ -297,9 +297,9 @@
 					<div class="icon-box">
 						<span class="la la-building-o"></span>
 					</div>
-					<h4><a href="about.html">Choose Location</a></h4>
+					<h4><a href="about.html">Выберите местоположение</a></h4>
 					<div class="text">
-						You Meet our agent and decuse your property Demand
+						Вы встречаетесь с нашим агентом и требуете свою собственность
 					</div>
 				</div>
 			</div>
@@ -310,9 +310,9 @@
 					<div class="icon-box">
 						<span class="la la-map-marker"></span>
 					</div>
-					<h4><a href="about.html">Select Your Property</a></h4>
+					<h4><a href="about.html">Выберите свою собственность</a></h4>
 					<div class="text">
-						You Meet our agent and decuse your property Demand
+						Вы встречаетесь с нашим агентом и требуете свою собственность
 					</div>
 				</div>
 			</div>
@@ -323,9 +323,9 @@
 					<div class="icon-box">
 						<span class="la la-file-text"></span>
 					</div>
-					<h4><a href="about.html">Confirmation</a></h4>
+					<h4><a href="about.html">Подтверждение</a></h4>
 					<div class="text">
-						You Meet our agent and decuse your property Demand
+						Вы встречаетесь с нашим агентом и требуете свою собственность
 					</div>
 				</div>
 			</div>
@@ -338,8 +338,8 @@
 <section class="why-choose-us">
 	<div class="auto-container">
 		<div class="sec-title">
-			<span class="title">FIND YOUR HOUSE IN YOUR CITY</span>
-			<h2>WHY CHOOSE US</h2>
+			<span class="title">НАЙДИ СВОЙ ДОМ В ВАШЕМ ГОРОДЕ</span>
+			<h2>ПОЧЕМУ ВЫБРАЛИ НАС</h2>
 		</div>
 
 		<div class="row">
@@ -349,10 +349,10 @@
 					<div class="icon-box">
 						<span class="icon flaticon-sketching"></span>
 					</div>
-					<h4><a href="about.html">Architecture Experience</a></h4>
+					<h4><a href="about.html">Архитектурный опыт</a></h4>
 					<div class="text">
-						The heart and soul of what we provide. Our comprehensive
-						architectural services include conceptual and schematic design
+						Сердце и душа того, что мы предоставляем. Наш всеобъемлющий
+						архитектурные услуги включают концептуальный и схематический дизайн
 					</div>
 				</div>
 			</div>
@@ -363,10 +363,10 @@
 					<div class="icon-box">
 						<span class="icon flaticon-worker"></span>
 					</div>
-					<h4><a href="about.html">Refinance Calculator</a></h4>
+					<h4><a href="about.html">Калькулятор рефинансирования</a></h4>
 					<div class="text">
-						The heart and soul of what we provide. Our comprehensive
-						architectural services include conceptual and schematic design
+						Сердце и душа того, что мы предоставляем. Наш всеобъемлющий
+						архитектурные услуги включают концептуальный и схематический дизайн
 					</div>
 				</div>
 			</div>
@@ -379,8 +379,8 @@
 					</div>
 					<h4><a href="about.html">House / Condo Contruction</a></h4>
 					<div class="text">
-						The heart and soul of what we provide. Our comprehensive
-						architectural services include conceptual and schematic design
+						Сердце и душа того, что мы предоставляем. Наш всеобъемлющий
+						архитектурные услуги включают концептуальный и схематический дизайн
 					</div>
 				</div>
 			</div>
@@ -391,10 +391,10 @@
 					<div class="icon-box">
 						<span class="icon flaticon-award"></span>
 					</div>
-					<h4><a href="about.html">Fince Winner</a></h4>
+					<h4><a href="about.html">Финансовый победитель</a></h4>
 					<div class="text">
-						The heart and soul of what we provide. Our comprehensive
-						architectural services include conceptual and schematic design
+						Сердце и душа того, что мы предоставляем. Наш всеобъемлющий
+						архитектурные услуги включают концептуальный и схематический дизайн
 					</div>
 				</div>
 			</div>
@@ -405,10 +405,10 @@
 					<div class="icon-box">
 						<span class="icon flaticon-trophy"></span>
 					</div>
-					<h4><a href="about.html">Best House Saller Winner</a></h4>
+					<h4><a href="about.html">Победитель в номинации «Лучший продавец дома»</a></h4>
 					<div class="text">
-						The heart and soul of what we provide. Our comprehensive
-						architectural services include conceptual and schematic design
+						Сердце и душа того, что мы предоставляем. Наш всеобъемлющий
+						архитектурные услуги включают концептуальный и схематический дизайн
 					</div>
 				</div>
 			</div>
@@ -419,10 +419,10 @@
 					<div class="icon-box">
 						<span class="icon flaticon-medal"></span>
 					</div>
-					<h4><a href="about.html">Best Support Winner</a></h4>
+					<h4><a href="about.html">Победитель в номинации «Лучшая поддержка»</a></h4>
 					<div class="text">
-						The heart and soul of what we provide. Our comprehensive
-						architectural services include conceptual and schematic design
+						Сердце и душа того, что мы предоставляем. Наш всеобъемлющий
+						архитектурные услуги включают концептуальный и схематический дизайн
 					</div>
 				</div>
 			</div>

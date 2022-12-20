@@ -255,9 +255,9 @@
 						<div class="feature-block col-lg-6 col-md-6 col-sm-12">
 							<div class="inner-box">
 								<span class="icon flaticon-house-1"></span>
-								<h4><a href="about.html">Buy Property</a></h4>
+								<h4><a href="/about">Купить недвижимость</a></h4>
 								<div class="text">
-									We have the best properties Sale, Buy, and Rent Dealers.
+									У нас есть лучшие агенты по продаже, покупке и аренде недвижимости.
 								</div>
 							</div>
 						</div>
@@ -266,9 +266,9 @@
 						<div class="feature-block col-lg-6 col-md-6 col-sm-12">
 							<div class="inner-box">
 								<span class="icon flaticon-rent"></span>
-								<h4><a href="about.html">REnt Property</a></h4>
+								<h4><a href="/about">АРЕНДА НЕДВИЖИМОСТИ</a></h4>
 								<div class="text">
-									We have the best properties Sale, Buy, and Rent Dealers.
+									У нас есть лучшие агенты по продаже, покупке и аренде недвижимости.
 								</div>
 							</div>
 						</div>
@@ -277,9 +277,9 @@
 						<div class="feature-block col-lg-6 col-md-6 col-sm-12">
 							<div class="inner-box">
 								<span class="icon flaticon-house-5"></span>
-								<h4><a href="about.html">Real Estate Kit</a></h4>
+								<h4><a href="/about">Комплект недвижимости</a></h4>
 								<div class="text">
-									We have the best properties Sale, Buy, and Rent Dealers.
+									У нас есть лучшие агенты по продаже, покупке и аренде недвижимости.
 								</div>
 							</div>
 						</div>
@@ -288,9 +288,9 @@
 						<div class="feature-block col-lg-6 col-md-6 col-sm-12">
 							<div class="inner-box">
 								<span class="icon flaticon-apartment"></span>
-								<h4><a href="about.html">Sale Property</a></h4>
+								<h4><a href="/about">Продажа недвижимости</a></h4>
 								<div class="text">
-									We have the best properties Sale, Buy, and Rent Dealers.
+									У нас есть лучшие агенты по продаже, покупке и аренде недвижимости.
 								</div>
 							</div>
 						</div>
@@ -317,8 +317,8 @@
 <section class="popular-places-section">
 	<div class="auto-container">
 		<div class="sec-title">
-			<span class="title">FIND YOUR DREAM HOUSE IN YOUR CITY</span>
-			<h2>MOST POPULAR PLACES</h2>
+			<span class="title">НАЙДИТЕ ДОМ СВОЕЙ МЕЧТЫ В ВАШЕМ ГОРОДЕ</span>
+			<h2>САМЫЕ ПОПУЛЯРНЫЕ МЕСТА</h2>
 		</div>
 
 		<div class="masonry-items-container clearfix">
@@ -329,13 +329,13 @@
 						<img src="/images/background/pexels-oleksandr-pidvalnyi-12940603.jpg" alt="" style="height: 295px;" />
 					</figure>
 					<div class="info-box">
-						<span class="category">Apartment</span>
-						<h3 class="place"><a href="properties.html">Алания</a></h3>
+						<span class="category">Квартира</span>
+						<h3 class="place"><a href="{{ route('project') }}">Алания</a></h3>
 						<div class="properties">
-							<a href="properties.html">7 Properties</a>
+							<a href="{{ route('project') }}">7 Характеристик</a>
 						</div>
 						<div class="view-all">
-							<a href="properties.html">View All</a>
+							<a href="{{ route('project') }}">Посмотреть все</a>
 						</div>
 					</div>
 				</div>
@@ -348,13 +348,13 @@
 						<img src="/images/background/pexels-funda-izgi-13134869.jpg" alt="" style="height: 420px;" />
 					</figure>
 					<div class="info-box">
-						<span class="category">House</span>
-						<h3 class="place"><a href="properties.html">Стамбул</a></h3>
+						<span class="category">Дом</span>
+						<h3 class="place"><a href="{{ route('project') }}">Стамбул</a></h3>
 						<div class="properties">
-							<a href="properties.html">9 Properties</a>
+							<a href="{{ route('project') }}">9 Характеристик</a>
 						</div>
 						<div class="view-all">
-							<a href="properties.html">View All</a>
+							<a href="{{ route('project') }}">Посмотреть все</a>
 						</div>
 					</div>
 				</div>
@@ -367,13 +367,13 @@
 						<img src="/images/background/pexels-emrah-ayvali-6198387.jpg" alt="" style="height: 295px;" />
 					</figure>
 					<div class="info-box">
-						<span class="category">Restaurant</span>
-						<h3 class="place"><a href="properties.html">Кемер</a></h3>
+						<span class="category">Ресторан</span>
+						<h3 class="place"><a href="{{ route('project') }}">Кемер</a></h3>
 						<div class="properties">
-							<a href="properties.html">5 Properties</a>
+							<a href="{{ route('project') }}">5 Характеристик</a>
 						</div>
 						<div class="view-all">
-							<a href="properties.html">View All</a>
+							<a href="{{ route('project') }}">Посмотреть все</a>
 						</div>
 					</div>
 				</div>
@@ -386,13 +386,13 @@
 						<img src="/images/background/pexels-serkan-pulat-10534187.jpg" alt="" style="height: 170px;" />
 					</figure>
 					<div class="info-box">
-						<span class="category">Farm</span>
-						<h3 class="place"><a href="properties.html">Кипр</a></h3>
+						<span class="category">Котедж</span>
+						<h3 class="place"><a href="{{ route('project') }}">Кипр</a></h3>
 						<div class="properties">
-							<a href="properties.html">12 Properties</a>
+							<a href="{{ route('project') }}">12 Характеристик</a>
 						</div>
 						<div class="view-all">
-							<a href="properties.html">View All</a>
+							<a href="{{ route('project') }}">Посмотреть все</a>
 						</div>
 					</div>
 				</div>
@@ -405,13 +405,13 @@
 						<img src="/images/background/pexels-azra-tuba-demir-10463590.jpg" alt="" style="height: 170px;" />
 					</figure>
 					<div class="info-box">
-						<span class="category">Villa</span>
-						<h3 class="place"><a href="properties.html">Белек</a></h3>
+						<span class="category">Вилла</span>
+						<h3 class="place"><a href="{{ route('project') }}">Белек</a></h3>
 						<div class="properties">
-							<a href="properties.html">6 Properties</a>
+							<a href="{{ route('project') }}">6 Характеристики</a>
 						</div>
 						<div class="view-all">
-							<a href="properties.html">View All</a>
+							<a href="{{ route('project') }}">Посмотреть все</a>
 						</div>
 					</div>
 				</div>
@@ -428,15 +428,15 @@
 			<!-- Title Column -->
 			<div class="title-column">
 				<div class="sec-title light">
-					<span class="title">IN FEW SECONDS WITH WILLES</span>
-					<h2>BUY OR SALE YOUR HOUSE</h2>
+					<span class="title">ЗА НЕСКОЛЬКО СЕКУНД С ВИЛЛОЙ</span>
+					<h2>КУПИТЬ ИЛИ ПРОДАТЬ СВОЙ ДОМ</h2>
 				</div>
 			</div>
 
 			<!-- Button Column -->
 			<div class="button-column">
-				<a href="admin/submit-property.html" class="theme-btn btn-style-three">SUBMIT PROPERTY</a>
-				<a href="#" class="theme-btn btn-style-one">BROWSE PROPERTY</a>
+				<a href="admin/submit-property.html" class="theme-btn btn-style-three">ОТПРАВИТЬ СОБСТВЕННОСТЬ</a>
+				<a href="{{ route('project') }}" class="theme-btn btn-style-one">ПОСМОТРЕТЬ НЕДВИЖИМОСТЬ</a>
 			</div>
 		</div>
 	</div>

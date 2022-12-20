@@ -7,8 +7,8 @@
 				<div class="mixitup-gallery">
 					<div class="upper-box clearfix">
 						<div class="sec-title">
-							<span class="title">FIND YOUR HOUSE IN YOUR CITY</span>
-							<h2>PROPERTY TYPES</h2>
+							<span class="title">НАЙТИ СВОЙ ДОМ В ВАШЕМ ГОРОДЕ</span>
+							<h2>ТИПЫ НЕДВИЖИМОСТИ</h2>
 						</div>
 
 						<!--Filter-->
@@ -62,7 +62,7 @@
 								</div>
 								<div class="lower-content">
 									<ul class="tags">
-										<li v-for="real in project.reals"><a href="property-detail.html">{{ real.title }}</a>,</li>
+										<li v-for="real in project.reals"><a href="#">{{ real.title }}</a>,</li>
 									</ul>
 									<h3>
 										<a :href="('/project/' + project.slug)">{{ project.title }}</a>
@@ -92,7 +92,7 @@
 				<div class="styled-pagination">
 					<ul class="clearfix">
 						<li class="prev">
-							<a href="#"><span>Prev</span></a>
+							<a href="#"><span>Пред</span></a>
 						</li>
 						<li class="active">
 							<a href="#"><span>1</span></a>
@@ -107,7 +107,7 @@
 							<a href="#"><span>4</span></a>
 						</li>
 						<li class="next">
-							<a href="#"><span>Next</span></a>
+							<a href="#"><span>След</span></a>
 						</li>
 					</ul>
 				</div>

@@ -3,18 +3,12 @@
 		<div class="sidebar-page-container">
         <div class="auto-container">
           <div class="upper-info-box">
-            <div class="row">
+            <div class="row align-items-center">
               <div class="about-property col-lg-8 col-md-12 col-sm-12">
                 <h2>{{ project.title }}</h2>
                 <div class="location">
                   <i class="la la-map-marker"></i> {{ project.address }}
                 </div>
-                <ul class="property-info clearfix">
-                  <li><i class="flaticon-dimension"></i> 286м2</li>
-                  <li><i class="flaticon-bed"></i> Комнаты: 4</li>
-                  <li><i class="flaticon-car"></i> Паркинг: 2</li>
-                  <li><i class="flaticon-bathtub"></i> Санузел: 3</li>
-                </ul>
               </div>
               <div class="price-column col-lg-4 col-md-12 col-sm-12">
                 <span class="title">Квартиры от</span>
@@ -111,8 +105,10 @@
                               <h4>{{ plan.rooms }}</h4>
                             </div>
                             <div class="float-left">
-                              <p class="plan-item__room">от {{ plan.price }} т</p>
-                              <p class="plan-item__room">от {{ plan.area }} км2</p>
+															<div class="d-flex justify-content-between">
+																<p class="plan-item__room">от {{ plan.price }} т</p>
+                              	<p class="plan-item__room">от {{ plan.area }} км2</p>
+															</div>
                               <p>
                                 {{ plan.description }}
                               </p>
@@ -130,75 +126,23 @@
                     <!--Tab -->
                     <div class="tab" id="first-floor">
                       <div class="image-box">
-                        <div class="pan-item">
+                        <div v-for="plan in project.plans" class="pan-item">
                           <img
-                            src="/images/resource/house-map.jpg"
+                            :src="plan.img"
                             alt=""
                             class="plan-item__img"
                           />
                           <div class="plan-item__desc">
                             <div class="plan-item__title-block">
-                              <h4>Заголовок</h4>
-                              <p>2-x комнатная</p>
+                              <h4>{{ plan.rooms }}</h4>
                             </div>
                             <div class="float-left">
-                              <p class="plan-item__room">от 800 000 т</p>
+                              <p class="plan-item__room">от {{ plan.price }} т</p>
+                              <p class="plan-item__room">от {{ plan.area }} км2</p>
                               <p>
-                                Просто текст <br />
-                                Просто текст <br />
-                                Просто текст
+                                {{ plan.description }}
                               </p>
-                              <a href="#" class="theme-btn btn-style-one"
-                                >Получить консультацию</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="pan-item">
-                          <img
-                            src="/images/resource/house-map.jpg"
-                            alt=""
-                            class="plan-item__img"
-                          />
-                          <div class="plan-item__desc">
-                            <div class="plan-item__title-block">
-                              <h4>Заголовок</h4>
-                              <p>2-x комнатная</p>
-                            </div>
-                            <div class="float-left">
-                              <p class="plan-item__room">от 800 000 т</p>
-                              <p>
-                                Просто текст <br />
-                                Просто текст <br />
-                                Просто текст
-                              </p>
-                              <a href="#" class="theme-btn btn-style-one"
-                                >Получить консультацию</a
-                              >
-                            </div>
-                          </div>
-                        </div>
-                        <div class="pan-item">
-                          <img
-                            src="/images/resource/house-map.jpg"
-                            alt=""
-                            class="plan-item__img"
-                          />
-                          <div class="plan-item__desc">
-                            <div class="plan-item__title-block">
-                              <h4>Заголовок</h4>
-                              <p>2-x комнатная</p>
-                            </div>
-                            <div class="float-left">
-                              <p class="plan-item__room">от 800 000 т</p>
-                              <p>
-                                Просто текст <br />
-                                Просто текст <br />
-                                Просто текст
-                              </p>
-                              <a href="#" class="theme-btn btn-style-one"
-                                >Получить консультацию</a
-                              >
+                              <a href="#" class="theme-btn btn-style-one">Получить консультацию</a>
                             </div>
                           </div>
                         </div>
@@ -215,7 +159,7 @@
                     <div class="tab" id="second-floor">
                       <div class="image-box">
 
-                        <div v-for="plan in project.plans" class="pan-item">
+												<div v-for="plan in project.plans" class="pan-item">
                           <img
                             :src="plan.img"
                             alt=""
@@ -223,17 +167,15 @@
                           />
                           <div class="plan-item__desc">
                             <div class="plan-item__title-block">
-                              <h4>Заголовок</h4>
-                              <p>2-x комнатная</p>
+                              <h4>{{ plan.rooms }}</h4>
                             </div>
                             <div class="float-left">
                               <p class="plan-item__room">от {{ plan.price }} т</p>
+                              <p class="plan-item__room">от {{ plan.area }} км2</p>
                               <p>
                                 {{ plan.description }}
                               </p>
-                              <a href="#" class="theme-btn btn-style-one"
-                                >Получить консультацию</a
-                              >
+                              <a href="#" class="theme-btn btn-style-one">Получить консультацию</a>
                             </div>
                           </div>
                         </div>

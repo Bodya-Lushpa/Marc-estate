@@ -32,7 +32,7 @@
 		<div class="styled-pagination">
 			<ul class="clearfix">
 				<li class="prev">
-					<a href="#"><span>Prev</span></a>
+					<a href="#"><span>Пред</span></a>
 				</li>
 				<li>
 					<a href="#"><span>1</span></a>
@@ -47,7 +47,7 @@
 					<a href="#"><span>4</span></a>
 				</li>
 				<li class="next">
-					<a href="#"><span>Next</span></a>
+					<a href="#"><span>След</span></a>
 				</li>
 			</ul>
 		</div>

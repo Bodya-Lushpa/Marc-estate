@@ -4436,11 +4436,11 @@ a.ui-button:active, .ui-button:active,
 
 .upper-info-box{
 	position: relative;
+	margin-bottom: 35px;
 }
 
 .upper-info-box .about-property{
 	position: relative;
-	margin-bottom: 35px;
 }
 
 .upper-info-box h2{
@@ -4460,7 +4460,6 @@ a.ui-button:active, .ui-button:active,
 	line-height: 24px;
 	color: #777777;
 	font-weight: 400;
-	margin-bottom: 18px;
 }
 
 .upper-info-box .location i{
@@ -4497,7 +4496,6 @@ a.ui-button:active, .ui-button:active,
 .upper-info-box .price-column{
 	position: relative;
 	text-align: right;
-	padding-top: 35px;
 }
 
 .upper-info-box .price-column .title{
@@ -7164,7 +7162,7 @@ a.ui-button:active, .ui-button:active,
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	padding: 80px 0 65px;
+	padding: 55px 0 15px;
 }
 
 .call-to-action:before{

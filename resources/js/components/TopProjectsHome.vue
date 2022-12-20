@@ -28,28 +28,20 @@
 									</ul>
 									<ul class="info clearfix">
 										<li>
-											<a href="properties.html"><i class="la la-calendar-minus-o"></i>{{ project.created_at | moment }}</a>
+											<a><i class="la la-calendar-minus-o"></i>{{ project.created_at | moment }}</a>
 										</li>
 									</ul>
 								</div>
 								<div class="lower-content">
 									<ul class="tags">
-										<li><a href="property-detail.html">Apartment</a>,</li>
-										<li><a href="property-detail.html">Bar</a>,</li>
-										<li><a href="property-detail.html">House</a>,</li>
+										<li v-for="real in project.reals"><a href="#">{{ real.title }}</a>,</li>
 									</ul>
 									<h3>
-										<a href="property-detail.html">{{ project.title }}</a>
+										<a :href="('/project/' + project.slug)">{{ project.title }}</a>
 									</h3>
 									<div class="lucation">
 										<i class="la la-map-marker"></i> {{ project.address }}
 									</div>
-									<ul class="property-info clearfix">
-										<li><i class="flaticon-dimension"></i> 356 Sq-Ft</li>
-										<li><i class="flaticon-bed"></i> 4 Bedrooms</li>
-										<li><i class="flaticon-car"></i> 2 Garage</li>
-										<li><i class="flaticon-bathtub"></i> 3 Bathroom</li>
-									</ul>
 									<div class="property-price clearfix">
 										<div class="read-more">
 											<a :href="('/project/' + project.slug)" class="theme-btn">Подробнее</a>
