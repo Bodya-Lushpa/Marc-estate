@@ -89,9 +89,6 @@
 import axios from 'axios';
 import moment from 'moment';
 import $ from "jquery";
-import "/js/jquery.js";
-import "/js/popper.min.js";
-import "/js/bootstrap.min.js";
 import "/plugins/revolution/js/jquery.themepunch.revolution.min.js";
 import "/plugins/revolution/js/jquery.themepunch.tools.min.js";
 import "/plugins/revolution/js/extensions/revolution.extension.actions.min.js";

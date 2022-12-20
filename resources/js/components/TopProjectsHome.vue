@@ -23,7 +23,7 @@
 									<span class="featured">Популярное</span>
 									<ul class="option-box">
 										<li>
-											<a :href="project.images[0].img" class="lightbox-image" data-fancybox="property"><i class="la la-camera"></i></a>
+											<a :href="project.images[0].img" class="lightbox-image" :data-fancybox="'property' + project.id"><i class="la la-camera"></i></a>
 										</li>
 									</ul>
 									<ul class="info clearfix">
