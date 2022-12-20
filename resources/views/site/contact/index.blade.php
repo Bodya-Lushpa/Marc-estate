@@ -52,7 +52,7 @@
 					<div class="contact-info-box">
 						<div class="inner-box">
 							<span class="icon la la-phone"></span>
-							<h4>Телефоон</h4>
+							<h4>Телефон</h4>
 							<ul>
 								<li>+ 7 777 552 99 99</li>
 							</ul>
@@ -63,7 +63,7 @@
 					<div class="contact-info-box">
 						<div class="inner-box">
 							<span class="icon la la-envelope-o"></span>
-							<h4>Emails</h4>
+							<h4>E-mail</h4>
 							<ul>
 								<li>info@markestate.kz</li>
 							</ul>
@@ -74,10 +74,10 @@
 					<div class="contact-info-box">
 						<div class="inner-box">
 							<span class="icon la la-globe"></span>
-							<h4>Адресс</h4>
+							<h4>Адрес</h4>
 							<ul>
 								<li>
-									Казахстан, пр, Сейфулина 597а, Турция, Стамбул, ул Абая 15.
+									Алматы, Сейфуллина 597а
 								</li>
 							</ul>
 						</div>

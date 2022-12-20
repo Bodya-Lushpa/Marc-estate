@@ -413,7 +413,7 @@
 	.upper-info-box .price-column{
 		text-align: left;
 		padding-top: 0;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 	}
 
 	.about-us .info-column .inner-column{
@@ -812,7 +812,19 @@
 	}
 	
 	.sidebar-page-container{
-		padding: 70px 0 20px;
+		padding: 110px 0 20px;
+	}
+
+	.upper-info-box .about-property{
+		margin-bottom: 25px;
+	}
+
+	.upper-info-box .price-column .price, .upper-info-box .price-column .title{
+		display: inline-block;
+	}
+
+	.upper-info-box{
+		margin-bottom: 0;
 	}
 
 	.agents-section.alternate,

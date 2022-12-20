@@ -215,7 +215,7 @@
 			</div>
 
 			<!-- Service Block -->
-			<div class="service-block col-lg-4 col-md-6 col-sm-12">
+			<div class="service-block d-none col-lg-4 col-md-6 col-sm-12">
 				<div class="inner-box">
 					<div class="icon-box">
 						<span class="icon flaticon-house-1"></span>
@@ -232,7 +232,7 @@
 			</div>
 
 			<!-- Service Block -->
-			<div class="service-block col-lg-4 col-md-6 col-sm-12">
+			<div class="service-block d-none col-lg-4 col-md-6 col-sm-12">
 				<div class="inner-box">
 					<div class="icon-box">
 						<span class="icon flaticon-settings-2"></span>
@@ -249,7 +249,7 @@
 			</div>
 
 			<!-- Service Block -->
-			<div class="service-block col-lg-4 col-md-6 col-sm-12">
+			<div class="service-block d-none col-lg-4 col-md-6 col-sm-12">
 				<div class="inner-box">
 					<div class="icon-box">
 						<span class="icon flaticon-file-1"></span>
@@ -375,20 +375,6 @@
 			<div class="feature-block-two col-lg-4 col-md-6 col-sm-12">
 				<div class="inner-box">
 					<div class="icon-box">
-						<span class="icon flaticon-mixer-with-wheels"></span>
-					</div>
-					<h4><a href="about.html">House / Condo Contruction</a></h4>
-					<div class="text">
-						Сердце и душа того, что мы предоставляем. Наш всеобъемлющий
-						архитектурные услуги включают концептуальный и схематический дизайн
-					</div>
-				</div>
-			</div>
-
-			<!-- Features BLock -->
-			<div class="feature-block-two col-lg-4 col-md-6 col-sm-12">
-				<div class="inner-box">
-					<div class="icon-box">
 						<span class="icon flaticon-award"></span>
 					</div>
 					<h4><a href="about.html">Финансовый победитель</a></h4>
@@ -399,33 +385,6 @@
 				</div>
 			</div>
 
-			<!-- Features BLock -->
-			<div class="feature-block-two col-lg-4 col-md-6 col-sm-12">
-				<div class="inner-box">
-					<div class="icon-box">
-						<span class="icon flaticon-trophy"></span>
-					</div>
-					<h4><a href="about.html">Победитель в номинации «Лучший продавец дома»</a></h4>
-					<div class="text">
-						Сердце и душа того, что мы предоставляем. Наш всеобъемлющий
-						архитектурные услуги включают концептуальный и схематический дизайн
-					</div>
-				</div>
-			</div>
-
-			<!-- Features BLock -->
-			<div class="feature-block-two col-lg-4 col-md-6 col-sm-12">
-				<div class="inner-box">
-					<div class="icon-box">
-						<span class="icon flaticon-medal"></span>
-					</div>
-					<h4><a href="about.html">Победитель в номинации «Лучшая поддержка»</a></h4>
-					<div class="text">
-						Сердце и душа того, что мы предоставляем. Наш всеобъемлющий
-						архитектурные услуги включают концептуальный и схематический дизайн
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 </section>

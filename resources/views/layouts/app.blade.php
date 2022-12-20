@@ -29,8 +29,6 @@
 	<link href="/css/responsive.css" rel="stylesheet" />
 	<!--Color Switcher Mockup-->
 	<link href="/css/color-switcher-design.css" rel="stylesheet" />
-	<!--Color Themes-->
-	<link id="theme-color-file" href="/css/color-themes/default-theme.css" rel="stylesheet" />
 
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 	<link rel="icon" href="/images/favicon.png" type="image/x-icon" />
