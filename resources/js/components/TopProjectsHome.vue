@@ -10,9 +10,10 @@
 
 				<div class="row">
 	<!-- Property Block -->
-	<div
+					<div
 						v-for="(project, index) in projects"
-						v-if="project.is_top"
+						:key="index"
+						v-if="project.is_top && index<6"
 						class="property-block all mix restaurent apprtment form col-xl-4 col-lg-6 col-md-6 col-sm-12">
 							<div class="inner-box">
 								<div class="image-box">
@@ -71,7 +72,7 @@ export default {
 	mounted() {
 		axios.get('/api/projects')
 		.then(response => {
-			this.projects = response.data;
+			this.projects = response.data.filter(project => project.is_top == true);
 		});
   },
 	filters: {
