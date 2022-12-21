@@ -15,7 +15,7 @@ class ProjectController extends Controller
 	 */
 	public function index()
 	{
-		return Project::with('images')->with('reals')->with('country')->with('city')->orderBy('created_at', 'DESC')->get();
+		return Project::with('images')->with('reals')->with('country')->with('city')->with('plans')->with('status')->orderBy('created_at', 'DESC')->get();
 	}
 
 	/**

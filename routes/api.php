@@ -1,9 +1,16 @@
 <?php
 
+use App\Http\Controllers\Api\CityController;
+use App\Http\Controllers\Api\CountryController;
 use App\Http\Controllers\Api\TypeRealController;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\PartnerController;
+use App\Http\Controllers\Api\PlanController;
+use App\Http\Controllers\Api\PlanRoomController;
 use App\Http\Controllers\Api\ProjectController;
+use App\Http\Controllers\Api\StatusProjectController;
+use App\Models\Country;
+use App\Models\StatusProject;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -27,4 +34,9 @@ Route::apiResources([
 	'projects' => ProjectController::class,
 	'partner' => PartnerController::class,
 	'type-real' => TypeRealController::class,
+	'counties' => CountryController::class,
+	'cities' => CityController::class,
+	'plan-room' => PlanRoomController::class,
+	'status-projects' => StatusProjectController::class,
+	'plans' => PlanController::class,
 ]);

@@ -5086,6 +5086,10 @@ a.ui-button:active, .ui-button:active,
 	transition: all 300ms ease;
 }
 
+.property-filter-section .mixitup-gallery .filters li a{
+	color: #2b2b2b;
+}
+
 .property-filter-section .mixitup-gallery .filters li:first-child{
 	margin-left: 0;
 }
@@ -5094,8 +5098,11 @@ a.ui-button:active, .ui-button:active,
 	display: none;
 }
 
-.property-filter-section .mixitup-gallery .filters li.mixitup-control-active,
+.property-filter-section .mixitup-gallery .filters li.active,
 .property-filter-section .mixitup-gallery .filters li:hover{
+	color: #126977;
+}
+.property-filter-section .mixitup-gallery .filters li.active a{
 	color: #126977;
 }
 

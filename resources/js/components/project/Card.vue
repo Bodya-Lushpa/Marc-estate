@@ -102,7 +102,7 @@
                           />
                           <div class="plan-item__desc">
                             <div class="plan-item__title-block">
-                              <h4>{{ plan.rooms }}</h4>
+                              <h4>{{ rooms(plan.id) }}</h4>
                             </div>
                             <div class="float-left">
 															<div class="d-flex justify-content-between">
@@ -320,6 +320,7 @@ export default {
 	data(){
 		return {
 			project: [],
+			plans: [],
 		}
 	},
 	updated (){
@@ -410,7 +411,17 @@ export default {
 		.then(response => {
 			this.project = response.data;
 		});
+		axios.get('/api/plans/')
+		.then(response => {
+			this.plans = response.data;
+		});
 	},
+	methods: {
+		rooms(room_id) {
+			var plan = this.plans.filter(plan => plan.id == room_id);
+			return plan[0].plan_room.title;
+		}
+	}
 }
 
 </script>

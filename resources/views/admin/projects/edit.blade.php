@@ -107,7 +107,7 @@
 									<div class="form-group">
 										<label>Страна</label>
 										<select class="form-control select2" name="country_id" style="width: 100%;">
-											<option value="{{ $project->country_id - 1 }}" selected>{{ $countryActive['title'] }}</option>
+											<option value="{{ $project->country_id }}" selected>{{ $countryActive['title'] }}</option>
 											@foreach ($counties as $country)
 											<option value="{{ $country->id }}">{{ $country->title }}</option>
 											@endforeach
@@ -118,7 +118,7 @@
 									<div class="form-group">
 										<label>Город</label>
 										<select class="form-control select2" name="city_id" style="width: 100%;">
-											<option value="{{ $project->city_id - 1 }}" selected>{{ $cityActive['title'] }}</option>
+											<option value="{{ $project->city_id }}" selected>{{ $cityActive['title'] }}</option>
 											@foreach ($cities as $city)
 											<option value="{{ $city->id }}">{{ $city->title }}</option>
 											@endforeach

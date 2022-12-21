@@ -11,8 +11,8 @@ class Plan extends Model
 
 	protected $fillable = ['img', 'rooms', 'description', 'price', 'area'];
 
-	public function room()
+	public function planRoom()
 	{
-		return $this->belongsTo('App\Models\PlanRoom');
+		return $this->belongsTo('App\Models\PlanRoom', 'rooms', 'id');
 	}
 }

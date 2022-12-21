@@ -74,13 +74,7 @@ class ProjectController extends Controller
 		$request->is_slider ? $project->is_slider = 1 : $project->is_slider = 0;
 		$request->is_top ? $project->is_top = 1 : $project->is_top = 0;
 		$project->save();
-		$projectImgs = [];
-		if ($request->img) {
-			foreach ($request->img as $key => $value) {
-				array_push($projectImgs, new ProjectImg(['img' => $value]));
-			}
-			$project->images()->saveMany($projectImgs);
-		}
+
 		$important_information = [];
 		if ($request->important_information) {
 			foreach ($request->important_information as $key => $value) {
@@ -101,6 +95,15 @@ class ProjectController extends Controller
 				array_push($type_reals, new ProjectTypereal(['real_id' => $value]));
 			}
 			$project->projectTypereal()->saveMany($type_reals);
+		}
+		$projectImgs = [];
+		if ($request->img) {
+			foreach ($request->img as $key => $value) {
+				array_push($projectImgs, new ProjectImg(['img' => $value]));
+			}
+			$project->images()->saveMany($projectImgs);
+		} else {
+			$project->images()->saveMany([new ProjectImg(['img' => '/images/background/pexels-azra-tuba-demir-10463590.jpg'])]);
 		}
 		$plans = [];
 		if ($request->plan) {
@@ -192,18 +195,12 @@ class ProjectController extends Controller
 		$project->coordinates2 = $request->coordinates2;
 		$project->description = $request->description;
 		$project->status_id = $request->status_id;
+		$project->country_id = $request->country_id;
+		$project->city_id = $request->city_id;
 		$project->images_for_slider = $request->images_for_slider;
 		$request->is_slider ? $project->is_slider = 1 : $project->is_slider = 0;
 		$request->is_top ? $project->is_top = 1 : $project->is_top = 0;
 		$project->save();
-
-		$projectImgs = [];
-		if ($request->img) {
-			foreach ($request->img as $key => $value) {
-				array_push($projectImgs, new ProjectImg(['img' => $value]));
-			}
-			$project->images()->saveMany($projectImgs);
-		}
 
 		$important_information = [];
 		if ($request->important_information) {
@@ -225,6 +222,15 @@ class ProjectController extends Controller
 				array_push($type_reals, new ProjectTypereal(['real_id' => $value]));
 			}
 			$project->projectTypereal()->saveMany($type_reals);
+		}
+		$projectImgs = [];
+		if ($request->img) {
+			foreach ($request->img as $key => $value) {
+				array_push($projectImgs, new ProjectImg(['img' => $value]));
+			}
+			$project->images()->saveMany($projectImgs);
+		} else {
+			$project->images()->saveMany([new ProjectImg(['img' => '/images/background/pexels-azra-tuba-demir-10463590.jpg'])]);
 		}
 		$plans = [];
 		if ($request->plan) {
