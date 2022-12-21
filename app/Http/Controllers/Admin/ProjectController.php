@@ -192,7 +192,11 @@ class ProjectController extends Controller
 		$project->coordinates2 = $request->coordinates2;
 		$project->description = $request->description;
 		$project->status_id = $request->status_id;
+		$project->images_for_slider = $request->images_for_slider;
+		$request->is_slider ? $project->is_slider = 1 : $project->is_slider = 0;
+		$request->is_top ? $project->is_top = 1 : $project->is_top = 0;
 		$project->save();
+
 		$projectImgs = [];
 		if ($request->img) {
 			foreach ($request->img as $key => $value) {

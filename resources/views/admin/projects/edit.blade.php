@@ -152,7 +152,9 @@
 									<div class="form-group">
 										<label for="exampleInputEmail1">Изображение для слайдера</label>
 										<div class="imagesForSlider_img1 d-flex"></div>
-										<div class="uploadImgClose w-25 mr-2"><img src="{{ $project->images_for_slider }}" alt="" class="uploadImg d-block mb-4 mr-2 w-100"><input type="text" class="d-none" name="img" value="{{ $project->images_for_slider }}"></div>
+										@if($project->images_for_slider)
+										<div class="uploadImgClose w-25 mr-2"><img src="{{ $project->images_for_slider }}" alt="" class="uploadImg d-block mb-4 mr-2 w-100"><input type="text" class="d-none" name="images_for_slider" value="{{ $project->images_for_slider }}"></div>
+										@endif
 										<div class="d-flex">
 											<a href="" class="popup_selector  btn btn-block btn-info w-25" data-inputid="imagesForSlider_img1">Выбрать</a>
 										</div>
