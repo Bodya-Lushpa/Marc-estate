@@ -12,7 +12,7 @@
               </div>
               <div class="price-column col-lg-4 col-md-12 col-sm-12">
                 <span class="title">Квартиры от</span>
-                <div class="price">$ {{ project.price }}</div>
+                <div class="price">$ {{ project.price.toLocaleString('ru') }}</div>
                 <span class="status">{{ project.status.title }}</span>
               </div>
             </div>

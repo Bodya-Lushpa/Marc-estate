@@ -16,7 +16,7 @@
 											<h3>{{ project.title }}</h3>
 											<p>{{ project.address }}</p>
 										</div>
-										<div class="price">${{ project.price }}</div>
+										<div class="price">${{ project.price.toLocaleString('ru') }}</div>
 										<div class="btn-box">
 											<a :href="'project/' + project.slug" class="theme-btn btn-style-one">ПОДРОБНЕЕ</a>
 										</div>

@@ -19,7 +19,7 @@
                       <h3>
                         <a :href="('/project/' + project.slug)">{{ project.title }}</a>
                       </h3>
-                      <div class="price">$ {{ project.price }}</div>
+                      <div class="price">$ {{ project.price.toLocaleString('ru') }}</div>
                     </article>
 
                   </div>

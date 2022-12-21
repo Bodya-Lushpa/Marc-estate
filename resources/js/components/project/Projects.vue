@@ -80,7 +80,7 @@
 										<div class="read-more">
 											<a :href="('/project/' + project.slug)" class="theme-btn">Подробнее</a>
 										</div>
-										<div class="price">$ {{ project.price }}</div>
+										<div class="price">$ {{ project.price.toLocaleString('ru') }}</div>
 									</div>
 								</div>
 							</div>
