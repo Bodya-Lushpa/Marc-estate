@@ -49,6 +49,16 @@
 										<input type="text" class="form-control" name="title" value="{{ $city['title'] }}" placeholder="Введите название статуса" required>
 									</div>
 								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Страна</label>
+										<select class="form-control select2" name="country_id" style="width: 100%;" required>
+											@foreach ($countries as $country)
+											<option value="{{ $country->id }}" @if($country->id == $city->country_id) selected @endif>{{ $country->title }}</option>
+											@endforeach
+										</select>
+									</div>
+								</div>
 
 							</div>
 

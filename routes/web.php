@@ -29,6 +29,7 @@ Route::get('/contact', function () {
 Route::get('/project', function () {
 	return view('site.project.index');
 })->name('project');
+Route::post('/leadSubmit', [App\Http\Controllers\Site\LeadController::class, 'store']);
 
 Route::get('/news/{slug}', function ($slug) {
 	return  view('site.news.card', [

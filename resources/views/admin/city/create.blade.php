@@ -48,6 +48,16 @@
 										<input type="text" class="form-control" name="title" placeholder="Введите название города" required>
 									</div>
 								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Страна</label>
+										<select class="form-control select2" name="country_id" style="width: 100%;" required>
+											@foreach ($countries as $country)
+											<option value="{{ $country->id }}">{{ $country->title }}</option>
+											@endforeach
+										</select>
+									</div>
+								</div>
 							</div>
 
 						</div>

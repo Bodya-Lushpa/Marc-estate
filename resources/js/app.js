@@ -19,6 +19,9 @@ Vue.component("recently-added", () => import("./components/RecentlyAdded"));
 Vue.component("main-slider", () => import("./components/MainSlider"));
 Vue.component("search-projects-filter", () => import("./components/SearchProjectsFilter"));
 Vue.component("type-real", () => import("./components/TypeReal"));
+Vue.component("form-widget", () => import("./components/FormConsultationWidget"));
+Vue.component("form-full", () => import("./components/FormConsultationFull"));
+Vue.component("form-contact", () => import("./components/FormContact"));
 
 const app = new Vue({
 	el: '#app'

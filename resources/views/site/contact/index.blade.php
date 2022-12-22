@@ -16,32 +16,7 @@
 						</div>
 					</div>
 
-					<!-- Contact Form -->
-					<div class="contact-form">
-						<form method="post" action="sendemail.php" id="contact-form">
-							<div class="form-group">
-								<input type="text" name="username" placeholder="Имя" required />
-							</div>
-
-							<div class="form-group">
-								<input type="email" name="email" placeholder="Email" required />
-							</div>
-
-							<div class="form-group">
-								<input type="text" name="subject" placeholder="Тема" required />
-							</div>
-
-							<div class="form-group">
-								<textarea name="message" placeholder="Сообщение"></textarea>
-							</div>
-
-							<div class="form-group">
-								<button class="theme-btn btn-style-one" type="submit" name="submit-form">
-									Отправить
-								</button>
-							</div>
-						</form>
-					</div>
+					<form-contact csrf="{{ csrf_token() }}"></form-contact>
 				</div>
 			</div>
 

@@ -7977,6 +7977,22 @@ a.ui-button:active, .ui-button:active,
 	color: #ffffff;
 }
 
+.iti.iti--allow-dropdown.iti--separate-dial-code{
+	width: 100%;
+}
+
+.modal-backdrop.fade.show{
+	z-index: -9999;
+	display: none!important;
+}
+.modal{
+	z-index: 9999;
+	background: rgba(0,0,0,0.5);
+}
+.modal-header{
+	border: 0;
+}
+
 .process-block .text{
 	position: relative;
 	display: block;

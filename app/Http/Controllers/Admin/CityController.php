@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\City;
+use App\Models\Country;
 use Illuminate\Http\Request;
 
 class CityController extends Controller
@@ -28,7 +29,10 @@ class CityController extends Controller
 	 */
 	public function create()
 	{
-		return view('admin.city.create');
+		$countries = Country::orderBy('created_at', 'desc')->get();
+		return view('admin.city.create', [
+			'countries' => $countries
+		]);
 	}
 
 	/**
@@ -41,6 +45,7 @@ class CityController extends Controller
 	{
 		$city = new City();
 		$city->title = $request->title;
+		$city->country_id = $request->country_id;
 		$city->save();
 
 		return redirect('admin/city')->withSuccess('Город успешно добавлен');
@@ -65,8 +70,10 @@ class CityController extends Controller
 	 */
 	public function edit(City $city)
 	{
+		$countries = Country::orderBy('created_at', 'desc')->get();
 		return view('admin.city.edit', [
-			'city' => $city
+			'city' => $city,
+			'countries' => $countries,
 		]);
 	}
 
@@ -80,6 +87,7 @@ class CityController extends Controller
 	public function update(Request $request, City $city)
 	{
 		$city->title = $request->title;
+		$city->country_id = $request->country_id;
 		$city->save();
 
 		return redirect('admin/city')->withSuccess('Город успешно обновлен');

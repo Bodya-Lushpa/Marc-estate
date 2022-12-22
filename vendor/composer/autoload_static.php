@@ -644,6 +644,7 @@ class ComposerStaticInit029140271f8c54e4773ca9bae66de49c
         'App\\Models\\Country' => __DIR__ . '/../..' . '/app/Models/Country.php',
         'App\\Models\\HomeInformation' => __DIR__ . '/../..' . '/app/Models/HomeInformation.php',
         'App\\Models\\ImportantInformation' => __DIR__ . '/../..' . '/app/Models/ImportantInformation.php',
+        'App\\Models\\Lead' => __DIR__ . '/../..' . '/app/Models/Lead.php',
         'App\\Models\\News' => __DIR__ . '/../..' . '/app/Models/News.php',
         'App\\Models\\Partner' => __DIR__ . '/../..' . '/app/Models/Partner.php',
         'App\\Models\\Plan' => __DIR__ . '/../..' . '/app/Models/Plan.php',
