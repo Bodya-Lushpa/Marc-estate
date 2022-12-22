@@ -206,16 +206,12 @@
 			<div class="info-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
 				<div class="inner-column">
 					<div class="sec-title light">
-						<span class="title">ЛУЧШЕЕ МЕСТО, ЧТОБЫ НАЙТИ НЕДВИЖИМОСТЬ</span>
-						<h2>НАЧНИТЕ ПОИСК С НАМИ</h2>
+						<span class="title">Лучшие объекты для инвестиций за рубежом</span>
+						<h2>НАЙДЁМ ДОМ ВАШЕЙ МЕЧТЫ</h2>
 					</div>
 
 					<div class="text">
-						<strong>Сайт рыбатекст поможет</strong> Сайт рыбатекст поможет
-						дизайнеру, верстальщику, вебмастеру сгенерировать несколько
-						абзацев более менее осмысленного текста рыбы на русском языке,
-						а начинающему оратору отточить навык публичных выступлений в
-						домашних условиях. При создании генератора мы использовали
+						Компания Mark Estate поможет вам с лёгкостью и без лишних усилий приобрести недвижимость за рубежом. Мы сотрудничаем напрямую как с надёжными застройщиками, так и с зарубежными агентствами недвижимости. Наши менеджеры уверенно ориентируются на рынке зарубежной недвижимости, знают все тонкости в оформлении сделок, а также особенности и специфику предлагаемого региона.
 					</div>
 
 					<div class="row features">
@@ -223,9 +219,9 @@
 						<div class="feature-block col-lg-6 col-md-6 col-sm-12">
 							<div class="inner-box">
 								<span class="icon flaticon-house-1"></span>
-								<h4><a href="/about">Купить недвижимость</a></h4>
+								<h4><a href="/about">ПОКУПКА НЕДВИЖИМОСТИ</a></h4>
 								<div class="text">
-									У нас есть лучшие агенты по продаже, покупке и аренде недвижимости.
+									Самые выгодные условия для покупки и лучшие цены от застройщиков
 								</div>
 							</div>
 						</div>
@@ -234,34 +230,13 @@
 						<div class="feature-block col-lg-6 col-md-6 col-sm-12">
 							<div class="inner-box">
 								<span class="icon flaticon-rent"></span>
-								<h4><a href="/about">АРЕНДА НЕДВИЖИМОСТИ</a></h4>
+								<h4><a href="/about">ПРОДАЖА НЕДВИЖИМОСТИ</a></h4>
 								<div class="text">
-									У нас есть лучшие агенты по продаже, покупке и аренде недвижимости.
+									Консультация и полное сопровождение сделки
 								</div>
 							</div>
 						</div>
 
-						<!-- Feature Block -->
-						<div class="feature-block col-lg-6 col-md-6 col-sm-12">
-							<div class="inner-box">
-								<span class="icon flaticon-house-5"></span>
-								<h4><a href="/about">Комплект недвижимости</a></h4>
-								<div class="text">
-									У нас есть лучшие агенты по продаже, покупке и аренде недвижимости.
-								</div>
-							</div>
-						</div>
-
-						<!-- Feature Block -->
-						<div class="feature-block col-lg-6 col-md-6 col-sm-12">
-							<div class="inner-box">
-								<span class="icon flaticon-apartment"></span>
-								<h4><a href="/about">Продажа недвижимости</a></h4>
-								<div class="text">
-									У нас есть лучшие агенты по продаже, покупке и аренде недвижимости.
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -285,7 +260,7 @@
 <section class="popular-places-section">
 	<div class="auto-container">
 		<div class="sec-title">
-			<span class="title">НАЙДИТЕ ДОМ СВОЕЙ МЕЧТЫ В ВАШЕМ ГОРОДЕ</span>
+			<span class="title">Поиск по городам</span>
 			<h2>САМЫЕ ПОПУЛЯРНЫЕ МЕСТА</h2>
 		</div>
 
@@ -297,13 +272,12 @@
 						<img src="/images/background/pexels-oleksandr-pidvalnyi-12940603.jpg" alt="" style="height: 295px;" />
 					</figure>
 					<div class="info-box">
-						<span class="category">Квартира</span>
 						<h3 class="place"><a href="{{ route('project') }}">Алания</a></h3>
 						<div class="properties">
 							<a href="{{ route('project') }}">7 Характеристик</a>
 						</div>
 						<div class="view-all">
-							<a href="{{ route('project') }}">Посмотреть все</a>
+							<a href="/project?countryhome=dubai">Посмотреть все</a>
 						</div>
 					</div>
 				</div>
@@ -316,7 +290,6 @@
 						<img src="/images/background/pexels-funda-izgi-13134869.jpg" alt="" style="height: 420px;" />
 					</figure>
 					<div class="info-box">
-						<span class="category">Дом</span>
 						<h3 class="place"><a href="{{ route('project') }}">Стамбул</a></h3>
 						<div class="properties">
 							<a href="{{ route('project') }}">9 Характеристик</a>
@@ -335,7 +308,6 @@
 						<img src="/images/background/pexels-emrah-ayvali-6198387.jpg" alt="" style="height: 295px;" />
 					</figure>
 					<div class="info-box">
-						<span class="category">Ресторан</span>
 						<h3 class="place"><a href="{{ route('project') }}">Кемер</a></h3>
 						<div class="properties">
 							<a href="{{ route('project') }}">5 Характеристик</a>
@@ -354,7 +326,6 @@
 						<img src="/images/background/pexels-serkan-pulat-10534187.jpg" alt="" style="height: 170px;" />
 					</figure>
 					<div class="info-box">
-						<span class="category">Котедж</span>
 						<h3 class="place"><a href="{{ route('project') }}">Кипр</a></h3>
 						<div class="properties">
 							<a href="{{ route('project') }}">12 Характеристик</a>
@@ -373,7 +344,6 @@
 						<img src="/images/background/pexels-azra-tuba-demir-10463590.jpg" alt="" style="height: 170px;" />
 					</figure>
 					<div class="info-box">
-						<span class="category">Вилла</span>
 						<h3 class="place"><a href="{{ route('project') }}">Белек</a></h3>
 						<div class="properties">
 							<a href="{{ route('project') }}">6 Характеристики</a>
@@ -396,15 +366,15 @@
 			<!-- Title Column -->
 			<div class="title-column">
 				<div class="sec-title light">
-					<span class="title">ЗА НЕСКОЛЬКО СЕКУНД С ВИЛЛОЙ</span>
+					<span class="title">В самый короткий срок</span>
 					<h2>КУПИТЬ ИЛИ ПРОДАТЬ СВОЙ ДОМ</h2>
 				</div>
 			</div>
 
 			<!-- Button Column -->
 			<div class="button-column">
-				<a href="admin/submit-property.html" class="theme-btn btn-style-three">ОТПРАВИТЬ СОБСТВЕННОСТЬ</a>
-				<a href="{{ route('project') }}" class="theme-btn btn-style-one">ПОСМОТРЕТЬ НЕДВИЖИМОСТЬ</a>
+				<a href="admin/submit-property.html" class="theme-btn btn-style-three">Продать недвижимость</a>
+				<a href="{{ route('project') }}" class="theme-btn btn-style-one">Выбрать недвижимость</a>
 			</div>
 		</div>
 	</div>

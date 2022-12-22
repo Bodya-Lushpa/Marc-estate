@@ -96,9 +96,9 @@ export default {
 		});
 		$( ".price-range-slider" ).slider({
 			range: true,
-			min: 100000,
+			min: 50000,
 			max: 2000000,
-			values: [ 500000, 1000000 ],
+			values: [ 50000, 2000000 ],
 			slide: function( event, ui ) {
 			$( "input.price-amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
 			}

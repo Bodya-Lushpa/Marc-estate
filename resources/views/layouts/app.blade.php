@@ -96,14 +96,7 @@
                           " x-out-of-boundaries="">
 													<li class="panel-outer">
 														<div class="form-container">
-															<form method="post" action="blog.html">
-																<div class="form-group">
-																	<input type="search" name="field-name" value="" placeholder="Search Here" required="" />
-																	<button type="submit" class="search-btn">
-																		<span class="la la-search"></span>
-																	</button>
-																</div>
-															</form>
+
 														</div>
 													</li>
 												</ul>
@@ -154,9 +147,9 @@
                       ">
 											<li class="panel-outer">
 												<div class="form-container">
-													<form method="post" action="blog.html">
+													<form method="get" action="/project">
 														<div class="form-group">
-															<input type="search" name="field-name" value="" placeholder="Поиск" required="" />
+															<input type="search" name="search" placeholder="Поиск" required="" />
 															<button type="submit" class="search-btn">
 																<span class="la la-search"></span>
 															</button>
@@ -244,6 +237,8 @@
 					</div>
 				</div>
 			</footer>
+
+
 
 
 			<!-- End Main Footer -->

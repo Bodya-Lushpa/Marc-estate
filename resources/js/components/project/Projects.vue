@@ -125,6 +125,15 @@ export default {
 			this.pageCount = Math.ceil(this.projects.length/6);
 			this.hasNextPage = this.projects.length > end;
 
+			if(windowData.search){
+				const filteredProject = this.projects.filter(function(project){
+					return project.title.toUpperCase().indexOf(windowData.search.toUpperCase()) !== -1;
+				});
+				this.pageCount = Math.ceil(filteredProject.length/6);
+				this.hasNextPage = filteredProject.length > end;
+				return filteredProject.slice(start, end);
+			}
+
 			if(windowData.typereal){
 				const filteredProject = this.projects.filter(function(project){
 					return project.reals.some(function s(real){
@@ -135,6 +144,16 @@ export default {
 				this.hasNextPage = filteredProject.length > end;
 				return filteredProject.slice(start, end);
 			}
+
+			if(windowData.countryhome){
+				var filteredProjectCountry = this.projects.filter(function(project){
+					return project.country.slug.includes(windowData.countryhome);
+				});
+				this.pageCount = Math.ceil(filteredProjectCountry.length/6);
+				this.hasNextPage = filteredProjectCountry.length > end;
+				return filteredProjectCountry.slice(start, end);
+			}
+
 			if(windowData.country){
 				var filteredProjectCountry = this.projects.filter(function(project){
 					return project.country.slug.includes(windowData.country);

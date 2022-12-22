@@ -74,27 +74,21 @@
                 </div>
 
                 <!-- Flooring Tabs -->
-                <div class="flooring-tabs tabs-box">
+                <div class="flooring-tabs tabs-box" v-if="project.plans[0].rooms">
                   <div class="clearfix">
                     <h4>Планировки</h4>
                     <ul class="tab-buttons">
-                      <li data-tab="#groud-floor" class="tab-btn active-btn">
-                        1 комнатные
-                      </li>
-                      <li data-tab="#first-floor" class="tab-btn">
-                        2-х комнатные
-                      </li>
-                      <li data-tab="#second-floor" class="tab-btn">
-                        3-х комнатные
+                      <li @click="selectRooms('all')" class="theme-btn btn-style-one" :class="[selectRoom == 'all' ? 'active-btn' : '']">Все</li>
+                      <li v-for="(planRoom, index) in roomsTitle()" :key="index" @click="selectRooms(planRoom.rooms)" class="theme-btn btn-style-one" :class="[selectRoom == planRoom.rooms ? 'active-btn' : '']">
+                        {{ planRoom.plan_room.title }}
                       </li>
                     </ul>
                   </div>
 
                   <div class="tabs-content">
-                    <!--Tab / Active Tab-->
-                    <div class="tab active-tab" id="groud-floor">
+                    <div class="tab active-tab">
                       <div class="image-box">
-												<div v-for="plan in project.plans" class="pan-item">
+												<div v-for="(plan, index) in filterRooms()" :key="index" v-if="index < showPlans" class="pan-item">
                           <img
                             :src="plan.img"
                             alt=""
@@ -118,72 +112,7 @@
                         </div>
 
                         <div class="text-center plan-item__more">
-                          <a href="#" class="theme-btn btn-style-one">ПОКАЗАТЬ ЕЩЕ</a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!--Tab -->
-                    <div class="tab" id="first-floor">
-                      <div class="image-box">
-                        <div v-for="plan in project.plans" class="pan-item">
-                          <img
-                            :src="plan.img"
-                            alt=""
-                            class="plan-item__img"
-                          />
-                          <div class="plan-item__desc">
-                            <div class="plan-item__title-block">
-                              <h4>{{ plan.rooms }}</h4>
-                            </div>
-                            <div class="float-left">
-                              <p class="plan-item__room">от {{ plan.price }} т</p>
-                              <p class="plan-item__room">от {{ plan.area }} км2</p>
-                              <p>
-                                {{ plan.description }}
-                              </p>
-                              <a href="#" class="theme-btn btn-style-one">Получить консультацию</a>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="text-center plan-item__more">
-                          <a href="#" class="theme-btn btn-style-six m-auto"
-                            >показать еще</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-
-                    <!--Tab -->
-                    <div class="tab" id="second-floor">
-                      <div class="image-box">
-
-												<div v-for="plan in project.plans" class="pan-item">
-                          <img
-                            :src="plan.img"
-                            alt=""
-                            class="plan-item__img"
-                          />
-                          <div class="plan-item__desc">
-                            <div class="plan-item__title-block">
-                              <h4>{{ plan.rooms }}</h4>
-                            </div>
-                            <div class="float-left">
-                              <p class="plan-item__room">от {{ plan.price }} т</p>
-                              <p class="plan-item__room">от {{ plan.area }} км2</p>
-                              <p>
-                                {{ plan.description }}
-                              </p>
-                              <a href="#" class="theme-btn btn-style-one">Получить консультацию</a>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="text-center plan-item__more">
-                          <a href="#" class="theme-btn btn-style-six m-auto"
-                            >показать еще</a
-                          >
+                          <button class="theme-btn btn-style-one" @click="showPlans = filterRooms().length" v-if="filterRooms().length > 3">ПОКАЗАТЬ ЕЩЕ</button>
                         </div>
                       </div>
                     </div>
@@ -321,6 +250,9 @@ export default {
 		return {
 			project: [],
 			plans: [],
+			planRooms: [],
+			selectRoom: 'all',
+			showPlans: 3
 		}
 	},
 	updated (){
@@ -417,9 +349,30 @@ export default {
 		});
 	},
 	methods: {
+		selectRooms(planRoom) {
+			this.showPlans = 3;
+			this.selectRoom = planRoom;
+		},
 		rooms(room_id) {
 			var plan = this.plans.filter(plan => plan.id == room_id);
 			return plan[0].plan_room.title;
+		},
+		filterRooms() {
+			if(this.selectRoom == 'all'){
+				return this.project.plans;
+			}else{
+				return this.project.plans.filter(plan => plan.rooms == this.selectRoom);
+			}
+		},
+		roomsTitle() {
+			this.planRooms = this.plans.filter(plan => plan.project_id == this.project.id);
+			const res = this.planRooms.reduce((o, i) => {
+				if (!o.find(v => v.rooms == i.rooms)) {
+					o.push(i);
+				}
+				return o;
+			}, []);
+			return (res);
 		}
 	}
 }

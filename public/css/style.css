@@ -4673,10 +4673,10 @@ a.ui-button:active, .ui-button:active,
 	display: inline-block;
 	font-size: 18px;
 	line-height: 1.2em;
-	color: #1a1d1f;
 	font-weight: 700;
+	padding: 8px 14px;
 	cursor: pointer;
-	margin-left: 35px;
+	margin-left: 25px;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
@@ -4686,7 +4686,8 @@ a.ui-button:active, .ui-button:active,
 
 .flooring-tabs .tab-buttons li:hover,
 .flooring-tabs .tab-buttons li.active-btn{
-	color: #126977;
+	color: #fff;
+	background: #bd9968;
 }
 
 .flooring-tabs .tab-buttons li:first-child{
@@ -6534,6 +6535,7 @@ a.ui-button:active, .ui-button:active,
 	height: 100%;
 	width: 100%;
 	padding: 25px 30px;
+	background: linear-gradient(183deg, rgba(0,0,0,0.3), transparent);
 }
 
 .popular-item .category{
@@ -6568,7 +6570,7 @@ a.ui-button:active, .ui-button:active,
 }
 
 .popular-item .place a:hover{
-	color: #222222;
+	color: #bd9968;
 }
 
 .popular-item .properties{
@@ -6591,7 +6593,7 @@ a.ui-button:active, .ui-button:active,
 }
 
 .popular-item .properties a:hover{
-	color: #222222;
+	color: #bd9968;
 }
 
 .popular-item .view-all{
@@ -6686,7 +6688,7 @@ a.ui-button:active, .ui-button:active,
 }
 
 .popular-item .view-all a:hover{
-	color: #222222;
+	color: #bd9968;
 }
 
 /***
@@ -7980,7 +7982,7 @@ a.ui-button:active, .ui-button:active,
 	display: block;
 	font-size: 15px;
 	line-height: 2em;
-	color: #bbbbbb;
+	color: #fff;
 	font-weight: 400;
 }
 

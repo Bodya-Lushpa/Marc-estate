@@ -4,7 +4,7 @@
 		<section class="property-section">
 			<div class="auto-container">
 				<div class="sec-title">
-					<span class="title">ПОИСК ЗАРУБЕЖНОЙ НЕДВИЖИМОСТИ </span>
+					<span class="title">Горячие предложения</span>
 					<h2>ПОПУЛЯРНОЕ</h2>
 				</div>
 

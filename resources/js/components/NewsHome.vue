@@ -12,7 +12,8 @@
 					<!-- News Block -->
 					<div
 						v-for="(post, index) in news"
-						v-if="index<3"
+						:key="index"
+						v-if="index < 3"
 						class="news-block col-lg-4 col-md-6 col-sm-12">
 						<div class="inner-box">
 							<div class="image-box">
