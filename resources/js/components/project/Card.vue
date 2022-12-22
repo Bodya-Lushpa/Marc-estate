@@ -112,7 +112,7 @@
                         </div>
 
                         <div class="text-center plan-item__more">
-                          <button class="theme-btn btn-style-one" @click="showPlans = filterRooms().length" v-if="filterRooms().length > 3">ПОКАЗАТЬ ЕЩЕ</button>
+                          <button class="theme-btn btn-style-one" @click="showPlans = filterRooms().length" v-if="filterRooms().length > 3 && filterRooms().length != showPlans">ПОКАЗАТЬ ЕЩЕ</button>
                         </div>
                       </div>
                     </div>
