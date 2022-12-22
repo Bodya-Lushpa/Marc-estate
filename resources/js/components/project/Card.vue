@@ -256,10 +256,10 @@ export default {
 		}
 	},
 	updated (){
-		var map_parameters = { center: {lat: this.project.coordinates1, lng: this.project.coordinates2}, zoom: 8 };
-		var map = new google.maps.Map(document.getElementById('map'), map_parameters);
-		var position1 = { position: {lat: this.project.coordinates1, lng: this.project.coordinates2}, map: map };
-		var marker1 = new google.maps.Marker(position1);
+		// var map_parameters = { center: {lat: this.project.coordinates1, lng: this.project.coordinates2}, zoom: 8 };
+		// var map = new google.maps.Map(document.getElementById('map'), map_parameters);
+		// var position1 = { position: {lat: this.project.coordinates1, lng: this.project.coordinates2}, map: map };
+		// var marker1 = new google.maps.Marker(position1);
 		// Product Carousel Slider
 		(function($) {
 			// Product Carousel Slider
