@@ -128,6 +128,11 @@ export default {
     );
   },
   updated() {
+    // $(".custom-select-box")
+    //   .selectmenu()
+    //   .selectmenu("menuWidget")
+    //   .addClass("overflow");
+
     $(".price-range-slider").slider({
       range: true,
       min: 50000,

@@ -18,6 +18,7 @@
             <input
               type="text"
               name="name"
+              id="name"
               v-model="leadData.name"
               placeholder="Имя"
               required

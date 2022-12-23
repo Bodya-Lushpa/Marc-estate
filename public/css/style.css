@@ -11628,14 +11628,15 @@ button[disabled="disabled"]{
 	display: flex;
 }
 .plan-item__img{
-	margin-right: 20px;
-}
-.plan-item__img, .plan-item__desc{
-	width: 50%;
+	width: 100%;
 	object-fit: cover;
 }
-.plan-item__img{
-	width: 41%;
+.plan-item__img_wrap{
+	width: 40%;
+	margin-right: 20px;
+}
+.plan-item__desc{
+	width: 50%;
 }
 p.plan-item__room{
 	color: #126977;
