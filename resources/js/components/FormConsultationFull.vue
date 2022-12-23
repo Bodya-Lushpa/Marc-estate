@@ -37,7 +37,11 @@
           ></textarea>
         </div>
         <div class="form-group col-lg-12 col-md-12 col-sm-12 text-center">
-          <button class="theme-btn btn-style-one" type="submit">
+          <button
+            class="theme-btn btn-style-one"
+            type="submit"
+            :disabled="disabledButton"
+          >
             Получить консультацию
           </button>
         </div>
@@ -97,6 +101,7 @@ export default {
         title_form: "Консультация",
         title_project: this.title_project,
       },
+      disabledButton: false,
     };
   },
   mounted() {
@@ -107,9 +112,11 @@ export default {
   methods: {
     submitData() {
       event.preventDefault();
+      this.disabledButton = true;
       axios
         .post("/leadSubmit", this.leadData)
         .then((response) => {
+          this.disabledButton = false;
           $(".openThank").click();
           this.leadData.name = "";
           this.leadData.phone = "";
@@ -117,6 +124,7 @@ export default {
         })
         .catch(function (error) {
           console.log(error);
+          this.disabledButton = false;
         });
     },
   },

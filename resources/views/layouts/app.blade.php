@@ -186,7 +186,7 @@
 												<ul class="contact-list d-md-flex align-items justify-content-md-between">
 													<li class="d-flex align-items-center justify-content-center">
 														<span class="la la-map-marker"></span>
-														<div>Казахстан, пр, Сейфулина 597а, Турция, Стамбул, ул Абая 15.</div>
+														<div>Казахстан, пр, Сейфулина 597а</div>
 													</li>
 													<li class="d-flex align-items-center justify-content-center">
 														<span class="la la-phone"></span>

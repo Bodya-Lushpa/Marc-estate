@@ -272,12 +272,12 @@
 						<img src="/images/background/pexels-oleksandr-pidvalnyi-12940603.jpg" alt="" style="height: 295px;" />
 					</figure>
 					<div class="info-box">
-						<h3 class="place"><a href="{{ route('project') }}">Алания</a></h3>
-						<div class="properties">
+						<h3 class="place"><a href="/project?cityhome=alaniya">Алания</a></h3>
+						<!-- <div class="properties">
 							<a href="{{ route('project') }}">7 Характеристик</a>
-						</div>
+						</div> -->
 						<div class="view-all">
-							<a href="/project?countryhome=dubai">Посмотреть все</a>
+							<a href="/project?cityhome=alaniya">Посмотреть все</a>
 						</div>
 					</div>
 				</div>
@@ -290,12 +290,12 @@
 						<img src="/images/background/pexels-funda-izgi-13134869.jpg" alt="" style="height: 420px;" />
 					</figure>
 					<div class="info-box">
-						<h3 class="place"><a href="{{ route('project') }}">Стамбул</a></h3>
-						<div class="properties">
+						<h3 class="place"><a href="/project?cityhome=kemer">Стамбул</a></h3>
+						<!-- <div class="properties">
 							<a href="{{ route('project') }}">9 Характеристик</a>
-						</div>
+						</div> -->
 						<div class="view-all">
-							<a href="{{ route('project') }}">Посмотреть все</a>
+							<a href="/project?cityhome=karaganda">Посмотреть все</a>
 						</div>
 					</div>
 				</div>
@@ -308,12 +308,12 @@
 						<img src="/images/background/pexels-emrah-ayvali-6198387.jpg" alt="" style="height: 295px;" />
 					</figure>
 					<div class="info-box">
-						<h3 class="place"><a href="{{ route('project') }}">Кемер</a></h3>
-						<div class="properties">
+						<h3 class="place"><a href="/project?cityhome=kemer">Кемер</a></h3>
+						<!-- <div class="properties">
 							<a href="{{ route('project') }}">5 Характеристик</a>
-						</div>
+						</div> -->
 						<div class="view-all">
-							<a href="{{ route('project') }}">Посмотреть все</a>
+							<a href="/project?cityhome=kemer">Посмотреть все</a>
 						</div>
 					</div>
 				</div>
@@ -327,9 +327,9 @@
 					</figure>
 					<div class="info-box">
 						<h3 class="place"><a href="{{ route('project') }}">Кипр</a></h3>
-						<div class="properties">
+						<!-- <div class="properties">
 							<a href="{{ route('project') }}">12 Характеристик</a>
-						</div>
+						</div> -->
 						<div class="view-all">
 							<a href="{{ route('project') }}">Посмотреть все</a>
 						</div>
@@ -341,15 +341,15 @@
 			<div class="popular-item masonry-item small-item">
 				<div class="image-box">
 					<figure class="image">
-						<img src="/images/background/pexels-azra-tuba-demir-10463590.jpg" alt="" style="height: 170px;" />
+						<img src="/images/background/pexels-mo-ismail-3763190.jpg" alt="" style="height: 170px;" />
 					</figure>
 					<div class="info-box">
-						<h3 class="place"><a href="{{ route('project') }}">Белек</a></h3>
-						<div class="properties">
+						<h3 class="place"><a href="/project?cityhome=dubay">Дубаи</a></h3>
+						<!-- <div class="properties">
 							<a href="{{ route('project') }}">6 Характеристики</a>
-						</div>
+						</div> -->
 						<div class="view-all">
-							<a href="{{ route('project') }}">Посмотреть все</a>
+							<a href="/project?cityhome=dubay">Посмотреть все</a>
 						</div>
 					</div>
 				</div>

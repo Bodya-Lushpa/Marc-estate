@@ -24,7 +24,7 @@ class LeadController extends Controller
 
 
 		Mail::send('mail', $data, function ($message) {
-			$message->to('bodya.lushpa@gmail.com', 'Tutorials Point')->subject('Новая заявка с сайта mark estate');
+			$message->to(env('MAIL_TO'))->subject('Новая заявка с сайта mark estate');
 			$message->from('info@markestate.kz', 'Mark Estate');
 		});
 		return $lead->save();

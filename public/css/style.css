@@ -7981,6 +7981,11 @@ a.ui-button:active, .ui-button:active,
 	width: 100%;
 }
 
+button[disabled="disabled"]{
+	cursor: progress;
+	background-color: #222222;
+}
+
 .modal-backdrop.fade.show{
 	z-index: -9999;
 	display: none!important;

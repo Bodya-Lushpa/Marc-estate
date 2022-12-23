@@ -122,9 +122,9 @@ export default {
       },
     });
     $("input.price-amount").val(
-      $(".price-range-slider").slider("values", 0) +
-        " - $" +
-        $(".price-range-slider").slider("values", 1)
+      $(".price-range-slider").slider(50000) +
+        " - " +
+        $(".price-range-slider").slider(2000000)
     );
   },
   updated() {
@@ -139,7 +139,7 @@ export default {
     });
     $("input.price-amount").val(
       $(".price-range-slider").slider("values", 0) +
-        " - $" +
+        " - " +
         $(".price-range-slider").slider("values", 1)
     );
   },

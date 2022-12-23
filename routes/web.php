@@ -65,6 +65,7 @@ Route::prefix('admin')->group(function () {
 			Route::resource('type-real', App\Http\Controllers\Admin\TypeRealController::class);
 			Route::resource('partner', App\Http\Controllers\Admin\PartnerController::class);
 			Route::resource('plan-room', App\Http\Controllers\Admin\PlanRoomController::class);
+			Route::resource('lead', App\Http\Controllers\Admin\LeadController::class);
 		});
 	});
 });

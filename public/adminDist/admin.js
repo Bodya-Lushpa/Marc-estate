@@ -18,6 +18,11 @@ $(document).ready(function () {
 		// "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
 	}).buttons().container().appendTo('#news_wrapper .col-md-6:eq(0)');
 
+	$("#leads").DataTable({
+		"responsive": true, "lengthChange": false, "autoWidth": false,
+		"buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+	}).buttons().container().appendTo('#leads_wrapper .col-md-6:eq(0)');
+
 	$('.btn-delete').on('click', function(){
 		var res = confirm('Подтвердите действие');
 		if(!res){
@@ -26,7 +31,6 @@ $(document).ready(function () {
 	});
 
 	var inputFile = $('.plansItem').length;
-	console.log(inputFile);
 
 	$('.repeaterItemAdd').on('click', function(e){
 		e.preventDefault();
