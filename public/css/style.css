@@ -7996,6 +7996,18 @@ button[disabled="disabled"]{
 }
 .modal-header{
 	border: 0;
+	background: #222;
+	color: #fff;
+}
+.modal-header .close{
+	color: #fff;
+}
+.modal-thanks .modal-header{
+	background: #fff;
+	color: #000;
+}
+.modal-thanks .modal-header .close{
+	color: #000;
 }
 
 .process-block .text{
@@ -10607,6 +10619,30 @@ button[disabled="disabled"]{
 .agent-from-widget input[type="tel"],
 .agent-from-widget select,
 .agent-from-widget textarea{
+	position:relative;
+	display:block;
+	width:100%;
+	font-size:14px;
+	color: #777777;
+	font-weight:400;
+	line-height:20px;
+	padding:14px 25px;
+	background-color:#ffffff;
+	border:1px solid #ebebeb;
+	height: 50px;
+	-webkit-transition:all 300ms ease;
+	-ms-transition:all 300ms ease;
+	-o-transition:all 300ms ease;
+	-moz-transition:all 300ms ease;
+	transition:all 300ms ease;
+}
+.modal input[type="text"],
+.modal input[type="email"],
+.modal input[type="password"],
+.modal input[type="url"],
+.modal input[type="tel"],
+.modal select,
+.modal textarea{
 	position:relative;
 	display:block;
 	width:100%;

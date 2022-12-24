@@ -244,6 +244,8 @@
 			<!-- End Main Footer -->
 		</div>
 		<!--End pagewrapper-->
+
+		<modal-thanks></modal-thanks>
 	</div>
 
 	<script src="/js/jquery.js"></script>

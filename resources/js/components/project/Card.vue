@@ -134,7 +134,11 @@
                             <p>
                               {{ plan.description }}
                             </p>
-                            <a href="#" class="theme-btn btn-style-one"
+                            <a
+                              href="#"
+                              class="theme-btn btn-style-one"
+                              data-toggle="modal"
+                              data-target=".modal-consultation"
                               >Получить консультацию</a
                             >
                           </div>
@@ -193,6 +197,7 @@
         </div>
       </div>
     </div>
+    <modal-form-consultation></modal-form-consultation>
   </div>
 </template>
 
