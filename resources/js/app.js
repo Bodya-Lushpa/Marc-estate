@@ -18,6 +18,7 @@ Vue.component("client-section", () => import("./components/ClientsSection"));
 Vue.component("recently-added", () => import("./components/widgets/RecentlyAdded"));
 Vue.component("main-slider", () => import("./components/MainSlider"));
 Vue.component("search-projects-filter", () => import("./components/widgets/SearchProjectsFilter"));
+Vue.component("search-projects-filter-home", () => import("./components/widgets/SearchProjectsFilterHome"));
 Vue.component("type-real", () => import("./components/widgets/TypeReal"));
 Vue.component("form-widget", () => import("./components/forms/FormConsultationWidget"));
 Vue.component("form-full", () => import("./components/forms/FormConsultationFull"));
@@ -26,6 +27,8 @@ Vue.component('jquery-selectmenu', () => import("./components/widgets/JquerySele
 Vue.component('modal-form-consultation', () => import("./components/modal/FormConsultation"));
 Vue.component('modal-thanks', () => import("./components/modal/Thank"));
 
+
 const app = new Vue({
-	el: '#app'
+	el: '#app',
 })
+
