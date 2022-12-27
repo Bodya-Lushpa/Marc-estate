@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\NewsRequest;
 use App\Models\News;
 use Illuminate\Http\Request;
 
@@ -37,7 +38,7 @@ class NewsController extends Controller
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(Request $request)
+	public function store(NewsRequest $request)
 	{
 		$news = new News();
 		$news->title = $request->title;
@@ -80,7 +81,7 @@ class NewsController extends Controller
 	 * @param  \App\Models\News  $news
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(Request $request, News $news)
+	public function update(NewsRequest $request, News $news)
 	{
 		$news->title = $request->title;
 		$news->img = $request->img[0];
