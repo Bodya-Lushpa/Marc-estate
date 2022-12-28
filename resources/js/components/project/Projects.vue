@@ -217,7 +217,7 @@ export default {
           });
         }
         if (windowData.city == "all") {
-          var filteredProjectCity = this.projects;
+          var filteredProjectCity = filteredProjectCountry;
         } else {
           var filteredProjectCity = filteredProjectCountry.filter(function (
             project
