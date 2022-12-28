@@ -209,26 +209,43 @@ export default {
       }
 
       if (windowData.country) {
-        var filteredProjectCountry = this.projects.filter(function (project) {
-          return project.country.slug.includes(windowData.country);
-        });
-        var filteredProjectCity = filteredProjectCountry.filter(function (
-          project
-        ) {
-          return project.city.slug.includes(windowData.city);
-        });
-        var filteredProjectRoom = filteredProjectCity.filter(function (
-          project
-        ) {
-          return project.plans.some(function s(plan) {
-            return plan.rooms == windowData.plan;
+        if (windowData.country == "all") {
+          var filteredProjectCountry = this.projects;
+        } else {
+          var filteredProjectCountry = this.projects.filter(function (project) {
+            return project.country.slug.includes(windowData.country);
           });
-        });
-        var filteredProjectStatus = filteredProjectRoom.filter(function (
-          project
-        ) {
-          return project.status.slug.includes(windowData.status);
-        });
+        }
+        if (windowData.city == "all") {
+          var filteredProjectCity = this.projects;
+        } else {
+          var filteredProjectCity = filteredProjectCountry.filter(function (
+            project
+          ) {
+            return project.city.slug.includes(windowData.city);
+          });
+        }
+        if (windowData.plan == "all") {
+          var filteredProjectRoom = filteredProjectCity;
+        } else {
+          var filteredProjectRoom = filteredProjectCity.filter(function (
+            project
+          ) {
+            return project.plans.some(function s(plan) {
+              return plan.rooms == windowData.plan;
+            });
+          });
+        }
+        if (windowData.status == "all") {
+          var filteredProjectStatus = filteredProjectRoom;
+        } else {
+          var filteredProjectStatus = filteredProjectRoom.filter(function (
+            project
+          ) {
+            return project.status.slug.includes(windowData.status);
+          });
+        }
+
         var price = windowData.price.split(" - ");
         var filteredProjectPrice = filteredProjectStatus.filter(function (
           project
