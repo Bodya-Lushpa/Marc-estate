@@ -106,13 +106,12 @@ export default {
       citiesFiltered: [],
       plans: [],
       statusProjects: [],
-      slug_country: "",
+      slug_country: "all",
     };
   },
   mounted() {
     axios.get("/api/counties").then((response) => {
       this.counties = response.data;
-      this.slug_country = response.data[0].slug;
     });
     axios.get("/api/cities").then((response) => {
       this.cities = response.data;

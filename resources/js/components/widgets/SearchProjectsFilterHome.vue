@@ -116,18 +116,18 @@ export default {
     return {
       counties: [],
       cities: [],
+      citiesDefault: [],
       plans: [],
       statusProjects: [],
-      slug_country: "",
+      slug_country: "all",
     };
   },
   mounted() {
     axios.get("/api/counties").then((response) => {
       this.counties = response.data;
-      this.slug_country = response.data[0].slug;
     });
     axios.get("/api/cities").then((response) => {
-      this.cities = response.data;
+      this.citiesDefault = response.data;
     });
     axios.get("/api/plan-room").then((response) => {
       this.plans = response.data;
@@ -168,10 +168,17 @@ export default {
   },
   methods: {
     citiesFilter() {
-      this.cities = this.counties.filter(
-        (country) => country.slug == this.slug_country
-      );
-      return this.cities[0].cities;
+      if (this.slug_country == "all") {
+        console.log("all");
+        console.log(this.citiesDefault);
+        return this.citiesDefault;
+      } else {
+        console.log("not all");
+        this.cities = this.counties.filter(
+          (country) => country.slug == this.slug_country
+        );
+        return this.cities[0].cities;
+      }
     },
   },
 };
