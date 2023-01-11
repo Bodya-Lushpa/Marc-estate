@@ -249,7 +249,6 @@
 	</div>
 
 	<script src="/js/jquery.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 	<script src="/js/imask.js"></script>
 	<script src="/js/popper.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
@@ -267,6 +266,7 @@
 	<script src="/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
 	<!--End Revolution Slider-->
 	<script src="/js/jquery-ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 	<script src="/js/jquery.fancybox.js"></script>
 	<script src="/js/owl.js"></script>
 	<script src="/js/wow.js"></script>
