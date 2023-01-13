@@ -168,7 +168,11 @@
 			</header>
 			<!--End Main Header -->
 
-			@yield('content')
+			<div class="pageWrap">
+
+				@yield('content')
+
+			</div>
 
 			<!-- Main Footer -->
 			<footer class="main-footer" style="background-image: url('/images/background/view-new-york-city-night-time.jpg')">

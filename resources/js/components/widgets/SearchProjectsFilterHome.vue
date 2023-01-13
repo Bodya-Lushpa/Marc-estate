@@ -169,11 +169,8 @@ export default {
   methods: {
     citiesFilter() {
       if (this.slug_country == "all") {
-        console.log("all");
-        console.log(this.citiesDefault);
         return this.citiesDefault;
       } else {
-        console.log("not all");
         this.cities = this.counties.filter(
           (country) => country.slug == this.slug_country
         );

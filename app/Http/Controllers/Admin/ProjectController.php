@@ -15,6 +15,8 @@ use App\Models\StatusProject;
 use App\Models\TypeReal;
 use App\Models\Plan;
 use App\Models\PlanRoom;
+use ImageOptimizer;
+use BlurHash;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -74,6 +76,7 @@ class ProjectController extends Controller
 		$project->images_for_slider = $request->images_for_slider;
 		$request->is_slider ? $project->is_slider = 1 : $project->is_slider = 0;
 		$request->is_top ? $project->is_top = 1 : $project->is_top = 0;
+		$project->hashimg = BlurHash::encode('.' . $request->img[0]);
 		$project->save();
 
 		$important_information = [];
@@ -100,6 +103,7 @@ class ProjectController extends Controller
 		$projectImgs = [];
 		if ($request->img) {
 			foreach ($request->img as $key => $value) {
+				ImageOptimizer::optimize('.' . $value);
 				array_push($projectImgs, new ProjectImg(['img' => $value]));
 			}
 			$project->images()->saveMany($projectImgs);
@@ -114,7 +118,7 @@ class ProjectController extends Controller
 			$project->plans()->saveMany($plans);
 		}
 
-		return redirect()->back()->withSuccess('Проект успешно добавлен');
+		return redirect('admin/project')->withSuccess('Проект успешно добавлен');
 	}
 
 	/**
@@ -201,6 +205,7 @@ class ProjectController extends Controller
 		$project->images_for_slider = $request->images_for_slider;
 		$request->is_slider ? $project->is_slider = 1 : $project->is_slider = 0;
 		$request->is_top ? $project->is_top = 1 : $project->is_top = 0;
+		$project->hashimg = BlurHash::encode('.' . $request->img[0]);
 		$project->save();
 
 		$important_information = [];
@@ -227,6 +232,7 @@ class ProjectController extends Controller
 		$projectImgs = [];
 		if ($request->img) {
 			foreach ($request->img as $key => $value) {
+				ImageOptimizer::optimize('.' . $value);
 				array_push($projectImgs, new ProjectImg(['img' => $value]));
 			}
 			$project->images()->saveMany($projectImgs);
@@ -241,7 +247,7 @@ class ProjectController extends Controller
 			$project->plans()->saveMany($plans);
 		}
 
-		return redirect()->back()->withSuccess('Проект успешно обновлен');
+		return redirect('admin/project')->withSuccess('Проект успешно обновлен');
 	}
 
 	/**
