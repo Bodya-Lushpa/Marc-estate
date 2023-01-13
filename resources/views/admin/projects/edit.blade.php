@@ -146,10 +146,12 @@
 								<div class="col-lg-12">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Основное изображение</label>
-										<div class="uploadImgWrap1 d-flex">
-											@foreach($project->images as $image)
-											<div class="uploadImgClose w-25 mr-2"><img src="{{ $image->img }}" alt="" class="uploadImg d-block mb-4 mr-2 w-100"><input type="text" class="d-none" name="img[]" value="{{ $image->img }}"></div>
-											@endforeach
+										<div class="w-100" style="overflow-x: auto;">
+											<div class="uploadImgWrap1 d-flex" style="width: 4000px;">
+												@foreach($project->images as $image)
+												<div class="uploadImgClose mr-2" style="width: 250px;"><img src="{{ $image->img }}" alt="" class="uploadImg d-block mb-4 mr-2 w-100"><input type="text" class="d-none" name="img[]" value="{{ $image->img }}"></div>
+												@endforeach
+											</div>
 										</div>
 										<div class="d-flex">
 											<a href="" class="popup_selector  btn btn-block btn-info w-25" data-inputid="uploadImgWrap1">Выбрать</a>
@@ -162,7 +164,7 @@
 										<label for="exampleInputEmail1">Изображение для слайдера</label>
 										<div class="imagesForSlider_img1 d-flex"></div>
 										@if($project->images_for_slider)
-										<div class="uploadImgClose w-25 mr-2"><img src="{{ $project->images_for_slider }}" alt="" class="uploadImg d-block mb-4 mr-2 w-100"><input type="text" class="d-none" name="images_for_slider" value="{{ $project->images_for_slider }}"></div>
+										<div class="uploadImgClose mr-2" style="width: 250px;"><img src="{{ $project->images_for_slider }}" alt="" class="uploadImg d-block mb-4 mr-2 w-100"><input type="text" class="d-none" name="images_for_slider" value="{{ $project->images_for_slider }}"></div>
 										@endif
 										<div class="d-flex">
 											<a href="" class="popup_selector  btn btn-block btn-info w-25" data-inputid="imagesForSlider_img1">Выбрать</a>

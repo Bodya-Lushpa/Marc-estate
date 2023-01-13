@@ -63,7 +63,7 @@
 										<label for="exampleInputEmail1">Основное изображение</label>
 
 										<div class="uploadImgWrap1 d-flex">
-											<div class="uploadImgClose w-25 mr-2"><img src="{{ $news->img }}" alt="" class="uploadImg d-block mb-4 mr-2 w-100"><input type="text" class="d-none" name="img[]" value="{{ $news->img }}"></div>
+											<div class="uploadImgClose mr-2" style="width: 250px;"><img src="{{ $news->img }}" alt="" class="uploadImg d-block mb-4 mr-2 w-100"><input type="text" class="d-none" name="img[]" value="{{ $news->img }}"></div>
 										</div>
 										<div class="d-flex">
 											<a href="" class="popup_selector  btn btn-block btn-info w-25" data-inputid="uploadImgWrap1">Выбрать</a>

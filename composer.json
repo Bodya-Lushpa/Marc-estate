@@ -7,6 +7,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "barryvdh/laravel-elfinder": "^0.4",
+        "bepsvpt/blurhash": "^2.0",
         "cviebrock/eloquent-sluggable": "^8.0",
         "doctrine/dbal": "^3.5",
         "fruitcake/laravel-cors": "^2.0",
@@ -16,6 +17,7 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.0",
+        "spatie/laravel-image-optimizer": "^1.7",
         "spatie/laravel-permission": "^5.7"
     },
     "require-dev": {

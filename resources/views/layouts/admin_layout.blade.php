@@ -114,27 +114,12 @@
 						</li>
 
 						<li class="nav-item">
-							<a href="#" class="nav-link">
+							<a href="{{ route('project.index') }}" class="nav-link">
 								<i class="nav-icon fas fa-home"></i>
 								<p>
 									Проекты
-									<i class="right fas fa-angle-left"></i>
 								</p>
 							</a>
-							<ul class="nav nav-treeview">
-								<li class="nav-item">
-									<a href="{{ route('project.index') }}" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
-										<p>Все проекты</p>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="{{ route('project.create') }}" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
-										<p>Добавить проект</p>
-									</a>
-								</li>
-							</ul>
 						</li>
 						@role('admin')
 						<li class="nav-item">
@@ -146,50 +131,20 @@
 							</a>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link">
+							<a href="{{ route('news.index') }}" class="nav-link">
 								<i class="nav-icon fas fa-newspaper"></i>
 								<p>
 									Новости
-									<i class="right fas fa-angle-left"></i>
 								</p>
 							</a>
-							<ul class="nav nav-treeview">
-								<li class="nav-item">
-									<a href="{{ route('news.index') }}" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
-										<p>Все новости</p>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="{{ route('news.create') }}" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
-										<p>Добавить новость</p>
-									</a>
-								</li>
-							</ul>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link">
+							<a href="{{ route('partner.index') }}" class="nav-link">
 								<i class="nav-icon fas fa-handshake"></i>
 								<p>
 									Партнеры
-									<i class="right fas fa-angle-left"></i>
 								</p>
 							</a>
-							<ul class="nav nav-treeview">
-								<li class="nav-item">
-									<a href="{{ route('partner.index') }}" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
-										<p>Все партнеры</p>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="{{ route('partner.create') }}" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
-										<p>Добавить партнеров</p>
-									</a>
-								</li>
-							</ul>
 						</li>
 						<li class="nav-item">
 							<a href="#" class="nav-link">
@@ -318,27 +273,12 @@
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link">
+							<a href="{{ route('users.index') }}" class="nav-link">
 								<i class="nav-icon fas fa-user"></i>
 								<p>
 									Менеджеры
-									<i class="right fas fa-angle-left"></i>
 								</p>
 							</a>
-							<ul class="nav nav-treeview">
-								<li class="nav-item">
-									<a href="{{ route('users.index') }}" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
-										<p>Все менеджеры</p>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="{{ route('users.create') }}" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
-										<p>Добавить менеджера</p>
-									</a>
-								</li>
-							</ul>
 						</li>
 						@endrole
 					</ul>

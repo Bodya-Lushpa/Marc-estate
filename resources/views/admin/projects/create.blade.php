@@ -138,7 +138,9 @@
 								<div class="col-lg-12">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Основное изображение</label>
-										<div class="uploadImgWrap1 d-flex"></div>
+										<div class="w-100" style="overflow-x: auto;">
+											<div class="uploadImgWrap1 d-flex"></div>
+										</div>
 
 										<div class="d-flex">
 											<a href="" class="popup_selector  btn btn-block btn-info w-25" data-inputid="uploadImgWrap1">Выбрать</a>

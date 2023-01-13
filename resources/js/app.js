@@ -7,6 +7,8 @@
 require('./bootstrap');
 
 import Vue from 'vue'
+import VueBlurHash from 'vue-blurhash'
+import 'vue-blurhash/dist/vue-blurhash.css'
 
 Vue.component("news", () => import("./components/news/News"));
 Vue.component("card-news", () => import("./components/news/Card"));
@@ -26,6 +28,11 @@ Vue.component("form-contact", () => import("./components/forms/FormContact"));
 Vue.component('jquery-selectmenu', () => import("./components/widgets/JquerySelectMenu"));
 Vue.component('modal-form-consultation', () => import("./components/modal/FormConsultation"));
 Vue.component('modal-thanks', () => import("./components/modal/Thank"));
+Vue.component('find-home-section', () => import("./components/home/FindHomeSection"));
+Vue.component('popular-places-section', () => import("./components/home/PopularPlacesSection"));
+Vue.component('call-to-action', () => import("./components/home/CallToAction"));
+
+Vue.use(VueBlurHash);
 
 
 const app = new Vue({

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\NewsRequest;
 use App\Models\News;
+use ImageOptimizer;
+use BlurHash;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
@@ -40,14 +42,16 @@ class NewsController extends Controller
 	 */
 	public function store(NewsRequest $request)
 	{
+		ImageOptimizer::optimize('.' . $request->img[0]);
+
 		$news = new News();
 		$news->title = $request->title;
-
 		$news->img = $request->img[0];
+		$news->hashimg = BlurHash::encode('.' . $request->img[0]);
 		$news->text = $request->text;
 		$news->save();
 
-		return redirect()->back()->withSuccess('Новость успешно добавлена');
+		return redirect('admin/news')->withSuccess('Новость успешно добавлена');
 	}
 
 	/**
@@ -83,12 +87,17 @@ class NewsController extends Controller
 	 */
 	public function update(NewsRequest $request, News $news)
 	{
+
+		ImageOptimizer::optimize('.' . $request->img[0]);
+
 		$news->title = $request->title;
 		$news->img = $request->img[0];
+		$news->hashimg = BlurHash::encode('.' . $request->img[0]);
 		$news->text = $request->text;
 		$news->save();
 
-		return redirect()->back()->withSuccess('Новость успешно обновлена');
+
+		return redirect('admin/news')->withSuccess('Новость успешно обновлена');
 	}
 
 	/**
