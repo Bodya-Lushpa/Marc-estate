@@ -109,6 +109,7 @@ export default {
           this.leadData.name = "";
           this.leadData.phone = "";
           this.leadData.text = "";
+          fbq("track", "SubmitApplication");
         })
         .catch(function (error) {
           console.log(error);
