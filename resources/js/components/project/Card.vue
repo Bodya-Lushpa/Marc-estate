@@ -25,8 +25,11 @@
             <div class="property-detail">
               <div class="upper-box">
                 <div class="carousel-outer">
-                  <ul class="image-carousel owl-carousel owl-theme">
-                    <li v-for="image in project.images">
+                  <ul
+                    class="image-carousel owl-carousel owl-theme"
+                    id="image-carousel"
+                  >
+                    <li v-for="(image, index) in project.images" :key="index">
                       <a :href="image.img" class="lightbox-image"
                         ><img :src="image.img"
                       /></a>
@@ -34,7 +37,7 @@
                   </ul>
 
                   <ul class="thumbs-carousel owl-carousel owl-theme">
-                    <li v-for="image in project.images">
+                    <li v-for="(image, index) in project.images" :key="index">
                       <img :src="image.img" alt="" />
                     </li>
                   </ul>
@@ -220,6 +223,14 @@ export default {
       showPlans: 3,
     };
   },
+  mounted() {
+    axios.get("/api/projects/" + this.slug).then((response) => {
+      this.project = response.data;
+    });
+    axios.get("/api/plans/").then((response) => {
+      this.plans = response.data;
+    });
+  },
   updated() {
     // var map_parameters = {
     //   center: {
@@ -228,7 +239,7 @@ export default {
     //   },
     //   zoom: 8,
     // };
-    // var map = new google.maps.Map(this.$refs.Gmap, map_parameters);
+    // var map = new google.maps.Map(this, map_parameters);
     // var position1 = {
     //   position: {
     //     lat: "47.451348",
@@ -247,6 +258,7 @@ export default {
           media: {},
         },
       });
+
       // Product Carousel Slider
       if (
         $(".property-detail .image-carousel").length &&
@@ -333,22 +345,13 @@ export default {
       }
     })(window.jQuery);
   },
-  mounted() {
-    axios.get("/api/projects/" + this.slug).then((response) => {
-      this.project = response.data;
-    });
-    axios.get("/api/plans/").then((response) => {
-      this.plans = response.data;
-    });
-  },
   methods: {
     selectRooms(planRoom) {
       this.showPlans = 3;
       this.selectRoom = planRoom;
     },
     rooms(room_id) {
-      var plan = this.plans.filter((plan) => plan.id == room_id);
-      return plan[0].plan_room.title;
+      return this.plans.filter((plan) => plan.id == room_id)[0].plan_room.title;
     },
     filterRooms() {
       if (this.selectRoom == "all") {

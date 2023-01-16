@@ -239,14 +239,14 @@
 												<ul class="contact-list d-md-flex align-items justify-content-md-between">
 													<li class="d-flex align-items-center justify-content-center">
 														<span class="la la-map-marker"></span>
-														<div>Казахстан, пр, Сейфулина 597а</div>
+														<div>Казахстан, Алматы, пр, Сейфулина 597а</div>
 													</li>
 													<li class="d-flex align-items-center justify-content-center">
 														<span class="la la-phone"></span>
-														<div>+7 (777) 666 03 90</div>
+														<div><a href="tel:+7 (777) 666 03 90">+7 (777) 666 03 90</a></div>
 													</li>
 													<li class="d-flex align-items-center justify-content-center">
-														<span class="la la-envelope"></span><a href="#">info@markestate.kz</a>
+														<span class="la la-envelope"></span><a href="mailTo:info@markestate.kz">info@markestate.kz</a>
 													</li>
 												</ul>
 											</div>

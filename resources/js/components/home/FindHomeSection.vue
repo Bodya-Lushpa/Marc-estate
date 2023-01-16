@@ -31,7 +31,7 @@
                 <div class="feature-block col-lg-6 col-md-6 col-sm-12">
                   <div class="inner-box">
                     <span class="icon flaticon-house-1"></span>
-                    <h4><a href="/about">ПОКУПКА НЕДВИЖИМОСТИ</a></h4>
+                    <h4>ПОКУПКА НЕДВИЖИМОСТИ</h4>
                     <div class="text">
                       Самые выгодные условия для покупки и лучшие цены от
                       застройщиков
@@ -43,7 +43,7 @@
                 <div class="feature-block col-lg-6 col-md-6 col-sm-12">
                   <div class="inner-box">
                     <span class="icon flaticon-rent"></span>
-                    <h4><a href="/about">ПРОДАЖА НЕДВИЖИМОСТИ</a></h4>
+                    <h4>ПРОДАЖА НЕДВИЖИМОСТИ</h4>
                     <div class="text">
                       Консультация и полное сопровождение сделки
                     </div>

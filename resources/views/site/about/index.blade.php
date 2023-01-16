@@ -3,13 +3,13 @@
 @section('content')
 
 <!-- About Us -->
-<section class="about-us style-two">
+<section class="about-us" style="background-image: url('images/background/1.jpg');">
 	<div class="auto-container">
 		<div class="row">
 			<!-- Info Column -->
 			<div class="info-column col-lg-6 col-md-12 col-sm-12">
 				<div class="inner-column">
-					<div class="sec-title">
+					<div class="sec-title light">
 						<span class="title">Лучшие объекты для инвестиций за рубежом</span>
 						<h2>НАЙДЁМ ДОМ ВАШЕЙ МЕЧТЫ</h2>
 					</div>
@@ -63,15 +63,15 @@
 <!-- Fun Fact -->
 <section class="fun-facts-section" style="background-image: url(/images/background/pexels-pixabay-262347.jpg)">
 	<div class="auto-container">
-		<div class="video-box">
+		<!-- <div class="video-box">
 			<figure class="image">
 				<img src="images/resource/image-5.jpg" alt="" />
 				<a href="https://www.youtube.com/watch?v=Fvae8nxzVz4" class="link" data-fancybox="gallery" data-caption=""><span class="icon flaticon-play-button-3"></span></a>
 			</figure>
-		</div>
+		</div> -->
 
 		<div class="fun-facts">
-			<div class="row clearfix">
+			<div class="row clearfix align-items-center">
 				<!--Column-->
 				<div class="column count-box col-lg-3 col-md-6 col-sm-12">
 					<div class="content">
