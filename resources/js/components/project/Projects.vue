@@ -269,7 +269,7 @@ export default {
         ) {
           return project.price > price[0] && project.price < price[1];
         });
-        this.pageCount = Math.ceil(filteredProjectPrice.length / 6);
+        this.pageCount = Math.ceil(filteredProjectPrice.length / 12);
         this.hasNextPage = filteredProjectPrice.length > end;
         return filteredProjectPrice.slice(start, end);
       }
