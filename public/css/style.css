@@ -8112,7 +8112,6 @@ button[disabled="disabled"] {
 
 .styled-pagination li a span {
 	display: inline-block;
-	transform: skewX(12deg);
 }
 
 .styled-pagination li a:hover,
