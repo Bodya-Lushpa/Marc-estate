@@ -2287,10 +2287,6 @@ img {
 	z-index: 5;
 }
 
-.main-slider .tp-dottedoverlay {
-	background: rgba(37, 37, 37, 0.30);
-}
-
 .main-slider .content-box {
 	position: relative;
 }
@@ -6083,11 +6079,12 @@ a.ui-button:active, .ui-button:active,
 	position: absolute;
 	left: 0;
 	top: 0;
-	height: 250px;
+	height: 100%;
 	width: 100%;
-	background-color: #ffffff;
+	background-color: #00515a;
+	opacity: 1;
 	content: "";
-	z-index: 1;
+	z-index: 0;
 }
 
 .fun-facts-section .video-box {
@@ -6160,7 +6157,7 @@ a.ui-button:active, .ui-button:active,
 
 .fun-facts {
 	position: relative;
-	padding: 85px 0px 55px;
+	padding: 45px 0px 30px;
 }
 
 .fun-facts-section .column {
@@ -6170,7 +6167,7 @@ a.ui-button:active, .ui-button:active,
 
 .fun-facts-section .column .content {
 	position: relative;
-	padding-left: 80px;
+	padding-left: 78px;
 }
 
 .fun-facts-section .column .icon-box {
@@ -6179,7 +6176,7 @@ a.ui-button:active, .ui-button:active,
 	top: -3px;
 	font-size: 72px;
 	line-height: 1em;
-	color: #126977;
+	color: #fff;
 }
 
 .fun-facts-section .count-outer {
@@ -6229,13 +6226,21 @@ a.ui-button:active, .ui-button:active,
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-color: #222222;
+	background-color: #00515a;
 	opacity: 0.90;
 	content: "";
 }
 
 .about-us .sec-title {
 	margin-bottom: 45px;
+}
+
+.about-us .sec-title .title {
+	color: #fff;
+}
+
+.about-us .sec-title:before, .about-us .sec-title:after {
+	background-color: #fff;
 }
 
 .about-us .info-column {
@@ -6251,7 +6256,7 @@ a.ui-button:active, .ui-button:active,
 	position: relative;
 	font-size: 15px;
 	line-height: 30px;
-	color: #bbbbbb;
+	color: #fff;
 	font-weight: 400;
 }
 
@@ -6276,7 +6281,7 @@ a.ui-button:active, .ui-button:active,
 	top: 0;
 	font-size: 48px;
 	line-height: 1em;
-	color: #126977;
+	color: #fff;
 }
 
 .feature-block h4 {
@@ -6324,7 +6329,7 @@ a.ui-button:active, .ui-button:active,
 	top: -30px;
 	height: 100%;
 	width: 100%;
-	border: 1px solid #126977;
+	border: 1px solid #fff;
 	content: "";
 }
 
@@ -7217,9 +7222,17 @@ a.ui-button:active, .ui-button:active,
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-color: #222222;
+	background-color: #00515a;
 	content: "";
 	opacity: 0.90;
+}
+
+.call-to-action .sec-title .title {
+	color: #fff;
+}
+
+.call-to-action .sec-title:before, .call-to-action .sec-title:after {
+	background-color: #fff;
 }
 
 .call-to-action .row {
@@ -7247,6 +7260,12 @@ a.ui-button:active, .ui-button:active,
 .call-to-action .button-column a {
 	margin-left: 30px;
 	margin-bottom: 20px;
+	background: #fff;
+	color: #00515a;
+}
+
+.call-to-action .button-column a:hover {
+	color: #fff;
 }
 
 /***
@@ -8112,7 +8131,6 @@ button[disabled="disabled"] {
 
 .styled-pagination li a span {
 	display: inline-block;
-	transform: skewX(12deg);
 }
 
 .styled-pagination li a:hover,
@@ -8196,7 +8214,7 @@ button[disabled="disabled"] {
 .clients-section {
 	position: relative;
 	padding: 40px 0;
-	background-color: #222222;
+	background-color: #00515a;
 }
 
 .clients-section .sponsors-outer {
@@ -9957,7 +9975,7 @@ button[disabled="disabled"] {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background: #222222;
+	background: #00515a;
 	opacity: 0.90;
 	content: "";
 }
@@ -10132,7 +10150,7 @@ button[disabled="disabled"] {
 	margin-right: 15px;
 	font-size: 18px;
 	line-height: 36px;
-	color: #126977;
+	color: #fff;
 }
 
 .main-footer .contact-list li a {
@@ -10145,7 +10163,7 @@ button[disabled="disabled"] {
 }
 
 .main-footer .contact-list li a:hover {
-	color: #126977;
+	color: #fff;
 }
 
 /*=== Cities Widget ===*/
@@ -10274,7 +10292,7 @@ button[disabled="disabled"] {
 
 .main-footer .footer-bottom .inner-container {
 	position: relative;
-	border-top: 1px solid #777777;
+	border-top: 1px solid #fff;
 }
 
 .main-footer .footer-bottom .copyright-text {
@@ -10339,7 +10357,7 @@ button[disabled="disabled"] {
 }
 
 .main-footer .footer-bottom .footer-nav ul li a:hover {
-	color: #126977;
+	color: #fff;
 }
 
 /*=======================================
@@ -11765,7 +11783,7 @@ p.plan-item__room {
 	bottom: 30px;
 	transform: translate(-50%, -50%);
 	background-color: #25d366;
-	box-shadow: 2px 2px 3px #999;
+	box-shadow: 2px 2px 3px #0009;
 	/*цвет кнопки*/
 	border-radius: 50%;
 	width: 55px;
@@ -11845,4 +11863,8 @@ p.plan-item__room {
 		left: 50px;
 		right: auto;
 	}
+}
+
+.loaderImg {
+	margin-bottom: 25px;
 }

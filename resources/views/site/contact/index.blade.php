@@ -29,7 +29,7 @@
 							<span class="icon la la-phone"></span>
 							<h4>Телефон</h4>
 							<ul>
-								<li>+ 7 777 552 99 99</li>
+								<li><a href="tel:+7 (777) 666 03 90">+7 (777) 666 03 90</a></li>
 							</ul>
 						</div>
 					</div>
@@ -40,7 +40,7 @@
 							<span class="icon la la-envelope-o"></span>
 							<h4>E-mail</h4>
 							<ul>
-								<li>info@markestate.kz</li>
+								<li><a href="mailTo:info@markestate.kz">info@markestate.kz</a></li>
 							</ul>
 						</div>
 					</div>
@@ -64,7 +64,10 @@
 							<h4>Соц. сети:</h4>
 							<ul class="social-icon-three">
 								<li>
-									<a href="#"><span class="la la-instagram"></span></a>
+									<a href="https://instagram.com/mark.estate?igshid=Zjc2ZTc4Nzk="><span class="la la-instagram"></span></a>
+								</li>
+								<li>
+									<a href="https://www.facebook.com/profile.php?id=100088668091336&mibextid=LQQJ4d"><span class="la la-facebook"></span></a>
 								</li>
 							</ul>
 						</div>
