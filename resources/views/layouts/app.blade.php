@@ -25,8 +25,8 @@
 	<!-- REVOLUTION LAYERS STYLES -->
 	<link href="/plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css" />
 	<!-- REVOLUTION NAVIGATION STYLES -->
-	<link href="/css/style.css" rel="stylesheet" />
-	<link href="/css/responsive.css" rel="stylesheet" />
+	<link href="/css/style.css?v=2" rel="stylesheet" />
+	<link href="/css/responsive.css?v=2" rel="stylesheet" />
 	<!--Color Switcher Mockup-->
 	<!-- <link href="/css/color-switcher-design.css" rel="stylesheet" /> -->
 
@@ -311,8 +311,8 @@
 		<modal-thanks></modal-thanks>
 	</div>
 
-	<script src="/js/jquery.js"></script>
-	<script src="/js/imask.js"></script>
+	<script src="/js/jquery.js?v=2"></script>
+	<script src="/js/imask.js?v=2"></script>
 	<script src="/js/popper.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<!--Revolution Slider-->
@@ -328,8 +328,8 @@
 	<script src="/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
 	<script src="/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
 	<!--End Revolution Slider-->
-	<script src="/js/jquery-ui.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+	<script src="/js/jquery-ui.js?v=2"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js?v=2"></script>
 	<script src="/js/jquery.fancybox.js"></script>
 	<script src="/js/owl.js"></script>
 	<script src="/js/wow.js"></script>
