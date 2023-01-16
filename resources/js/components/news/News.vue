@@ -4,7 +4,7 @@
     <section class="blog-section">
       <div class="auto-container">
         <div v-if="loading" class="text-center">
-          <img src="/images/loader.gif" style="width: 10%" />
+          <img src="/images/loader.gif" style="width: 10%" class="loaderImg" />
         </div>
         <div v-else>
           <div v-if="filteredNews().length">
