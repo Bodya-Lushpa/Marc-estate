@@ -19,14 +19,14 @@ class LeadController extends Controller
 		$lead->title_form = $request->title_form;
 		$lead->title_project = $request->title_project;
 		$lead->text = $request->text;
+		$lead->save();
 
 		$data = array('name' => $request->name, 'phone' => $request->phone, 'text' => $request->text, 'title_form' => $request->title_form, 'title_project' => $request->title_project);
 
 
-		Mail::send('mail', $data, function ($message) {
+		return Mail::send('mail', $data, function ($message) {
 			$message->to(env('MAIL_TO'))->subject('Новая заявка с сайта mark estate');
 			$message->from('info@markestate.kz', 'Mark Estate');
 		});
-		return $lead->save();
 	}
 }

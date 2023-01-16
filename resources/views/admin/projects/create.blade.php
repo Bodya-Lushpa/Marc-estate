@@ -55,7 +55,7 @@
 								<div class="col-lg-7">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Название</label>
-										<input type="text" class="form-control" name="title" placeholder="Введите название проекта" required>
+										<input type="text" class="form-control" name="title" placeholder="Введите название проекта" value="{{ old('title') }}" required>
 									</div>
 								</div>
 								<div class="col-lg-3">
@@ -77,13 +77,13 @@
 								<div class="col-lg-4">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Адресс</label>
-										<input type="text" class="form-control" name="address" placeholder="Введите адресс проекта" required>
+										<input type="text" class="form-control" name="address" value="{{ old('address') }}" placeholder="Введите адресс проекта" required>
 									</div>
 								</div>
 								<div class="col-lg-2">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Цена</label>
-										<input type="text" class="form-control" name="price" placeholder="Цена проекта от" required>
+										<input type="text" class="form-control" name="price" value="{{ old('price') }}" placeholder="Цена проекта от" required>
 									</div>
 								</div>
 								<div class="col-md-2">
@@ -130,8 +130,8 @@
 									<div class="form-group">
 										<label for="exampleInputEmail1">Координаты</label>
 										<div class="row">
-											<div class="col-lg-6"><input type="text" class="form-control" name="coordinates1" placeholder="" required></div>
-											<div class="col-lg-6"><input type="text" class="form-control" name="coordinates2" placeholder="" required></div>
+											<div class="col-lg-6"><input type="text" class="form-control" name="coordinates1" placeholder="" value="{{ old('coordinates1') }}" required></div>
+											<div class="col-lg-6"><input type="text" class="form-control" name="coordinates2" placeholder="" value="{{ old('coordinates2') }}" required></div>
 										</div>
 									</div>
 								</div>
@@ -183,7 +183,7 @@
 						<div class="card-body">
 							<div class="col-lg-12">
 								<div class="form-group">
-									<textarea name="description" class="editor"></textarea>
+									<textarea name="description" class="editor" value="{{ old('description') }}"></textarea>
 								</div>
 							</div>
 						</div>
@@ -219,7 +219,7 @@
 
 					<div class="card card-primary">
 						<div class="card-header">
-							<h3 class="card-title">Home Amenities</h3>
+							<h3 class="card-title">Преимущества</h3>
 							<div class="card-tools">
 								<button type="button" class="btn btn-tool" data-card-widget="collapse">
 									<i class="fas fa-minus"></i>

@@ -28,7 +28,7 @@
 	<link href="/css/style.css" rel="stylesheet" />
 	<link href="/css/responsive.css" rel="stylesheet" />
 	<!--Color Switcher Mockup-->
-	<link href="/css/color-switcher-design.css" rel="stylesheet" />
+	<!-- <link href="/css/color-switcher-design.css" rel="stylesheet" /> -->
 
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 	<link rel="icon" href="/images/favicon.png" type="image/x-icon" />
@@ -292,11 +292,21 @@
 			</footer>
 
 
-
-
 			<!-- End Main Footer -->
 		</div>
 		<!--End pagewrapper-->
+
+		<a href="https://api.whatsapp.com/send?phone=77776660390&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%20%D0%9C%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%B7%D0%B0%20%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B5%D0%B9.%20%D0%9C%D0%BE%D0%B3%D0%BB%D0%B8%20%D0%B1%D1%8B%20%D1%81%D0%B2%D1%8F%D0%B7%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D1%81%D0%BE%20%D0%BC%D0%BD%D0%BE%D0%B9%3F" target="_blank" title="Написать в Whatsapp" rel="noopener noreferrer">
+			<div class="social-button">
+				<span class="la la-whatsapp"></span>
+			</div>
+		</a>
+
+		<a href="tel:+77776660390" title="Позвонить">
+			<div class="social-button social-button-tel">
+				<span class="la la-phone"></span>
+			</div>
+		</a>
 
 		<modal-thanks></modal-thanks>
 	</div>
@@ -324,13 +334,13 @@
 	<script src="/js/owl.js"></script>
 	<script src="/js/wow.js"></script>
 	<script src="/js/isotope.js"></script>
-	<!-- <script src="/js/mixitup.js"></script> -->
-	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh2CmiYQa-pHzV-BB8LdoQ19qk-mV-08o"></script> -->
 	<script src="/js/appear.js"></script>
 	<script src="/js/script.js"></script>
 
 	<!-- Scripts -->
 	<script src="{{ asset('js/app.js') }}" defer></script>
+
 
 
 </body>

@@ -3000,6 +3000,8 @@ a.ui-button:active, .ui-button:active,
 }
 
 .property-search-form .range-slider-one .ui-widget.ui-widget-content {
+	width: 95%;
+	margin: 0 auto;
 	height: 3px;
 	border: none;
 	margin-top: 20px;
@@ -4691,6 +4693,7 @@ a.ui-button:active, .ui-button:active,
 }
 
 .flooring-tabs .tab-buttons li {
+	text-align: center;
 	position: relative;
 	display: inline-block;
 	font-size: 18px;
@@ -11754,4 +11757,90 @@ p.plan-item__room {
 
 .plan-item__more {
 	margin-top: 40px;
+}
+
+.social-button {
+	position: fixed;
+	right: 13px;
+	bottom: 30px;
+	transform: translate(-50%, -50%);
+	background: #25D366;
+	/*цвет кнопки*/
+	border-radius: 50%;
+	width: 55px;
+	/*ширина кнопки*/
+	height: 55px;
+	/*высота кнопки*/
+	color: #fff;
+	text-align: center;
+	line-height: 53px;
+	/*центровка иконки в кнопке*/
+	font-size: 35px;
+	/*размер иконки*/
+	z-index: 9999;
+}
+
+.social-button a {
+	color: #fff;
+}
+
+.social-button:before,
+.social-button:after {
+	content: " ";
+	display: block;
+	position: absolute;
+	border: 50%;
+	border: 1px solid #25D366;
+	/*цвет анимированных волн от кнопки*/
+	left: -20px;
+	right: -20px;
+	top: -20px;
+	bottom: -20px;
+	border-radius: 50%;
+	animation: animate 1.5s linear infinite;
+	opacity: 0;
+	backface-visibility: hidden;
+}
+
+.social-button:after {
+	animation-delay: .5s;
+}
+
+.social-button-tel {
+	bottom: 130px;
+	background: #116877;
+}
+
+.social-button-tel:before,
+.social-button-tel:after {
+	border: 1px solid #116877;
+}
+
+@keyframes animate {
+	0% {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(1.2);
+		opacity: 0;
+	}
+}
+
+@media (max-width : 800px) {
+	.social-button {
+		bottom: 5px;
+		right: 5px;
+	}
+
+	.social-button-tel {
+		bottom: 5px;
+		left: 50px;
+		right: auto;
+	}
 }

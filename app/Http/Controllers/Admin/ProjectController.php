@@ -76,18 +76,19 @@ class ProjectController extends Controller
 		$project->images_for_slider = $request->images_for_slider;
 		$request->is_slider ? $project->is_slider = 1 : $project->is_slider = 0;
 		$request->is_top ? $project->is_top = 1 : $project->is_top = 0;
-		$project->hashimg = BlurHash::encode('.' . $request->img[0]);
+
+		$request->img[0] ? $project->hashimg = BlurHash::encode('.' . $request->img[0]) : 'LaFZ4_xui]IT%%WZaJROkERjoct7';
 		$project->save();
 
 		$important_information = [];
-		if ($request->important_information) {
+		if ($request->important_information[0]) {
 			foreach ($request->important_information as $key => $value) {
 				array_push($important_information, new ImportantInformation(['title' => $value]));
 			}
 			$project->importantInformation()->saveMany($important_information);
 		}
 		$home_amenities = [];
-		if ($request->home_amenities) {
+		if ($request->home_amenities[0]) {
 			foreach ($request->home_amenities as $key => $value) {
 				array_push($home_amenities, new HomeInformation(['title' => $value]));
 			}
@@ -205,7 +206,7 @@ class ProjectController extends Controller
 		$project->images_for_slider = $request->images_for_slider;
 		$request->is_slider ? $project->is_slider = 1 : $project->is_slider = 0;
 		$request->is_top ? $project->is_top = 1 : $project->is_top = 0;
-		$project->hashimg = BlurHash::encode('.' . $request->img[0]);
+		$request->img[0] ? $project->hashimg = BlurHash::encode('.' . $request->img[0]) : 'LaFZ4_xui]IT%%WZaJROkERjoct7';
 		$project->save();
 
 		$important_information = [];

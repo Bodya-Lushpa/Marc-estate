@@ -161,12 +161,16 @@
               </div>
 
               <!-- Nearest Places -->
-              <div class="nearest-places">
+              <!-- <div class="nearest-places">
                 <h4>Расположение</h4>
                 <div class="outer-box clearfix">
-                  <div id="map" style="height: 350px; width: 100%"></div>
+                  <div
+                    ref="map"
+                    id="map"
+                    style="height: 350px; width: 100%"
+                  ></div>
                 </div>
-              </div>
+              </div> -->
 
               <form-full
                 :csrf="csrf"
@@ -201,8 +205,6 @@
 
 <script>
 import axios from "axios";
-import $ from "jquery";
-import owlCarousel from "/js/owl.js";
 
 export default {
   props: {
@@ -219,9 +221,21 @@ export default {
     };
   },
   updated() {
-    // var map_parameters = { center: {lat: this.project.coordinates1, lng: this.project.coordinates2}, zoom: 8 };
-    // var map = new google.maps.Map(document.getElementById('map'), map_parameters);
-    // var position1 = { position: {lat: this.project.coordinates1, lng: this.project.coordinates2}, map: map };
+    // var map_parameters = {
+    //   center: {
+    //     lat: "47.451348",
+    //     lng: "65.170465",
+    //   },
+    //   zoom: 8,
+    // };
+    // var map = new google.maps.Map(this.$refs.Gmap, map_parameters);
+    // var position1 = {
+    //   position: {
+    //     lat: "47.451348",
+    //     lng: "65.170465",
+    //   },
+    //   map: map,
+    // };
     // var marker1 = new google.maps.Marker(position1);
 
     // Product Carousel Slider
@@ -302,7 +316,6 @@ export default {
               },
             },
           })
-
           .on("click", ".owl-item", function () {
             $sync1.trigger("to.owl.carousel", [
               $(this).index(),

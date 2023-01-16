@@ -143,7 +143,7 @@
               :class="[pageNumber == page ? 'active' : '']"
               @click="page = pageNumber"
             >
-              <a type="click"
+              <a href="#" type="click"
                 ><span>{{ pageNumber }}</span></a
               >
             </li>
@@ -187,9 +187,9 @@ export default {
       const windowData = Object.fromEntries(
         new URL(window.location).searchParams.entries()
       );
-      const start = (this.page - 1) * 6;
-      const end = this.page * 6;
-      this.pageCount = Math.ceil(this.projects.length / 6);
+      const start = (this.page - 1) * 12;
+      const end = this.page * 12;
+      this.pageCount = Math.ceil(this.projects.length / 12);
       this.hasNextPage = this.projects.length > end;
 
       if (windowData.search) {
@@ -200,7 +200,7 @@ export default {
               .indexOf(windowData.search.toUpperCase()) !== -1
           );
         });
-        this.pageCount = Math.ceil(filteredProject.length / 6);
+        this.pageCount = Math.ceil(filteredProject.length / 12);
         this.hasNextPage = filteredProject.length > end;
         return filteredProject.slice(start, end);
       }
@@ -209,7 +209,7 @@ export default {
         var filteredProjectCity = this.projects.filter(function (project) {
           return project.city.slug.includes(windowData.cityhome);
         });
-        this.pageCount = Math.ceil(filteredProjectCity.length / 6);
+        this.pageCount = Math.ceil(filteredProjectCity.length / 12);
         this.hasNextPage = filteredProjectCity.length > end;
         return filteredProjectCity.slice(start, end);
       }
@@ -220,7 +220,7 @@ export default {
             return real.slug == windowData.typereal;
           });
         });
-        this.pageCount = Math.ceil(filteredProject.length / 6);
+        this.pageCount = Math.ceil(filteredProject.length / 12);
         this.hasNextPage = filteredProject.length > end;
         return filteredProject.slice(start, end);
       }

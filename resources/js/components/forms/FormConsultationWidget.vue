@@ -6,7 +6,7 @@
     </div>
     <div class="widget-content">
       <div class="agent-form">
-        <form action="" method="post" @submit="submitData(event)">
+        <form action="" method="post" @submit="submitData()">
           <input type="hidden" name="_token" :value="csrf" />
           <input
             type="hidden"
@@ -91,6 +91,7 @@ export default {
         })
         .catch(function (error) {
           console.log(error);
+          console.log("error");
           this.disabledButton = false;
         });
     },
