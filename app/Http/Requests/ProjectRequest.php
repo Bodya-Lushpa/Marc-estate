@@ -30,6 +30,10 @@ class ProjectRequest extends FormRequest
 			'description' => 'required',
 			'country_id' => 'required',
 			'city_id' => 'required',
+			'img' => 'required',
+			'type_reals' => 'required',
+			'important_information' => 'required',
+			'home_amenities' => 'required',
 		];
 	}
 }

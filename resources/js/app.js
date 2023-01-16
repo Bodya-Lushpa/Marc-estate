@@ -37,5 +37,5 @@ Vue.use(VueBlurHash);
 
 const app = new Vue({
 	el: '#app',
-})
+});
 

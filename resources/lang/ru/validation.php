@@ -107,6 +107,10 @@ return [
 		'title' => 'Название',
 		'img' => 'Изображение',
 		'text' => 'Описание',
+		'description' => 'Описание',
+		'type_reals' => 'Тип недвижимости',
+		'important_information' => 'Важная информация',
+		'home_amenities' => 'Преимущества',
 	],
 
 ];
