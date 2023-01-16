@@ -11764,7 +11764,8 @@ p.plan-item__room {
 	right: 13px;
 	bottom: 30px;
 	transform: translate(-50%, -50%);
-	background: #25D366;
+	background-color: #25d366;
+	box-shadow: 2px 2px 3px #999;
 	/*цвет кнопки*/
 	border-radius: 50%;
 	width: 55px;
@@ -11773,11 +11774,12 @@ p.plan-item__room {
 	/*высота кнопки*/
 	color: #fff;
 	text-align: center;
-	line-height: 53px;
+	line-height: 56px;
 	/*центровка иконки в кнопке*/
 	font-size: 35px;
 	/*размер иконки*/
 	z-index: 9999;
+	padding-left: 2px;
 }
 
 .social-button a {
@@ -11827,7 +11829,7 @@ p.plan-item__room {
 	}
 
 	100% {
-		transform: scale(1.2);
+		transform: scale(1);
 		opacity: 0;
 	}
 }
@@ -11835,7 +11837,7 @@ p.plan-item__room {
 @media (max-width : 800px) {
 	.social-button {
 		bottom: 5px;
-		right: 5px;
+		right: 0px;
 	}
 
 	.social-button-tel {
