@@ -1,8 +1,8 @@
-.repeaterItem, .plansItem{
+.repeaterItem, .plansItem {
 	position: relative;
 }
 
-.closeRepeaterItem, .closePlanItem{
+.closeRepeaterItem, .closePlanItem {
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -17,24 +17,27 @@
 	align-items: center;
 	justify-content: center;
 }
-.uploadImgClose{
+
+.uploadImgClose {
 	position: relative;
 }
-.uploadImgClose::after{
+
+.uploadImgClose::after {
 	content: "Нажмите на картинку, чтобы удалить";
 	display: none;
 	transition: 0.3s;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 24px;
-    background: #b1b1b18f;
-    text-align: center;
-    padding: 13px;
-    padding-top: 50px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 24px;
+	background: #b1b1b18f;
+	text-align: center;
+	padding: 13px;
+	padding-top: 50px;
 }
-.uploadImgClose:hover::after{
+
+.uploadImgClose:hover::after {
 	display: block;
 	cursor: pointer;
 }

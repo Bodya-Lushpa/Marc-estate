@@ -45,8 +45,6 @@
               <div class="property-features">
                 <h4>Важная информация</h4>
                 <ul class="list-style-one">
-                  <li>Цена: $ {{ project.price }}</li>
-                  <li>Статус: {{ project.status.title }}</li>
                   <li>
                     Тип:
                     <span v-for="real in project.reals">{{ real.title }} </span>
