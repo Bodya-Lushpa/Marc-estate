@@ -137,7 +137,7 @@
               <a type="click"><span>Пред</span></a>
             </li>
             <li
-              v-for="(pageNumber, key) in pageCount()"
+              v-for="(pageNumber, key) in pageCount"
               :key="key"
               :class="[pageNumber == page ? 'active' : '']"
               @click="page = pageNumber"
@@ -173,6 +173,7 @@ export default {
       typeReals: [],
       loading: true,
       page: 1,
+      pageCount: 1,
       hasNextPage: true,
       isActive: true,
       windowData: "",
@@ -201,6 +202,7 @@ export default {
               .indexOf(windowData.search.toUpperCase()) !== -1
           );
         });
+        this.pageCount = Math.ceil(filteredProject.length / 12);
         this.hasNextPage = filteredProject.length > end;
         return filteredProject.slice(start, end);
       }
@@ -208,6 +210,7 @@ export default {
         var filteredProjectCity = this.projects.filter(function (project) {
           return project.city.slug.includes(windowData.cityhome);
         });
+        this.pageCount = Math.ceil(filteredProject.length / 12);
         this.hasNextPage = filteredProjectCity.length > end;
         return filteredProjectCity.slice(start, end);
       }
@@ -215,7 +218,7 @@ export default {
         const filteredProject = this.projects.filter((project) => {
           return project.reals.some((real) => real.slug == windowData.typereal);
         });
-
+        this.pageCount = Math.ceil(filteredProject.length / 12);
         this.hasNextPage = filteredProject.length > end;
         return filteredProject.slice(start, end);
       }
@@ -262,13 +265,11 @@ export default {
         ) {
           return project.price > price[0] && project.price < price[1];
         });
+        this.pageCount = Math.ceil(filteredProjectPrice.length / 12);
         this.hasNextPage = filteredProjectPrice.length > end;
         return filteredProjectPrice.slice(start, end);
       }
       return this.projects.slice(start, end);
-    },
-    pageCount() {
-      return Math.ceil(this.filteredProjects().length / 12);
     },
   },
   mounted() {
