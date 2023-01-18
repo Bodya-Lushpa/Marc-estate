@@ -129,13 +129,7 @@
                           :href="plan.img"
                           class="lightbox-image plan-item__img_wrap"
                         >
-                          <blur-hash-image
-                            :hash="plan.hashimg"
-                            :src="plan.img"
-                            height="110"
-                            alt=""
-                            class="plan-item__img"
-                          />
+                          <img :src="plan.img" alt="" class="plan-item__img" />
                         </a>
                         <div class="plan-item__desc">
                           <div class="plan-item__title-block">
