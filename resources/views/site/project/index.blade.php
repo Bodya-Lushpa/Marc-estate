@@ -5,6 +5,4 @@
 
 <projects></projects>
 
-<client-section></client-section>
-
 @endsection

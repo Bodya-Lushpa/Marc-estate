@@ -323,6 +323,4 @@
 </section>
 <!-- End Why Choose Us -->
 
-<client-section></client-section>
-
 @endsection

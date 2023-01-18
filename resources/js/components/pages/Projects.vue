@@ -130,7 +130,6 @@
             <p v-else class="text-center">Данные отсутствуют</p>
           </div>
         </div>
-
         <!--Post Share Options-->
         <div class="styled-pagination">
           <ul class="clearfix">
@@ -138,7 +137,7 @@
               <a type="click"><span>Пред</span></a>
             </li>
             <li
-              v-for="(pageNumber, key) in pageCount"
+              v-for="(pageNumber, key) in pageCount()"
               :key="key"
               :class="[pageNumber == page ? 'active' : '']"
               @click="page = pageNumber"
@@ -155,20 +154,25 @@
       </div>
     </section>
     <!--End Property Filter Section -->
+
+    <clientSection></clientSection>
   </div>
 </template>
 
 <script>
 import axios from "axios";
 import moment from "moment";
+import clientSection from "../ClientsSection.vue";
 export default {
+  components: {
+    clientSection,
+  },
   data() {
     return {
       projects: [],
       typeReals: [],
       loading: true,
       page: 1,
-      pageCount: 1,
       hasNextPage: true,
       isActive: true,
       windowData: "",
@@ -188,7 +192,6 @@ export default {
       );
       const start = (this.page - 1) * 12;
       const end = this.page * 12;
-      this.pageCount = Math.ceil(this.projects.length / 12);
       this.hasNextPage = this.projects.length > end;
       if (windowData.search) {
         const filteredProject = this.projects.filter(function (project) {
@@ -198,7 +201,6 @@ export default {
               .indexOf(windowData.search.toUpperCase()) !== -1
           );
         });
-        this.pageCount = Math.ceil(filteredProject.length / 12);
         this.hasNextPage = filteredProject.length > end;
         return filteredProject.slice(start, end);
       }
@@ -206,17 +208,14 @@ export default {
         var filteredProjectCity = this.projects.filter(function (project) {
           return project.city.slug.includes(windowData.cityhome);
         });
-        this.pageCount = Math.ceil(filteredProjectCity.length / 12);
         this.hasNextPage = filteredProjectCity.length > end;
         return filteredProjectCity.slice(start, end);
       }
       if (windowData.typereal) {
-        const filteredProject = this.projects.filter(function (project) {
-          return project.reals.some(function s(real) {
-            return real.slug == windowData.typereal;
-          });
+        const filteredProject = this.projects.filter((project) => {
+          return project.reals.some((real) => real.slug == windowData.typereal);
         });
-        this.pageCount = Math.ceil(filteredProject.length / 12);
+
         this.hasNextPage = filteredProject.length > end;
         return filteredProject.slice(start, end);
       }
@@ -263,11 +262,13 @@ export default {
         ) {
           return project.price > price[0] && project.price < price[1];
         });
-        this.pageCount = Math.ceil(filteredProjectPrice.length / 12);
         this.hasNextPage = filteredProjectPrice.length > end;
         return filteredProjectPrice.slice(start, end);
       }
       return this.projects.slice(start, end);
+    },
+    pageCount() {
+      return Math.ceil(this.filteredProjects().length / 12);
     },
   },
   mounted() {
