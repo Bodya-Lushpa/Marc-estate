@@ -161,7 +161,6 @@
 <script>
 import axios from "axios";
 import moment from "moment";
-
 export default {
   data() {
     return {
@@ -191,7 +190,6 @@ export default {
       const end = this.page * 12;
       this.pageCount = Math.ceil(this.projects.length / 12);
       this.hasNextPage = this.projects.length > end;
-
       if (windowData.search) {
         const filteredProject = this.projects.filter(function (project) {
           return (
@@ -204,7 +202,6 @@ export default {
         this.hasNextPage = filteredProject.length > end;
         return filteredProject.slice(start, end);
       }
-
       if (windowData.cityhome) {
         var filteredProjectCity = this.projects.filter(function (project) {
           return project.city.slug.includes(windowData.cityhome);
@@ -213,7 +210,6 @@ export default {
         this.hasNextPage = filteredProjectCity.length > end;
         return filteredProjectCity.slice(start, end);
       }
-
       if (windowData.typereal) {
         const filteredProject = this.projects.filter(function (project) {
           return project.reals.some(function s(real) {
@@ -224,7 +220,6 @@ export default {
         this.hasNextPage = filteredProject.length > end;
         return filteredProject.slice(start, end);
       }
-
       if (windowData.country) {
         if (windowData.country == "all") {
           var filteredProjectCountry = this.projects;
@@ -262,7 +257,6 @@ export default {
             return project.status.slug.includes(windowData.status);
           });
         }
-
         var price = windowData.price.split(" - ");
         var filteredProjectPrice = filteredProjectStatus.filter(function (
           project
@@ -273,7 +267,6 @@ export default {
         this.hasNextPage = filteredProjectPrice.length > end;
         return filteredProjectPrice.slice(start, end);
       }
-
       return this.projects.slice(start, end);
     },
   },

@@ -12,7 +12,7 @@
                   <!-- Form Group -->
                   <div class="form-group col-lg-4 col-md-6 col-sm-12">
                     <label>Страна</label>
-                    <jquery-selectmenu
+                    <jquerySelectmenu
                       name="country"
                       class="custom-select-box"
                       v-model="slug_country"
@@ -25,7 +25,7 @@
                       >
                         {{ country.title }}
                       </option>
-                    </jquery-selectmenu>
+                    </jquerySelectmenu>
                   </div>
 
                   <!-- Form Group -->
@@ -110,8 +110,12 @@
 
 <script>
 import axios from "axios";
+import jquerySelectmenu from "./JquerySelectMenu.vue";
 
 export default {
+  components: {
+    jquerySelectmenu,
+  },
   data() {
     return {
       counties: [],

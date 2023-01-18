@@ -44,6 +44,9 @@
 
 	.main-slider {
 		margin-top: 90px;
+		height: auto;
+		min-height: 300px;
+		padding-top: 0;
 	}
 
 	.header-style-one .header-lower .logo:after,

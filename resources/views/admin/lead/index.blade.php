@@ -45,6 +45,7 @@
 							<th>Имя</th>
 							<th>Телефон</th>
 							<th>Сообщение</th>
+							<th>Дата</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -56,6 +57,7 @@
 							<td>{{ $lead['name'] }}</td>
 							<td>{{ $lead['phone'] }}</td>
 							<td>{{ $lead['text'] }}</td>
+							<td>{{ $lead['created_at'] }}</td>
 						</tr>
 						@endforeach
 					</tbody>
@@ -67,6 +69,7 @@
 							<th>Имя</th>
 							<th>Телефон</th>
 							<th>Сообщение</th>
+							<th>Дата</th>
 						</tr>
 					</tfoot>
 				</table>

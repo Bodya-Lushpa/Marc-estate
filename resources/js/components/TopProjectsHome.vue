@@ -88,7 +88,7 @@
               </div>
             </div>
           </div>
-          <p v-else class="text-center">Данные отсутствуют</p>
+          <p v-else class="text-center mb-5">Данные отсутствуют</p>
         </div>
 
         <div class="row text-center">

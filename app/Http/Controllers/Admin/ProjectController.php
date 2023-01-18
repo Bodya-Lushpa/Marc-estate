@@ -105,7 +105,7 @@ class ProjectController extends Controller
 		if ($request->img) {
 			foreach ($request->img as $key => $value) {
 				ImageOptimizer::optimize('.' . $value);
-				array_push($projectImgs, new ProjectImg(['img' => $value]));
+				array_push($projectImgs, new ProjectImg(['img' => $value, 'hashimg' => BlurHash::encode('.' . $value)]));
 			}
 			$project->images()->saveMany($projectImgs);
 		} else {
@@ -114,7 +114,8 @@ class ProjectController extends Controller
 		$plans = [];
 		if ($request->plan) {
 			foreach ($request->plan as $key => $value) {
-				array_push($plans, new Plan(['img' => $value['img'], 'rooms' => $value['room'], 'price' => $value['price'], 'area' => $value['area'], 'description' => $value['description']]));
+				ImageOptimizer::optimize('.' . $value['img']);
+				array_push($plans, new Plan(['img' => $value['img'], 'hashimg' => BlurHash::encode('.' . $value['img']), 'rooms' => $value['room'], 'price' => $value['price'], 'area' => $value['area'], 'description' => $value['description']]));
 			}
 			$project->plans()->saveMany($plans);
 		}
@@ -234,7 +235,7 @@ class ProjectController extends Controller
 		if ($request->img) {
 			foreach ($request->img as $key => $value) {
 				ImageOptimizer::optimize('.' . $value);
-				array_push($projectImgs, new ProjectImg(['img' => $value]));
+				array_push($projectImgs, new ProjectImg(['img' => $value, 'hashimg' => BlurHash::encode('.' . $value)]));
 			}
 			$project->images()->saveMany($projectImgs);
 		} else {
@@ -243,7 +244,8 @@ class ProjectController extends Controller
 		$plans = [];
 		if ($request->plan) {
 			foreach ($request->plan as $key => $value) {
-				array_push($plans, new Plan(['img' => $value['img'], 'rooms' => $value['room'], 'price' => $value['price'], 'area' => $value['area'],  'description' => $value['description']]));
+				ImageOptimizer::optimize('.' . $value['img']);
+				array_push($plans, new Plan(['img' => $value['img'], 'hashimg' => BlurHash::encode('.' . $value['img']), 'rooms' => $value['room'], 'price' => $value['price'], 'area' => $value['area'], 'description' => $value['description']]));
 			}
 			$project->plans()->saveMany($plans);
 		}

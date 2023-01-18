@@ -153,7 +153,7 @@ export default {
           responsiveLevels: [1200, 1040, 778, 480],
           visibilityLevels: [1200, 1040, 778, 480],
           gridwidth: [1170, 1040, 778, 540],
-          gridheight: [650, 650, 650, 650],
+          gridheight: [720, 650, 650, 650],
           lazyType: "none",
           parallax: {
             type: "scroll",

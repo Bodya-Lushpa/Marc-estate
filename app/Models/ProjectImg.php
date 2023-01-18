@@ -9,7 +9,7 @@ class ProjectImg extends Model
 {
 	use HasFactory;
 
-	protected $fillable = ['img'];
+	protected $fillable = ['img', 'hashimg'];
 
 	public function product()
 	{
