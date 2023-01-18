@@ -77,7 +77,10 @@
                   <div class="form-group col-lg-4 col-md-6 col-sm-12">
                     <div class="range-slider-one clearfix">
                       <label>Цена</label>
-                      <div class="price-range-slider"></div>
+                      <div
+                        class="price-range-slider"
+                        ref="priceRangeSlider"
+                      ></div>
                       <div class="input">
                         <input
                           type="hidden"
@@ -139,8 +142,6 @@ export default {
     axios.get("/api/status-projects").then((response) => {
       this.statusProjects = response.data;
     });
-  },
-  updated() {
     $(".price-range-slider").slider({
       range: true,
       min: 50000,

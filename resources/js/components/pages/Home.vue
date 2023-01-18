@@ -22,14 +22,15 @@
 
 
 <script>
-import mainSlider from "../MainSlider.vue";
-import searchProjectsFilterHome from "../widgets/SearchProjectsFilterHome.vue";
-import topProjectsHome from "../TopProjectsHome.vue";
-import findHomeSection from "../home/FindHomeSection.vue";
-import popularPlacesSection from "../home/PopularPlacesSection.vue";
-import callToAction from "../home/CallToAction.vue";
-import clientSection from "../ClientsSection.vue";
-import newsHome from "../NewsHome.vue";
+const mainSlider = () => import("../MainSlider.vue");
+const searchProjectsFilterHome = () =>
+  import("../widgets/SearchProjectsFilterHome.vue");
+const topProjectsHome = () => import("../TopProjectsHome.vue");
+const findHomeSection = () => import("../home/FindHomeSection.vue");
+const popularPlacesSection = () => import("../home/PopularPlacesSection.vue");
+const callToAction = () => import("../home/CallToAction.vue");
+const clientSection = () => import("../ClientsSection.vue");
+const newsHome = () => import("../NewsHome.vue");
 
 export default {
   components: {

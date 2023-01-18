@@ -126,8 +126,7 @@ export default {
     axios.get("/api/status-projects").then((response) => {
       this.statusProjects = response.data;
     });
-  },
-  updated() {
+
     $(".price-range-slider").slider({
       range: true,
       min: 50000,

@@ -193,6 +193,7 @@ export default {
       );
       const start = (this.page - 1) * 12;
       const end = this.page * 12;
+      this.pageCount = Math.ceil(this.projects.length / 12);
       this.hasNextPage = this.projects.length > end;
       if (windowData.search) {
         const filteredProject = this.projects.filter(function (project) {
