@@ -2,8 +2,7 @@
 
 @section('content')
 
-<card-news slug="{{ $slug }}"></card-news>
+<newscard slug="{{ $slug }}"></newscard>
 
-<client-section></client-section>
 
 @endsection

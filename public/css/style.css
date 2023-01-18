@@ -2280,7 +2280,11 @@ img {
 .main-slider {
 	position: relative;
 	z-index: 10;
-	margin-top: 77px;
+	margin-top: 0px;
+	height: 100vh;
+	background: #00515a;
+	overflow: hidden;
+	padding-top: 40px;
 }
 
 .main-slider .tp-caption {
@@ -4565,7 +4569,7 @@ a.ui-button:active, .ui-button:active,
 
 .property-detail .carousel-outer .thumbs-carousel .owl-item img {
 	height: 100px;
-	object-fit: cover;
+	object-fit: contain;
 	width: 100%;
 }
 
@@ -11741,6 +11745,11 @@ button[disabled="disabled"] {
 	object-fit: cover;
 }
 
+.pan-item img {
+	width: 100%;
+	object-fit: contain;
+}
+
 .plan-item__img_wrap {
 	width: 40%;
 	margin-right: 20px;
@@ -11867,4 +11876,8 @@ p.plan-item__room {
 
 .loaderImg {
 	margin-bottom: 25px;
+}
+
+.lightbox-image {
+	display: block;
 }

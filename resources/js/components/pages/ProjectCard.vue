@@ -30,15 +30,28 @@
                     id="image-carousel"
                   >
                     <li v-for="(image, index) in project.images" :key="index">
-                      <a :href="image.img" class="lightbox-image"
-                        ><img :src="image.img"
-                      /></a>
+                      <a
+                        :href="image.img"
+                        class="lightbox-image"
+                        style="display: block"
+                      >
+                        <blur-hash-image
+                          height="80"
+                          :hash="image.hashimg"
+                          :src="image.img"
+                        />
+                      </a>
                     </li>
                   </ul>
 
                   <ul class="thumbs-carousel owl-carousel owl-theme">
                     <li v-for="(image, index) in project.images" :key="index">
-                      <img :src="image.img" alt="" />
+                      <blur-hash-image
+                        height="80"
+                        :hash="image.hashimg"
+                        :src="image.img"
+                        alt=""
+                      />
                     </li>
                   </ul>
                 </div>
@@ -116,7 +129,13 @@
                           :href="plan.img"
                           class="lightbox-image plan-item__img_wrap"
                         >
-                          <img :src="plan.img" alt="" class="plan-item__img" />
+                          <blur-hash-image
+                            :hash="plan.hashimg"
+                            :src="plan.img"
+                            height="110"
+                            alt=""
+                            class="plan-item__img"
+                          />
                         </a>
                         <div class="plan-item__desc">
                           <div class="plan-item__title-block">
@@ -175,10 +194,7 @@
                 </div>
               </div> -->
 
-              <form-full
-                :csrf="csrf"
-                :title_project="project.title"
-              ></form-full>
+              <formFull :csrf="csrf" :title_project="project.title"></formFull>
             </div>
           </div>
 
@@ -187,29 +203,48 @@
             <aside class="sidebar default-sidebar">
               <!-- Agent Widget -->
 
-              <form-widget
+              <formWidget
                 :csrf="csrf"
                 :title_project="project.title"
-              ></form-widget>
+              ></formWidget>
 
-              <search-projects-filter></search-projects-filter>
+              <searchProjectsFilter></searchProjectsFilter>
 
-              <type-real></type-real>
+              <typeReal></typeReal>
 
-              <recently-added></recently-added>
+              <recentlyAdded></recentlyAdded>
             </aside>
           </div>
         </div>
       </div>
     </div>
-    <modal-form-consultation></modal-form-consultation>
+
+    <clientSection></clientSection>
+
+    <modalFormConsultation></modalFormConsultation>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import searchProjectsFilter from "../widgets/SearchProjectsFilter.vue";
+import typeReal from "../widgets/TypeReal.vue";
+import recentlyAdded from "../widgets/RecentlyAdded.vue";
+import formWidget from "../forms/FormConsultationWidget.vue";
+import formFull from "../forms/FormConsultationFull.vue";
+import clientSection from "../ClientsSection.vue";
+import modalFormConsultation from "../modal/FormConsultation.vue";
 
 export default {
+  components: {
+    clientSection,
+    modalFormConsultation,
+    searchProjectsFilter,
+    typeReal,
+    recentlyAdded,
+    formWidget,
+    formFull,
+  },
   props: {
     slug: String,
     csrf: String,
