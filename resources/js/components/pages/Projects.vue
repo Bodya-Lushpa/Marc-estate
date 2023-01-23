@@ -37,6 +37,8 @@
             </div>
           </div>
 
+          <FilterProjects class="d-none d-md-block"></FilterProjects>
+
           <div class="row mb-4">
             <div class="col-lg-8">
               <ul class="d-flex flex-wrap filterActiveList">
@@ -53,6 +55,7 @@
               </ul>
             </div>
             <div class="col-lg-4 d-flex justify-content-md-end">
+              <p class="mr-2">Сортировка:</p>
               <div class="form-group">
                 <jquerySelectmenu
                   name="sort"
@@ -188,6 +191,7 @@
     <!--End Property Filter Section -->
 
     <clientSection></clientSection>
+    <FilterProjectsModal class="d-md-none"></FilterProjectsModal>
   </div>
 </template>
 
@@ -197,14 +201,15 @@ import moment from "moment";
 import jquerySelectmenu from "../widgets/JquerySelectMenu.vue";
 import clientSection from "../ClientsSection.vue";
 
-const searchProjectsFilterHome = () =>
-  import("../widgets/SearchProjectsFilterHome.vue");
+const FilterProjects = () => import("../widgets/FilterProjects.vue");
+const FilterProjectsModal = () => import("../modal/FilterProjects.vue");
 
 export default {
   components: {
     clientSection,
     jquerySelectmenu,
-    searchProjectsFilterHome,
+    FilterProjects,
+    FilterProjectsModal,
   },
   data() {
     return {

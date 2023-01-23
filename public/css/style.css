@@ -5073,7 +5073,7 @@ a.ui-button:active, .ui-button:active,
 
 .property-filter-section {
 	position: relative;
-	padding: 120px 0 60px;
+	padding: 220px 0 60px;
 }
 
 .property-filter-section .upper-box {
@@ -11901,4 +11901,68 @@ p.plan-item__room {
 
 .filterActive span.la {
 	margin-left: 10px;
+}
+
+.fixedFilter.property-search-form {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 75px;
+	padding: 10px 40px;
+	padding-bottom: 0;
+	background: #116877;
+	z-index: 999;
+}
+
+.fixedFilter.property-search-form .form-group label {
+	color: #fff
+}
+
+.fixedFilter.property-search-form .form-group button {
+	background: #fff;
+	color: #000;
+}
+
+.property-search-form.fixedFilter .range-slider-one .ui-slider .ui-slider-range {
+	background: #fff;
+}
+
+.fixedFilter .input .price-text {
+	color: #fff;
+}
+
+.fixedFilter.property-search-form .ui-selectmenu-button.ui-button {
+	height: 40px;
+	padding: 6px 30px 5px 25px;
+}
+
+.fixedFilter.property-search-form .ui-button .ui-icon:before {
+	height: 40px;
+	line-height: 39px;
+}
+
+.fixedFilter.property-search-form .form-group {
+	margin-bottom: 14px;
+}
+
+.property-search-form .form-group button {
+	margin-top: 28px;
+}
+
+.modal-body .property-search-form .form-group button {
+	margin-top: 0;
+}
+
+.modal-body .property-search-form .form-group {
+	margin-bottom: 10px;
+}
+
+.openFilterMobile {
+	position: fixed;
+	top: 90px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 999;
 }
