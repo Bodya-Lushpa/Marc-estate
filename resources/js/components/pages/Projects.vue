@@ -37,6 +37,37 @@
             </div>
           </div>
 
+          <div class="row mb-4">
+            <div class="col-lg-8">
+              <ul class="d-flex flex-wrap filterActiveList">
+                <li
+                  v-for="(activeFilter, index) in activeFilters"
+                  :key="index"
+                  class=""
+                >
+                  <a :href="activeFilter.link" class="filterActive">
+                    <span>{{ activeFilter.title }}</span>
+                    <span class="la la-close"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-md-end">
+              <div class="form-group">
+                <jquerySelectmenu
+                  name="sort"
+                  class="custom-select-box"
+                  v-model="sort"
+                >
+                  <option value="date">По дате добавления</option>
+                  <option value="abc">По алфавиту</option>
+                  <option value="priceСheap">От дешевых к дорогим</option>
+                  <option value="priceExpensive">От дорогих к дешевым</option>
+                </jquerySelectmenu>
+              </div>
+            </div>
+          </div>
+
           <div v-if="loading" class="text-center">
             <img
               src="/images/loader.gif"
@@ -134,10 +165,11 @@
         <div class="styled-pagination">
           <ul class="clearfix">
             <li class="prev" v-if="page > 1" @click="page = page - 1">
-              <a type="click"><span>Пред</span></a>
+              <a href="#" type="click"><span>Пред</span></a>
             </li>
             <li
               v-for="(pageNumber, key) in pageCount"
+              v-if="pageNumber - page <= 2 && page - pageNumber <= 2"
               :key="key"
               :class="[pageNumber == page ? 'active' : '']"
               @click="page = pageNumber"
@@ -147,7 +179,7 @@
               >
             </li>
             <li class="next" v-if="hasNextPage" @click="page = page + 1">
-              <a type="submit"><span>След</span></a>
+              <a href="#" type="click"><span>След</span></a>
             </li>
           </ul>
         </div>
@@ -162,15 +194,23 @@
 <script>
 import axios from "axios";
 import moment from "moment";
+import jquerySelectmenu from "../widgets/JquerySelectMenu.vue";
 import clientSection from "../ClientsSection.vue";
+
+const searchProjectsFilterHome = () =>
+  import("../widgets/SearchProjectsFilterHome.vue");
+
 export default {
   components: {
     clientSection,
+    jquerySelectmenu,
+    searchProjectsFilterHome,
   },
   data() {
     return {
       projects: [],
       typeReals: [],
+      planRoom: [],
       loading: true,
       page: 1,
       pageCount: 1,
@@ -178,6 +218,8 @@ export default {
       isActive: true,
       windowData: "",
       windowSearch: "",
+      sort: "date",
+      activeFilters: [],
     };
   },
   created() {
@@ -188,99 +230,155 @@ export default {
   },
   methods: {
     filteredProjects() {
-      const windowData = Object.fromEntries(
-        new URL(window.location).searchParams.entries()
-      );
       const start = (this.page - 1) * 12;
       const end = this.page * 12;
       this.pageCount = Math.ceil(this.projects.length / 12);
       this.hasNextPage = this.projects.length > end;
-      if (windowData.search) {
-        const filteredProject = this.projects.filter(function (project) {
-          return (
-            project.title
-              .toUpperCase()
-              .indexOf(windowData.search.toUpperCase()) !== -1
-          );
-        });
-        this.pageCount = Math.ceil(filteredProject.length / 12);
-        this.hasNextPage = filteredProject.length > end;
-        return filteredProject.slice(start, end);
+
+      if (this.sort == "date") {
+        return this.projects.slice(start, end);
       }
-      if (windowData.cityhome) {
-        var filteredProjectCity = this.projects.filter(function (project) {
-          return project.city.slug.includes(windowData.cityhome);
+      if (this.sort == "abc") {
+        const sortProjects = this.projects.slice().sort(function (a, b) {
+          if (a.title.toLowerCase() < b.title.toLowerCase()) {
+            return -1;
+          }
         });
-        this.pageCount = Math.ceil(filteredProject.length / 12);
-        this.hasNextPage = filteredProjectCity.length > end;
-        return filteredProjectCity.slice(start, end);
+        return sortProjects.slice(start, end);
       }
-      if (windowData.typereal) {
-        const filteredProject = this.projects.filter((project) => {
-          return project.reals.some((real) => real.slug == windowData.typereal);
+      if (this.sort == "priceСheap") {
+        const sortProjects = this.projects.slice().sort(function (a, b) {
+          return a.price - b.price;
         });
-        this.pageCount = Math.ceil(filteredProject.length / 12);
-        this.hasNextPage = filteredProject.length > end;
-        return filteredProject.slice(start, end);
+        return sortProjects.slice(start, end);
       }
-      if (windowData.country) {
-        if (windowData.country == "all") {
-          var filteredProjectCountry = this.projects;
-        } else {
-          var filteredProjectCountry = this.projects.filter(function (project) {
-            return project.country.slug.includes(windowData.country);
-          });
-        }
-        if (windowData.city == "all") {
-          var filteredProjectCity = filteredProjectCountry;
-        } else {
-          var filteredProjectCity = filteredProjectCountry.filter(function (
-            project
-          ) {
-            return project.city.slug.includes(windowData.city);
-          });
-        }
-        if (windowData.plan == "all") {
-          var filteredProjectRoom = filteredProjectCity;
-        } else {
-          var filteredProjectRoom = filteredProjectCity.filter(function (
-            project
-          ) {
-            return project.plans.some(function s(plan) {
-              return plan.rooms == windowData.plan;
-            });
-          });
-        }
-        if (windowData.status == "all") {
-          var filteredProjectStatus = filteredProjectRoom;
-        } else {
-          var filteredProjectStatus = filteredProjectRoom.filter(function (
-            project
-          ) {
-            return project.status.slug.includes(windowData.status);
-          });
-        }
-        var price = windowData.price.split(" - ");
-        var filteredProjectPrice = filteredProjectStatus.filter(function (
-          project
-        ) {
-          return project.price > price[0] && project.price < price[1];
+      if (this.sort == "priceExpensive") {
+        const sortProjects = this.projects.slice().sort(function (a, b) {
+          return b.price - a.price;
         });
-        this.pageCount = Math.ceil(filteredProjectPrice.length / 12);
-        this.hasNextPage = filteredProjectPrice.length > end;
-        return filteredProjectPrice.slice(start, end);
+        return sortProjects.slice(start, end);
       }
-      return this.projects.slice(start, end);
     },
   },
   mounted() {
-    axios.get("/api/projects").then((response) => {
-      this.projects = response.data;
-      this.loading = false;
-    });
     axios.get("/api/type-real").then((response) => {
       this.typeReals = response.data;
     });
+    axios.get("/api/plan-room").then((response) => {
+      this.planRooms = response.data;
+    });
+    axios
+      .get("/api/projects")
+      .then((response) => {
+        this.projects = response.data;
+
+        const windowData = Object.fromEntries(
+          new URL(window.location).searchParams.entries()
+        );
+
+        if (windowData.search) {
+          this.projects = response.data.filter(function (project) {
+            return (
+              project.title
+                .toUpperCase()
+                .indexOf(windowData.search.toUpperCase()) !== -1
+            );
+          });
+        }
+        if (windowData.cityhome) {
+          this.projects = response.data.filter(function (project) {
+            return project.city.slug.includes(windowData.cityhome);
+          });
+        }
+        if (windowData.typereal) {
+          this.projects = response.data.filter((project) => {
+            return project.reals.some(
+              (real) => real.slug == windowData.typereal
+            );
+          });
+          let activeTypeReals = this.typeReals.filter(
+            (typeReal) => typeReal.slug == windowData.typereal
+          );
+          this.activeFilters.push({
+            title: activeTypeReals[0].title,
+            link: "/project",
+          });
+        }
+        if (windowData.country) {
+          if (windowData.country == "all") {
+            var filteredProjectCountry = response.data;
+          } else {
+            var filteredProjectCountry = response.data.filter(function (
+              project
+            ) {
+              return project.country.slug.includes(windowData.country);
+            });
+            let activeTypeReals = this.typeReals.filter(
+              (typeReal) => typeReal.slug == windowData.typereal
+            );
+            this.activeFilters.push({
+              title: filteredProjectCountry[0].country.title,
+              link: "/project?country=all&city=all&plan=all&status=all&price=50000+-+2000000",
+            });
+          }
+          if (windowData.city == "all") {
+            var filteredProjectCity = filteredProjectCountry;
+          } else {
+            var filteredProjectCity = filteredProjectCountry.filter(function (
+              project
+            ) {
+              return project.city.slug.includes(windowData.city);
+            });
+            this.activeFilters.push({
+              title: filteredProjectCity[0].city.title,
+              link: "/project?country=all&city=all&plan=all&status=all&price=50000+-+2000000",
+            });
+          }
+          if (windowData.plan == "all") {
+            var filteredProjectRoom = filteredProjectCity;
+          } else {
+            var filteredProjectRoom = filteredProjectCity.filter(function (
+              project
+            ) {
+              return project.plans.some(function s(plan) {
+                return plan.rooms == windowData.plan;
+              });
+            });
+            let activePlanRooms = this.planRooms.filter(
+              (planRoom) => planRoom.id == windowData.plan
+            );
+            this.activeFilters.push({
+              title: activePlanRooms[0].title,
+              link: "/project?country=all&city=all&plan=all&status=all&price=50000+-+2000000",
+            });
+          }
+          if (windowData.status == "all") {
+            var filteredProjectStatus = filteredProjectRoom;
+          } else {
+            var filteredProjectStatus = filteredProjectRoom.filter(function (
+              project
+            ) {
+              return project.status.slug.includes(windowData.status);
+            });
+            this.activeFilters.push({
+              title: filteredProjectStatus[0].status.title,
+              link: "/project?country=all&city=all&plan=all&status=all&price=50000+-+2000000",
+            });
+          }
+          var price = windowData.price.split(" - ");
+          this.projects = filteredProjectStatus.filter(function (project) {
+            return project.price > price[0] && project.price < price[1];
+          });
+        }
+      })
+      .finally(() => {
+        this.loading = false;
+      });
+
+    $(".custom-select-box")
+      .selectmenu()
+      .selectmenu("menuWidget")
+      .addClass("overflow");
   },
   filters: {
     moment: function (date) {
