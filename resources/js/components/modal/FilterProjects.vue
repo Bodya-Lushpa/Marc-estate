@@ -1,13 +1,26 @@
 <template>
   <div>
-    <a
-      href="#"
-      data-toggle="modal"
-      data-target=".modal-filterProjects"
-      class="theme-btn btn-style-one openFilterMobile"
-      >Фильтр</a
-    >
-    <!-- Modal -->
+    <div class="d-flex openFilterMobile">
+      <a
+        href="#"
+        data-toggle="modal"
+        data-target=".modal-filterProjects"
+        class="theme-btn btn-style-one w-50"
+        >Фильтр</a
+      >
+      <jquerySelectmenu
+        name="sort"
+        class="custom-select-box w-50"
+        v-model="sort"
+      >
+        <option value="date">По дате добавления</option>
+        <option value="abc">По алфавиту</option>
+        <option value="priceСheap">От дешевых к дорогим</option>
+        <option value="priceExpensive">От дорогих к дешевым</option>
+      </jquerySelectmenu>
+    </div>
+
+    <!-- Modal filter -->
     <div
       class="modal fade modal-filterProjects"
       tabindex="-1"
@@ -126,6 +139,46 @@
         </div>
       </div>
     </div>
+
+    <!-- Modal sort -->
+    <div
+      class="modal fade modal-sortProjects"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="false"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Сортировка</h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="col-12 text-center">
+              <div class="form-group mt-2">
+                <jquerySelectmenu
+                  name="sort"
+                  class="custom-select-box"
+                  v-model="sort"
+                >
+                  <option value="date">По дате добавления</option>
+                  <option value="abc">По алфавиту</option>
+                  <option value="priceСheap">От дешевых к дорогим</option>
+                  <option value="priceExpensive">От дорогих к дешевым</option>
+                </jquerySelectmenu>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -145,6 +198,7 @@ export default {
       plans: [],
       statusProjects: [],
       slug_country: "all",
+      sort: "date",
     };
   },
   mounted() {
@@ -199,6 +253,11 @@ export default {
         );
         return this.cities[0].cities;
       }
+    },
+  },
+  watch: {
+    sort: function () {
+      this.$emit("sort", this.sort);
     },
   },
 };

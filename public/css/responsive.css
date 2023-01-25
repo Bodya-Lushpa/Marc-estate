@@ -1337,6 +1337,35 @@
 		margin-right: 0;
 	}
 
+	.property-filter-section .upper-box .filters {
+		margin-bottom: 0px;
+	}
+
+	.openFilterMobile .ui-selectmenu-button.ui-button {
+		background-color: #126977;
+		color: #ffffff;
+		padding: 15px;
+		width: 50%;
+		border: 0;
+		border-radius: 0;
+
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 700;
+	}
+
+	.ui-menu .ui-menu-item-wrapper {
+		padding: 8px 15px;
+	}
+
+	.openFilterMobile .ui-selectmenu-text {
+		margin-right: 0;
+		text-align: center;
+	}
+
+	.openFilterMobile .ui-selectmenu-icon.ui-icon {
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 599px) {

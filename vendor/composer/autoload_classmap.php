@@ -66,6 +66,7 @@ return array(
     'App\\Models\\Project' => $baseDir . '/app/Models/Project.php',
     'App\\Models\\ProjectImg' => $baseDir . '/app/Models/ProjectImg.php',
     'App\\Models\\ProjectTypereal' => $baseDir . '/app/Models/ProjectTypereal.php',
+    'App\\Models\\Region' => $baseDir . '/app/Models/Region.php',
     'App\\Models\\StatusProject' => $baseDir . '/app/Models/StatusProject.php',
     'App\\Models\\TypeReal' => $baseDir . '/app/Models/TypeReal.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',

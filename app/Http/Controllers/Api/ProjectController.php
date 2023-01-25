@@ -38,6 +38,7 @@ class ProjectController extends Controller
 	public function show($id)
 	{
 		return Project::with('images')->with('status')->with('country')->with('city')->with('importantInformation')->with('homeAmenities')->with('reals')->with('plans')->where('slug', $id)->first();
+		// return Project::with('images')->with('status')->with('country')->with('city')->with('importantInformation')->with('homeAmenities')->with('reals')->with('plans')->where('slug', $id)->first();
 	}
 
 	/**

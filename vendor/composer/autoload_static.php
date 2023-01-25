@@ -672,6 +672,7 @@ class ComposerStaticInit029140271f8c54e4773ca9bae66de49c
         'App\\Models\\Project' => __DIR__ . '/../..' . '/app/Models/Project.php',
         'App\\Models\\ProjectImg' => __DIR__ . '/../..' . '/app/Models/ProjectImg.php',
         'App\\Models\\ProjectTypereal' => __DIR__ . '/../..' . '/app/Models/ProjectTypereal.php',
+        'App\\Models\\Region' => __DIR__ . '/../..' . '/app/Models/Region.php',
         'App\\Models\\StatusProject' => __DIR__ . '/../..' . '/app/Models/StatusProject.php',
         'App\\Models\\TypeReal' => __DIR__ . '/../..' . '/app/Models/TypeReal.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
