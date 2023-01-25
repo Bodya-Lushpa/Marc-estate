@@ -13,7 +13,7 @@
             <div class="price-column col-lg-4 col-md-12 col-sm-12">
               <span class="title">Квартиры от</span>
               <div class="price">
-                $ {{ project.price.toLocaleString("ru") }}
+                $ {{ parseInt(project.price).toLocaleString("ru") }}
               </div>
               <span class="status">{{ project.status.title }}</span>
             </div>
@@ -63,12 +63,17 @@
                 <ul class="list-style-one">
                   <li>
                     Тип:
-                    <span v-for="real in project.reals">{{ real.title }} </span>
+                    <span v-for="(real, index) in project.reals" :key="index"
+                      >{{ real.title }}
+                    </span>
                   </li>
                   <li>Страна: {{ project.country.title }}</li>
                   <li>Город: {{ project.city.title }}</li>
                   <li
-                    v-for="important_information in project.important_information"
+                    v-for="(
+                      important_information, index
+                    ) in project.important_information"
+                    :key="index"
                   >
                     {{ important_information.title }}
                   </li>
@@ -84,7 +89,10 @@
               <div class="property-features">
                 <h4>Преимущества</h4>
                 <ul class="list-style-one">
-                  <li v-for="home_ameniti in project.home_amenities">
+                  <li
+                    v-for="(home_ameniti, index) in project.home_amenities"
+                    :key="index"
+                  >
                     {{ home_ameniti.title }}
                   </li>
                 </ul>
@@ -255,6 +263,7 @@ export default {
   mounted() {
     axios.get("/api/projects/" + this.slug).then((response) => {
       this.project = response.data;
+      console.log(this.project);
     });
     axios.get("/api/plans/").then((response) => {
       this.plans = response.data;

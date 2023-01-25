@@ -61,6 +61,7 @@ Route::prefix('admin')->group(function () {
 			Route::resource('users', App\Http\Controllers\Admin\UserController::class);
 			Route::resource('status-project', App\Http\Controllers\Admin\StatusProjectController::class);
 			Route::resource('city', App\Http\Controllers\Admin\CityController::class);
+			Route::resource('region', App\Http\Controllers\Admin\RegionController::class);
 			Route::resource('country', App\Http\Controllers\Admin\CountryController::class);
 			Route::resource('type-real', App\Http\Controllers\Admin\TypeRealController::class);
 			Route::resource('partner', App\Http\Controllers\Admin\PartnerController::class);

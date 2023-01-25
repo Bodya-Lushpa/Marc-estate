@@ -54,7 +54,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-lg-4 d-flex justify-content-md-end">
+            <div class="col-lg-4 d-none d-md-flex justify-content-md-end">
               <p class="mr-2">Сортировка:</p>
               <div class="form-group">
                 <jquerySelectmenu
@@ -191,7 +191,10 @@
     <!--End Property Filter Section -->
 
     <clientSection></clientSection>
-    <FilterProjectsModal class="d-md-none"></FilterProjectsModal>
+    <FilterProjectsModal
+      @sort="changeSort"
+      class="d-md-none"
+    ></FilterProjectsModal>
   </div>
 </template>
 
@@ -234,6 +237,9 @@ export default {
     );
   },
   methods: {
+    changeSort(sort) {
+      this.sort = sort;
+    },
     filteredProjects() {
       const start = (this.page - 1) * 12;
       const end = this.page * 12;
@@ -389,6 +395,11 @@ export default {
     moment: function (date) {
       moment.locale("kk");
       return moment(date).format("L");
+    },
+  },
+  watch: {
+    sort: function () {
+      this.page = 1;
     },
   },
 };

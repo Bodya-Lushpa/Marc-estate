@@ -8,7 +8,6 @@
       <input type="hidden" name="title_project" value="" />
       <div class="row">
         <div class="form-group col-lg-6 col-md-12 col-sm-12">
-          {{ name }}
           <input
             type="text"
             name="name"
@@ -18,7 +17,6 @@
           />
         </div>
         <div class="form-group col-lg-6 col-md-12 col-sm-12">
-          {{ phone }}
           <input
             type="text"
             name="phone"
@@ -28,7 +26,6 @@
             required
           />
         </div>
-        {{ text }}
         <div class="form-group col-lg-12 col-md-12 col-sm-12">
           <textarea
             name="text"
@@ -88,7 +85,7 @@ export default {
           this.leadData.name = "";
           this.leadData.phone = "";
           this.leadData.text = "";
-					fbq('track', 'SubmitApplication');
+          fbq("track", "SubmitApplication");
         })
         .catch(function (error) {
           console.log(error);
