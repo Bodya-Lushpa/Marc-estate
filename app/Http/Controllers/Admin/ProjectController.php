@@ -15,6 +15,7 @@ use App\Models\StatusProject;
 use App\Models\TypeReal;
 use App\Models\Plan;
 use App\Models\PlanRoom;
+use App\Models\Region;
 use ImageOptimizer;
 use BlurHash;
 use Illuminate\Http\Request;
@@ -28,7 +29,12 @@ class ProjectController extends Controller
 	 */
 	public function index()
 	{
+
 		$projects = Project::orderBy('created_at', 'DESC')->get();
+		$ProjectImg = ProjectImg::orderBy('created_at', 'DESC')->get();
+		foreach ($ProjectImg as $img) {
+			ImageOptimizer::optimize('.' . $img->img);
+		}
 		return view('admin.projects.index', [
 			'projects' => $projects
 		]);
@@ -43,15 +49,17 @@ class ProjectController extends Controller
 	{
 		$typeReals = TypeReal::all();
 		$statusProjects = StatusProject::all();
-		$cities = City::all();
 		$counties = Country::all();
+		$regions = Region::all();
+		$cities = City::all();
 		$planRooms = PlanRoom::all();
 		return view('admin.projects.create', [
 			'statusProjects' => $statusProjects,
 			'cities' => $cities,
 			'typeReals' => $typeReals,
 			'counties' => $counties,
-			'planRooms' => $planRooms
+			'planRooms' => $planRooms,
+			'regions' => $regions,
 		]);
 	}
 
@@ -71,6 +79,7 @@ class ProjectController extends Controller
 		$project->coordinates2 = $request->coordinates2;
 		$project->status_id = $request->status_id;
 		$project->country_id = $request->country_id;
+		$request->region_id ? $project->region_id = $request->region_id : NULL;
 		$project->city_id = $request->city_id;
 		$project->description = $request->description;
 		$project->images_for_slider = $request->images_for_slider;
@@ -153,6 +162,8 @@ class ProjectController extends Controller
 		$statusProjects = StatusProject::where('id', '!=', $project->status_id)->get();
 		$countryActive = Country::where('id', $project->country_id)->first();
 		$counties = Country::where('id', '!=', $project->country_id)->get();
+		$regionActive = Region::where('id', $project->region_id)->first();
+		$regions = Region::where('id', '!=', $project->region_id)->get();
 		$cityActive = City::where('id', $project->city_id)->first();
 		$cities = City::where('id', '!=', $project->city_id)->get();
 		$planRooms = PlanRoom::all();
@@ -162,6 +173,8 @@ class ProjectController extends Controller
 			'statusProjects' => $statusProjects,
 			'countryActive' => $countryActive,
 			'counties' => $counties,
+			'regionActive' => $regionActive,
+			'regions' => $regions,
 			'cityActive' => $cityActive,
 			'cities' => $cities,
 			'typeReals' => $typeReals,
@@ -203,6 +216,7 @@ class ProjectController extends Controller
 		$project->description = $request->description;
 		$project->status_id = $request->status_id;
 		$project->country_id = $request->country_id;
+		$request->region_id ? $project->region_id = $request->region_id : NULL;
 		$project->city_id = $request->city_id;
 		$project->images_for_slider = $request->images_for_slider;
 		$request->is_slider ? $project->is_slider = 1 : $project->is_slider = 0;

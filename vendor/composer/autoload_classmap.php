@@ -21,6 +21,7 @@ return array(
     'App\\Http\\Controllers\\Admin\\PartnerController' => $baseDir . '/app/Http/Controllers/Admin/PartnerController.php',
     'App\\Http\\Controllers\\Admin\\PlanRoomController' => $baseDir . '/app/Http/Controllers/Admin/PlanRoomController.php',
     'App\\Http\\Controllers\\Admin\\ProjectController' => $baseDir . '/app/Http/Controllers/Admin/ProjectController.php',
+    'App\\Http\\Controllers\\Admin\\RegionController' => $baseDir . '/app/Http/Controllers/Admin/RegionController.php',
     'App\\Http\\Controllers\\Admin\\StatusProjectController' => $baseDir . '/app/Http/Controllers/Admin/StatusProjectController.php',
     'App\\Http\\Controllers\\Admin\\TypeRealController' => $baseDir . '/app/Http/Controllers/Admin/TypeRealController.php',
     'App\\Http\\Controllers\\Admin\\UserController' => $baseDir . '/app/Http/Controllers/Admin/UserController.php',

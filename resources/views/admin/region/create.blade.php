@@ -1,6 +1,6 @@
 @extends('layouts.admin_layout')
 
-@section('title', 'Добавление города')
+@section('title', 'Добавление региона')
 
 @section('content')
 <!-- Content Header (Page header) -->
@@ -8,12 +8,12 @@
 	<div class="container-fluid">
 		<div class="row mb-2">
 			<div class="col-sm-6">
-				<h1 class="m-0">Добавление города</h1>
+				<h1 class="m-0">Добавление региона</h1>
 			</div><!-- /.col -->
 			<div class="col-sm-6">
 				<ol class="breadcrumb float-sm-right">
 					<li class="breadcrumb-item"><a href="{{ route('homeAdmin') }}" class="text-info">Главная</a></li>
-					<li class="breadcrumb-item active">Добавление города</li>
+					<li class="breadcrumb-item active">Добавление региона</li>
 				</ol>
 			</div><!-- /.col -->
 		</div><!-- /.row -->
@@ -46,6 +46,16 @@
 									<div class="form-group">
 										<label for="exampleInputEmail1">Название</label>
 										<input type="text" class="form-control" name="title" placeholder="Введите название региона" required>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Страна</label>
+										<select class="form-control select2" name="country_id" style="width: 100%;" required>
+											@foreach ($countries as $country)
+											<option value="{{ $country->id }}">{{ $country->title }}</option>
+											@endforeach
+										</select>
 									</div>
 								</div>
 							</div>

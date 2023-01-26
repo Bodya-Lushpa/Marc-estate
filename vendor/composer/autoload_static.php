@@ -627,6 +627,7 @@ class ComposerStaticInit029140271f8c54e4773ca9bae66de49c
         'App\\Http\\Controllers\\Admin\\PartnerController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PartnerController.php',
         'App\\Http\\Controllers\\Admin\\PlanRoomController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PlanRoomController.php',
         'App\\Http\\Controllers\\Admin\\ProjectController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ProjectController.php',
+        'App\\Http\\Controllers\\Admin\\RegionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/RegionController.php',
         'App\\Http\\Controllers\\Admin\\StatusProjectController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/StatusProjectController.php',
         'App\\Http\\Controllers\\Admin\\TypeRealController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/TypeRealController.php',
         'App\\Http\\Controllers\\Admin\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/UserController.php',

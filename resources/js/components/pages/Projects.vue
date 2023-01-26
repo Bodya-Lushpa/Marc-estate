@@ -57,11 +57,7 @@
             <div class="col-lg-4 d-none d-md-flex justify-content-md-end">
               <p class="mr-2">Сортировка:</p>
               <div class="form-group">
-                <jquerySelectmenu
-                  name="sort"
-                  class="custom-select-box"
-                  v-model="sort"
-                >
+                <jquerySelectmenu class="custom-select-box" v-model="sort">
                   <option value="date">По дате добавления</option>
                   <option value="abc">По алфавиту</option>
                   <option value="priceСheap">От дешевых к дорогим</option>
@@ -70,7 +66,6 @@
               </div>
             </div>
           </div>
-
           <div v-if="loading" class="text-center">
             <img
               src="/images/loader.gif"
@@ -282,7 +277,6 @@ export default {
       .get("/api/projects")
       .then((response) => {
         this.projects = response.data;
-
         const windowData = Object.fromEntries(
           new URL(window.location).searchParams.entries()
         );
