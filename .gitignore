@@ -1,6 +1,5 @@
 /public/hot
 /public/storage
-/public/files
 /storage/*.key
 .env
 .env.backup
