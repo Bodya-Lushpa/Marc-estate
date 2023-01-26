@@ -43,13 +43,7 @@
 						@method('PUT')
 						<div class="card-body">
 							<div class="row">
-								<div class="col-lg-6">
-									<div class="form-group">
-										<label for="exampleInputEmail1">Название</label>
-										<input type="text" class="form-control" name="title" value="{{ $city['title'] }}" placeholder="Введите название статуса" required>
-									</div>
-								</div>
-								<div class="col-md-6">
+								<div class="col-md-4">
 									<div class="form-group">
 										<label>Страна</label>
 										<select class="form-control select2" name="country_id" style="width: 100%;" required>
@@ -57,6 +51,23 @@
 											<option value="{{ $country->id }}" @if($country->id == $city->country_id) selected @endif>{{ $country->title }}</option>
 											@endforeach
 										</select>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label>Регион</label>
+										<select class="form-control select2" name="region_id" style="width: 100%;" required>
+											<option disabled selected>Не выбран</option>
+											@foreach ($regions as $region)
+											<option value="{{ $region->id }}">{{ $region->title }}</option>
+											@endforeach
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="form-group">
+										<label for="exampleInputEmail1">Город</label>
+										<input type="text" class="form-control" name="title" value="{{ $city['title'] }}" placeholder="Введите название статуса" required>
 									</div>
 								</div>
 

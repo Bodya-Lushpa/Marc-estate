@@ -112,7 +112,7 @@
 										</select>
 									</div>
 								</div>
-								<div class="col-md-4">
+								<div class="col-md-3">
 									<div class="form-group">
 										<label>Страна</label>
 										<select class="form-control select2" name="country_id" style="width: 100%;">
@@ -123,7 +123,22 @@
 										</select>
 									</div>
 								</div>
-								<div class="col-md-4">
+								<div class="col-md-3">
+									<div class="form-group">
+										<label>Регион (только для Турции)</label>
+										<select class="form-control select2" name="region_id" style="width: 100%;">
+											@if ($project->region_id)
+											<option value="{{ $project->region_id }}" selected>{{ $regionActive['title'] }}</option>
+											@else
+											<option disabled selected>не выбран</option>
+											@endif
+											@foreach ($regions as $region)
+											<option value="{{ $region->id }}">{{ $region->title }}</option>
+											@endforeach
+										</select>
+									</div>
+								</div>
+								<div class="col-md-3">
 									<div class="form-group">
 										<label>Город</label>
 										<select class="form-control select2" name="city_id" style="width: 100%;">
@@ -134,7 +149,7 @@
 										</select>
 									</div>
 								</div>
-								<div class="col-lg-4">
+								<div class="col-lg-3">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Координаты</label>
 										<div class="row">

@@ -164,7 +164,6 @@
             <div class="col-12 text-center">
               <div class="form-group mt-2">
                 <jquerySelectmenu
-                  name="sort"
                   class="custom-select-box"
                   v-model="sort"
                 >

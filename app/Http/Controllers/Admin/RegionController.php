@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Region;
+use App\Models\Country;
 use Illuminate\Http\Request;
 
 class RegionController extends Controller
@@ -28,7 +29,10 @@ class RegionController extends Controller
 	 */
 	public function create()
 	{
-		return view('admin.region.create');
+		$countries = Country::orderBy('created_at', 'desc')->get();
+		return view('admin.region.create', [
+			'countries' => $countries
+		]);
 	}
 
 	/**
@@ -41,6 +45,7 @@ class RegionController extends Controller
 	{
 		$region = new Region();
 		$region->title = $request->title;
+		$region->country_id = $request->country_id;
 		$region->save();
 
 		return redirect('admin/region')->withSuccess('Регион успешно добавлена');
@@ -65,8 +70,10 @@ class RegionController extends Controller
 	 */
 	public function edit(Region $region)
 	{
+		$countries = Country::orderBy('created_at', 'desc')->get();
 		return view('admin.region.edit', [
-			'region' => $region
+			'region' => $region,
+			'countries' => $countries,
 		]);
 	}
 
@@ -80,6 +87,7 @@ class RegionController extends Controller
 	public function update(Request $request, Region $region)
 	{
 		$region->title = $request->title;
+		$region->country_id = $request->country_id;
 		$region->save();
 
 		return redirect('admin/region')->withSuccess('Регион успешно обновлен');
