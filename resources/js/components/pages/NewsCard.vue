@@ -94,6 +94,11 @@
     <!-- End Sidebar Container -->
 
     <clientSection></clientSection>
+
+    <FilterProjectsModal
+      @sort="changeSort"
+      class="d-md-none notSort"
+    ></FilterProjectsModal>
   </div>
 </template>
 
@@ -104,6 +109,7 @@ import searchProjectsFilter from "../widgets/SearchProjectsFilter.vue";
 import typeReal from "../widgets/TypeReal.vue";
 import recentlyAdded from "../widgets/RecentlyAdded.vue";
 import clientSection from "../ClientsSection.vue";
+const FilterProjectsModal = () => import("../modal/FilterProjects.vue");
 
 export default {
   components: {
@@ -111,6 +117,7 @@ export default {
     searchProjectsFilter,
     typeReal,
     recentlyAdded,
+    FilterProjectsModal,
   },
   props: {
     slug: String,
