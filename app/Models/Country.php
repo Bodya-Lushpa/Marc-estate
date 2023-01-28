@@ -28,4 +28,8 @@ class Country extends Model
 	{
 		return $this->hasMany('App\Models\City');
 	}
+	public function regions()
+	{
+		return $this->hasMany('App\Models\Region');
+	}
 }

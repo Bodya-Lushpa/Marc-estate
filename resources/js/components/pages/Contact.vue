@@ -93,6 +93,11 @@
 	</div>
 </section> -->
     <!-- End Map Section -->
+
+		<FilterProjectsModal
+      @sort="changeSort"
+      class="d-md-none notSort"
+    ></FilterProjectsModal>
   </div>
 </template>
 
@@ -101,6 +106,7 @@
 
 <script>
 import formContact from "../forms/FormContact.vue";
+const FilterProjectsModal = () => import("../modal/FilterProjects.vue");
 
 export default {
   props: {
@@ -108,6 +114,7 @@ export default {
   },
   components: {
     formContact,
+		FilterProjectsModal
   },
   data() {
     return {};

@@ -2,43 +2,10 @@
   <div>
     <!-- Property Filter Section -->
     <section class="property-filter-section">
+      <FilterProjects class="d-none d-md-block"></FilterProjects>
       <div class="auto-container">
         <!--MixitUp Galery-->
         <div class="mixitup-gallery">
-          <div class="upper-box clearfix">
-            <div class="sec-title">
-              <span class="title">НАЙТИ СВОЙ ДОМ В ВАШЕМ ГОРОДЕ</span>
-              <h2>ТИПЫ НЕДВИЖИМОСТИ</h2>
-            </div>
-            <!--Filter-->
-            <div class="filters">
-              <ul class="filter-tabs filter-btns clearfix">
-                <li
-                  class="filter"
-                  :class="[windowSearch == '' ? 'active' : '']"
-                >
-                  <a href="/project">Все</a>
-                </li>
-                <li
-                  v-for="(typeReal, key) in typeReals"
-                  :key="key"
-                  class="filter"
-                  :class="[
-                    windowData.typereal == typeReal.slug ? 'active' : '',
-                  ]"
-                  data-role="button"
-                  data-filter="all"
-                >
-                  <a :href="'/project?typereal=' + typeReal.slug">{{
-                    typeReal.title
-                  }}</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <FilterProjects class="d-none d-md-block"></FilterProjects>
-
           <div class="row mb-4">
             <div class="col-lg-8">
               <ul class="d-flex flex-wrap filterActiveList">
@@ -276,12 +243,12 @@ export default {
     axios
       .get("/api/projects")
       .then((response) => {
-        this.projects = response.data;
+        var FilterProjects = response.data;
         const windowData = Object.fromEntries(
           new URL(window.location).searchParams.entries()
         );
 
-        if (windowData.search) {
+        if (windowData.search != "all" && windowData.search) {
           this.projects = response.data.filter(function (project) {
             return (
               project.title
@@ -290,13 +257,9 @@ export default {
             );
           });
         }
-        if (windowData.cityhome) {
-          this.projects = response.data.filter(function (project) {
-            return project.city.slug.includes(windowData.cityhome);
-          });
-        }
-        if (windowData.typereal) {
-          this.projects = response.data.filter((project) => {
+
+        if (windowData.typereal != "all" && windowData.typereal) {
+          FilterProjects = FilterProjects.filter((project) => {
             return project.reals.some(
               (real) => real.slug == windowData.typereal
             );
@@ -309,72 +272,67 @@ export default {
             link: "/project",
           });
         }
-        if (windowData.country) {
-          if (windowData.country == "all") {
-            var filteredProjectCountry = response.data;
-          } else {
-            var filteredProjectCountry = response.data.filter(function (
-              project
-            ) {
-              return project.country.slug.includes(windowData.country);
+
+        if (windowData.country != "all" && windowData.country) {
+          FilterProjects = FilterProjects.filter(function (project) {
+            return project.country.slug.includes(windowData.country);
+          });
+          this.activeFilters.push({
+            title: FilterProjects[0].country.title,
+            link: "/project?country=all&city=all&plan=all&status=all&price=50000+-+2000000",
+          });
+        }
+        if (windowData.region != "all" && windowData.region) {
+          FilterProjects = FilterProjects.filter(function (project) {
+            if (project.region) {
+              return project.region.slug.includes(windowData.region);
+            }
+          });
+          this.activeFilters.push({
+            title: FilterProjects[0].region.title,
+            link: "/project?country=all&city=all&plan=all&status=all&price=50000+-+2000000",
+          });
+        }
+        if (windowData.city != "all" && windowData.city) {
+          FilterProjects = FilterProjects.filter(function (project) {
+            return project.city.slug.includes(windowData.city);
+          });
+          this.activeFilters.push({
+            title: FilterProjects[0].city.title,
+            link: "/project?country=all&city=all&plan=all&status=all&price=50000+-+2000000",
+          });
+        }
+        if (windowData.plan != "all" && windowData.plan) {
+          FilterProjects = FilterProjects.filter(function (project) {
+            return project.plans.some(function s(plan) {
+              return plan.rooms == windowData.plan;
             });
-            let activeTypeReals = this.typeReals.filter(
-              (typeReal) => typeReal.slug == windowData.typereal
-            );
-            this.activeFilters.push({
-              title: filteredProjectCountry[0].country.title,
-              link: "/project?country=all&city=all&plan=all&status=all&price=50000+-+2000000",
-            });
-          }
-          if (windowData.city == "all") {
-            var filteredProjectCity = filteredProjectCountry;
-          } else {
-            var filteredProjectCity = filteredProjectCountry.filter(function (
-              project
-            ) {
-              return project.city.slug.includes(windowData.city);
-            });
-            this.activeFilters.push({
-              title: filteredProjectCity[0].city.title,
-              link: "/project?country=all&city=all&plan=all&status=all&price=50000+-+2000000",
-            });
-          }
-          if (windowData.plan == "all") {
-            var filteredProjectRoom = filteredProjectCity;
-          } else {
-            var filteredProjectRoom = filteredProjectCity.filter(function (
-              project
-            ) {
-              return project.plans.some(function s(plan) {
-                return plan.rooms == windowData.plan;
-              });
-            });
-            let activePlanRooms = this.planRooms.filter(
-              (planRoom) => planRoom.id == windowData.plan
-            );
-            this.activeFilters.push({
-              title: activePlanRooms[0].title,
-              link: "/project?country=all&city=all&plan=all&status=all&price=50000+-+2000000",
-            });
-          }
-          if (windowData.status == "all") {
-            var filteredProjectStatus = filteredProjectRoom;
-          } else {
-            var filteredProjectStatus = filteredProjectRoom.filter(function (
-              project
-            ) {
-              return project.status.slug.includes(windowData.status);
-            });
-            this.activeFilters.push({
-              title: filteredProjectStatus[0].status.title,
-              link: "/project?country=all&city=all&plan=all&status=all&price=50000+-+2000000",
-            });
-          }
+          });
+          let activePlanRooms = this.planRooms.filter(
+            (planRoom) => planRoom.id == windowData.plan
+          );
+          this.activeFilters.push({
+            title: activePlanRooms[0].title,
+            link: "/project?country=all&city=all&plan=all&status=all&price=50000+-+2000000",
+          });
+        }
+        if (windowData.status != "all" && windowData.status) {
+          FilterProjects = FilterProjects.filter(function (project) {
+            return project.status.slug.includes(windowData.status);
+          });
+          this.activeFilters.push({
+            title: FilterProjects[0].status.title,
+            link: "/project?country=all&city=all&plan=all&status=all&price=50000+-+2000000",
+          });
+        }
+        if (windowData.price) {
           var price = windowData.price.split(" - ");
-          this.projects = filteredProjectStatus.filter(function (project) {
+          FilterProjects = FilterProjects.filter(function (project) {
             return project.price > price[0] && project.price < price[1];
           });
         }
+
+        this.projects = FilterProjects;
       })
       .finally(() => {
         this.loading = false;

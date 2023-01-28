@@ -21,10 +21,10 @@
               </figure>
               <div class="info-box">
                 <h3 class="place">
-                  <a href="/project?cityhome=alaniya">Алания</a>
+                  <a href="/project?city=alaniya">Алания</a>
                 </h3>
                 <div class="view-all">
-                  <a href="/project?cityhome=alaniya">Посмотреть все</a>
+                  <a href="/project?city=alaniya">Посмотреть все</a>
                 </div>
               </div>
             </div>
@@ -42,10 +42,10 @@
               </figure>
               <div class="info-box">
                 <h3 class="place">
-                  <a href="/project?cityhome=kemer">Стамбул</a>
+                  <a href="/project?city=karaganda">Стамбул</a>
                 </h3>
                 <div class="view-all">
-                  <a href="/project?cityhome=karaganda">Посмотреть все</a>
+                  <a href="/project?city=karaganda">Посмотреть все</a>
                 </div>
               </div>
             </div>
@@ -63,10 +63,10 @@
               </figure>
               <div class="info-box">
                 <h3 class="place">
-                  <a href="/project?cityhome=kemer">Кемер</a>
+                  <a href="/project?city=kemer">Кемер</a>
                 </h3>
                 <div class="view-all">
-                  <a href="/project?cityhome=kemer">Посмотреть все</a>
+                  <a href="/project?city=kemer">Посмотреть все</a>
                 </div>
               </div>
             </div>

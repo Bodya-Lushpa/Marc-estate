@@ -36,6 +36,10 @@ class Project extends Model
 	{
 		return $this->belongsTo('App\Models\Country');
 	}
+	public function region()
+	{
+		return $this->belongsTo('App\Models\Region');
+	}
 	public function city()
 	{
 		return $this->belongsTo('App\Models\City');

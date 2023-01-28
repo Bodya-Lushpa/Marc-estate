@@ -62,6 +62,25 @@
                   </jquerySelectmenu>
                 </div>
 
+                <div class="form-group col-lg-2 col-md-6 col-sm-12">
+                  <label>Регион</label>
+                  <jquerySelectmenu
+                    name="region"
+                    id="city"
+                    class="custom-select-box"
+                    v-model="slug_region"
+                  >
+                    <option value="all">Все регионы</option>
+                    <option
+                      v-for="(region, index) in regionsFilter()"
+                      :key="index"
+                      :value="region.slug"
+                    >
+                      {{ region.title }}
+                    </option>
+                  </jquerySelectmenu>
+                </div>
+
                 <!-- Form Group -->
                 <div class="form-group col-lg-2 col-md-6 col-sm-12">
                   <label>Город</label>
@@ -163,10 +182,7 @@
           <div class="modal-body">
             <div class="col-12 text-center">
               <div class="form-group mt-2">
-                <jquerySelectmenu
-                  class="custom-select-box"
-                  v-model="sort"
-                >
+                <jquerySelectmenu class="custom-select-box" v-model="sort">
                   <option value="date">По дате добавления</option>
                   <option value="abc">По алфавиту</option>
                   <option value="priceСheap">От дешевых к дорогим</option>
@@ -192,23 +208,31 @@ export default {
   data() {
     return {
       counties: [],
-      cities: [],
+      regions: [],
       citiesDefault: [],
       plans: [],
       statusProjects: [],
+      typeReals: [],
       slug_country: "all",
-      sort: "date",
+      slug_region: "all",
+      showBtn: false,
     };
   },
   mounted() {
     axios.get("/api/counties").then((response) => {
       this.counties = response.data;
     });
+    axios.get("/api/regions").then((response) => {
+      this.regions = response.data;
+    });
     axios.get("/api/cities").then((response) => {
       this.citiesDefault = response.data;
     });
     axios.get("/api/plan-room").then((response) => {
       this.plans = response.data;
+    });
+    axios.get("/api/type-real").then((response) => {
+      this.typeReals = response.data;
     });
     axios.get("/api/status-projects").then((response) => {
       this.statusProjects = response.data;
@@ -243,20 +267,35 @@ export default {
       .addClass("overflow");
   },
   methods: {
-    citiesFilter() {
+    regionsFilter() {
       if (this.slug_country == "all") {
-        return this.citiesDefault;
+        return this.regions;
       } else {
-        this.cities = this.counties.filter(
+        var regions = this.counties.filter(
           (country) => country.slug == this.slug_country
         );
-        return this.cities[0].cities;
+        return regions[0].regions;
+      }
+    },
+    citiesFilter() {
+      if (this.slug_country == "all" && this.slug_region == "all") {
+        return this.citiesDefault;
+      } else if (this.slug_region == "all") {
+        var cities = this.counties.filter(
+          (country) => country.slug == this.slug_country
+        );
+        return cities[0].cities;
+      } else {
+        var cities = this.regions.filter(
+          (region) => region.slug == this.slug_region
+        );
+        return cities[0].cities;
       }
     },
   },
   watch: {
-    sort: function () {
-      this.$emit("sort", this.sort);
+    slug_country: function () {
+      this.slug_region = "all";
     },
   },
 };

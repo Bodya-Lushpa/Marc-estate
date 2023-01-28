@@ -15,7 +15,7 @@ class CountryController extends Controller
 	 */
 	public function index()
 	{
-		return Country::with('cities')->orderBy('created_at', 'DESC')->get();
+		return Country::with('regions')->with('cities')->orderBy('created_at', 'DESC')->get();
 	}
 
 	/**

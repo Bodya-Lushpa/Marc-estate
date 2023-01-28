@@ -224,6 +224,11 @@
     <clientSection></clientSection>
 
     <modalFormConsultation></modalFormConsultation>
+
+    <FilterProjectsModal
+      @sort="changeSort"
+      class="d-md-none notSort"
+    ></FilterProjectsModal>
   </div>
 </template>
 
@@ -236,6 +241,7 @@ import formWidget from "../forms/FormConsultationWidget.vue";
 import formFull from "../forms/FormConsultationFull.vue";
 import clientSection from "../ClientsSection.vue";
 import modalFormConsultation from "../modal/FormConsultation.vue";
+const FilterProjectsModal = () => import("../modal/FilterProjects.vue");
 
 export default {
   components: {
@@ -246,6 +252,7 @@ export default {
     recentlyAdded,
     formWidget,
     formFull,
+    FilterProjectsModal,
   },
   props: {
     slug: String,

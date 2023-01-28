@@ -30,15 +30,14 @@ class ProjectController extends Controller
 	 */
 	public function index()
 	{
-		// $watermark = Image::make('./files/5 (1).jpg');
-		// $watermark->insert('./files/watermark.png', 'bottom-right', 50, 50);
-		// $watermark->save('./files/5 (1).jpg');
 
 		$projects = Project::orderBy('created_at', 'DESC')->get();
-		// $ProjectImg = ProjectImg::orderBy('created_at', 'DESC')->get();
-		// foreach ($ProjectImg as $img) {
-		// 	ImageOptimizer::optimize('.' . $img->img);
-		// }
+		$ProjectImg = ProjectImg::orderBy('created_at', 'DESC')->get();
+		foreach ($ProjectImg as $img) {
+			$watermark = Image::make('.' . $img->img);
+			$watermark->insert('.' . $img->img);
+			$watermark->save('.' . $img->img);
+		}
 		return view('admin.projects.index', [
 			'projects' => $projects
 		]);

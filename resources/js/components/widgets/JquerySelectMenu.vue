@@ -8,9 +8,7 @@
 export default {
   props: ["value"],
   data() {
-    return {
-      projects: [],
-    };
+    return {};
   },
   mounted: function () {
     const emit = (value) => this.$emit("input", value);

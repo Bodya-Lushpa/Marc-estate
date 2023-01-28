@@ -18,8 +18,6 @@
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-	<!-- Styles -->
-	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 	<!-- Stylesheets -->
 	<link href="/css/bootstrap.css" rel="stylesheet" />
@@ -29,8 +27,10 @@
 	<!-- REVOLUTION LAYERS STYLES -->
 	<link href="/plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css" />
 	<!-- REVOLUTION NAVIGATION STYLES -->
-	<link href="/css/style.css?v=2" rel="stylesheet" />
-	<link href="/css/responsive.css?v=2" rel="stylesheet" />
+
+	<!-- Styles -->
+	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 	<!--Color Switcher Mockup-->
 	<!-- <link href="/css/color-switcher-design.css" rel="stylesheet" /> -->
 

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\CityController;
 use App\Http\Controllers\Api\CountryController;
+use App\Http\Controllers\Api\RegionController;
 use App\Http\Controllers\Api\TypeRealController;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\PartnerController;
@@ -35,6 +36,7 @@ Route::apiResources([
 	'partner' => PartnerController::class,
 	'type-real' => TypeRealController::class,
 	'counties' => CountryController::class,
+	'regions' => RegionController::class,
 	'cities' => CityController::class,
 	'plan-room' => PlanRoomController::class,
 	'status-projects' => StatusProjectController::class,

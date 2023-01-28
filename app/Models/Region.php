@@ -23,4 +23,9 @@ class Region extends Model
 			]
 		];
 	}
+
+	public function cities()
+	{
+		return $this->hasMany('App\Models\City');
+	}
 }
