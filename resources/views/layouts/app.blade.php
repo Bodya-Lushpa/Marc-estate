@@ -29,7 +29,7 @@
 	<!-- REVOLUTION NAVIGATION STYLES -->
 
 	<!-- Styles -->
-	<link href="{{ asset('css/app.css?v=2') }}" rel="stylesheet">
+	<link href="{{ asset('css/app.css?v=2') }}{{  "?dt=".time()  }}" rel="stylesheet">
 
 	<!--Color Switcher Mockup-->
 	<!-- <link href="/css/color-switcher-design.css" rel="stylesheet" /> -->
@@ -370,7 +370,7 @@
 	<script src="/js/script.js"></script>
 
 	<!-- Scripts -->
-	<script src="{{ asset('js/app.js') }}" defer></script>
+	<script src="{{ asset('js/app.js') }}{{  "?dt=".time()  }}" defer></script>
 
 
 
