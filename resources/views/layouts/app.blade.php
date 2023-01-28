@@ -29,7 +29,7 @@
 	<!-- REVOLUTION NAVIGATION STYLES -->
 
 	<!-- Styles -->
-	<link href="{{ asset('css/app.css?v=2') }}{{  "?dt=".time()  }}" rel="stylesheet">
+	<link href="{{ asset('css/app.css') }}{{  "?dt=".time()  }}" rel="stylesheet">
 
 	<!--Color Switcher Mockup-->
 	<!-- <link href="/css/color-switcher-design.css" rel="stylesheet" /> -->
