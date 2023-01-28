@@ -370,7 +370,7 @@
 	<script src="/js/script.js"></script>
 
 	<!-- Scripts -->
-	<script src="{{ asset('js/app.js') }}" defer></script>
+	<script src="{{ asset('js/app.js?v=2') }}" defer></script>
 
 
 
