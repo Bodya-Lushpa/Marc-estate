@@ -32,12 +32,12 @@ class ProjectController extends Controller
 	{
 
 		$projects = Project::orderBy('created_at', 'DESC')->get();
-		$ProjectImg = ProjectImg::orderBy('created_at', 'DESC')->get();
-		foreach ($ProjectImg as $img) {
-			$watermark = Image::make('.' . $img->img);
-			$watermark->insert('.' . $img->img);
-			$watermark->save('.' . $img->img);
-		}
+		// $ProjectImg = ProjectImg::orderBy('created_at', 'DESC')->skip(797)->take(193)->get();
+		// foreach ($ProjectImg as $img) {
+		// 	$watermark = Image::make('.' . $img->img);
+		// 	$watermark->insert('./files/watermark.png', 'center');
+		// 	$watermark->save('.' . $img->img);
+		// }
 		return view('admin.projects.index', [
 			'projects' => $projects
 		]);
