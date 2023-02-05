@@ -15,7 +15,7 @@ class CityController extends Controller
 	 */
 	public function index()
 	{
-		return City::orderBy('created_at', 'DESC')->get();
+		return City::has('projects')->orderBy('created_at', 'DESC')->get();
 	}
 
 	/**

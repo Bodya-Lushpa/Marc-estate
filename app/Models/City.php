@@ -23,4 +23,9 @@ class City extends Model
 			]
 		];
 	}
+
+	public function projects()
+	{
+		return $this->hasMany('App\Models\Project');
+	}
 }

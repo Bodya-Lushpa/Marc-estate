@@ -18706,6 +18706,24 @@ p.plan-item__room {
   margin-top: 0;
 }
 
+select {
+  text-align: left;
+  white-space: nowrap;
+  border-radius: 3px;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 28px;
+  font-size: 13px;
+  color: #777777;
+  line-height: 26px;
+  font-weight: 400;
+  padding: 1px 10px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  transition: all 300ms ease;
+}
+
 /* Willies - Real Estate HTML Template */
 @media only screen and (max-width: 1900px) {
   .header-style-six .outer-box {

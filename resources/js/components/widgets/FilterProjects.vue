@@ -12,11 +12,7 @@
               <div class="row">
                 <div class="col-lg-4"><label>Страна</label></div>
                 <div class="col-lg-8">
-                  <jquerySelectmenu
-                    name="country"
-                    class="custom-select-box"
-                    v-model="slug_country"
-                  >
+                  <select name="country" v-model="slug_country">
                     <option value="all">Все страны</option>
                     <option
                       v-for="(country, index) in counties"
@@ -25,7 +21,7 @@
                     >
                       {{ country.title }}
                     </option>
-                  </jquerySelectmenu>
+                  </select>
                 </div>
               </div>
             </div>
@@ -33,7 +29,7 @@
               <div class="row">
                 <div class="col-lg-4"><label>Тип</label></div>
                 <div class="col-lg-8">
-                  <select name="typereal" class="custom-select-box">
+                  <select name="typereal">
                     <option value="all">Все типы</option>
                     <option
                       v-for="(typeReal, index) in typeReals"
@@ -50,23 +46,18 @@
           <div class="col-lg-3">
             <div class="filterItem">
               <div class="row">
-                <div class="col-lg-4"><label>Регион</label></div>
+                <div class="col-lg-4"><label>Город (Şehir)</label></div>
                 <div class="col-lg-8">
-                  <jquerySelectmenu
-                    name="region"
-                    id="city"
-                    class="custom-select-box"
-                    v-model="slug_region"
-                  >
-                    <option value="all">Все регионы</option>
+                  <select name="region" id="city" v-model="slug_region">
+                    <option value="all">Все город (Şehir)</option>
                     <option
-                      v-for="(region, index) in regionsFilter()"
+                      v-for="(region, index) in regions"
                       :key="index"
                       :value="region.slug"
                     >
                       {{ region.title }}
                     </option>
-                  </jquerySelectmenu>
+                  </select>
                 </div>
               </div>
             </div>
@@ -76,7 +67,7 @@
                   <label>Статус</label>
                 </div>
                 <div class="col-lg-8">
-                  <select name="status" class="custom-select-box">
+                  <select name="status">
                     <option value="all">Все статусы</option>
                     <option
                       v-for="(statusProject, index) in statusProjects"
@@ -93,10 +84,10 @@
           <div class="col-lg-3">
             <div class="filterItem">
               <div class="row">
-                <div class="col-lg-4"><label>Город</label></div>
+                <div class="col-lg-4"><label>Пригород(İlçe)</label></div>
                 <div class="col-lg-8">
-                  <select name="city" id="city" class="custom-select-box">
-                    <option value="all">Все города</option>
+                  <select name="city" id="city">
+                    <option value="all">Все пригород (İlçe)</option>
                     <option
                       v-for="(city, index) in citiesFilter()"
                       :key="index"
@@ -137,7 +128,7 @@
               <div class="row">
                 <div class="col-lg-4"><label>Планировки</label></div>
                 <div class="col-lg-8">
-                  <select name="plan" class="custom-select-box">
+                  <select name="plan">
                     <option value="all">Все планировки</option>
                     <option
                       v-for="(plan, index) in plans"
@@ -225,10 +216,6 @@ export default {
         " - " +
         $(".price-range-slider").slider("values", 1).toLocaleString("ru")
     );
-    $(".custom-select-box")
-      .selectmenu()
-      .selectmenu("menuWidget")
-      .addClass("overflow");
   },
   methods: {
     regionsFilter() {

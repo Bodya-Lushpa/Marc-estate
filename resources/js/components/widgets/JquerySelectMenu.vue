@@ -21,6 +21,5 @@ export default {
   updated: function () {
     $("select").selectmenu("refresh");
   },
-  watch: {},
 };
 </script>
