@@ -15,7 +15,7 @@ class RegionController extends Controller
 	 */
 	public function index()
 	{
-		return Region::with('cities')->orderBy('created_at', 'DESC')->get();
+		return Region::has('projects')->with('cities')->orderBy('created_at', 'DESC')->get();
 	}
 
 	/**

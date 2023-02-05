@@ -360,12 +360,11 @@
 	<script src="/plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
 	<!--End Revolution Slider-->
 	<script src="/js/jquery-ui.js?v=2"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js?v=2"></script>
+	<script src="/js/jquery.ui.touch-punch.min.js?v=2"></script>
 	<script src="/js/jquery.fancybox.js"></script>
 	<script src="/js/owl.js"></script>
 	<script src="/js/wow.js"></script>
 	<script src="/js/isotope.js"></script>
-	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh2CmiYQa-pHzV-BB8LdoQ19qk-mV-08o"></script> -->
 	<script src="/js/appear.js"></script>
 	<script src="/js/script.js"></script>
 

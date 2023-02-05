@@ -32,7 +32,7 @@ class ProjectController extends Controller
 	{
 
 		$projects = Project::orderBy('created_at', 'DESC')->get();
-		// $ProjectImg = ProjectImg::orderBy('created_at', 'DESC')->skip(797)->take(193)->get();
+		// $ProjectImg = ProjectImg::orderBy('created_at', 'DESC')->skip(950)->take(40)->get();
 		// foreach ($ProjectImg as $img) {
 		// 	$watermark = Image::make('.' . $img->img);
 		// 	$watermark->insert('./files/watermark.png', 'center');

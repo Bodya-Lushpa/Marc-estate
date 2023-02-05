@@ -24,12 +24,12 @@
             <div class="col-lg-4 d-none d-md-flex justify-content-md-end">
               <p class="mr-2">Сортировка:</p>
               <div class="form-group">
-                <jquerySelectmenu class="custom-select-box" v-model="sort">
+                <select v-model="sort">
                   <option value="date">По дате добавления</option>
                   <option value="abc">По алфавиту</option>
                   <option value="priceСheap">От дешевых к дорогим</option>
                   <option value="priceExpensive">От дорогих к дешевым</option>
-                </jquerySelectmenu>
+                </select>
               </div>
             </div>
           </div>
@@ -181,7 +181,7 @@ export default {
       projects: [],
       typeReals: [],
       planRoom: [],
-      loading: true,
+      loading: false,
       page: 1,
       pageCount: 1,
       hasNextPage: true,

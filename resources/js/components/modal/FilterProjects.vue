@@ -46,11 +46,7 @@
                 <!-- Form Group -->
                 <div class="form-group col-lg-2 col-md-6 col-sm-12">
                   <label>Страна</label>
-                  <jquerySelectmenu
-                    name="country"
-                    class="custom-select-box"
-                    v-model="slug_country"
-                  >
+                  <select name="country" v-model="slug_country">
                     <option value="all">Все страны</option>
                     <option
                       v-for="(country, index) in counties"
@@ -59,18 +55,13 @@
                     >
                       {{ country.title }}
                     </option>
-                  </jquerySelectmenu>
+                  </select>
                 </div>
 
                 <div class="form-group col-lg-2 col-md-6 col-sm-12">
-                  <label>Регион</label>
-                  <jquerySelectmenu
-                    name="region"
-                    id="city"
-                    class="custom-select-box"
-                    v-model="slug_region"
-                  >
-                    <option value="all">Все регионы</option>
+                  <label>Город (Şehir)</label>
+                  <select name="region" id="city" v-model="slug_region">
+                    <option value="all">Все города (Şehir)</option>
                     <option
                       v-for="(region, index) in regionsFilter()"
                       :key="index"
@@ -78,14 +69,14 @@
                     >
                       {{ region.title }}
                     </option>
-                  </jquerySelectmenu>
+                  </select>
                 </div>
 
                 <!-- Form Group -->
                 <div class="form-group col-lg-2 col-md-6 col-sm-12">
-                  <label>Город</label>
-                  <select name="city" id="city" class="custom-select-box">
-                    <option value="all">Все города</option>
+                  <label>Пригород (İlçe)</label>
+                  <select name="city" id="city">
+                    <option value="all">Все пригороды (İlçe)</option>
                     <option
                       v-for="(city, index) in citiesFilter()"
                       :key="index"
@@ -99,7 +90,7 @@
                 <!-- Form Group -->
                 <div class="form-group col-lg-2 col-md-6 col-sm-12">
                   <label>Планировки</label>
-                  <select name="plan" class="custom-select-box">
+                  <select name="plan">
                     <option value="all">Все планировки</option>
                     <option
                       v-for="(plan, index) in plans"
@@ -114,7 +105,7 @@
                 <!-- Form Group -->
                 <div class="form-group col-lg-2 col-md-6 col-sm-12">
                   <label>Статус</label>
-                  <select name="status" class="custom-select-box">
+                  <select name="status">
                     <option value="all">Все статусы</option>
                     <option
                       v-for="(statusProject, index) in statusProjects"
@@ -158,42 +149,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Modal sort -->
-    <div
-      class="modal fade modal-sortProjects"
-      tabindex="-1"
-      role="dialog"
-      aria-hidden="false"
-    >
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4>Сортировка</h4>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="col-12 text-center">
-              <div class="form-group mt-2">
-                <jquerySelectmenu class="custom-select-box" v-model="sort">
-                  <option value="date">По дате добавления</option>
-                  <option value="abc">По алфавиту</option>
-                  <option value="priceСheap">От дешевых к дорогим</option>
-                  <option value="priceExpensive">От дорогих к дешевым</option>
-                </jquerySelectmenu>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -216,6 +171,7 @@ export default {
       slug_country: "all",
       slug_region: "all",
       showBtn: false,
+      sort: "date",
     };
   },
   mounted() {
@@ -294,6 +250,9 @@ export default {
     },
   },
   watch: {
+    sort: function () {
+      this.$emit("sort", this.sort);
+    },
     slug_country: function () {
       this.slug_region = "all";
     },

@@ -1,14 +1,13 @@
 <template>
   <div>
-		<FilterProjects class="d-none d-md-block"></FilterProjects>
+    <FilterProjects class="d-none d-md-block"></FilterProjects>
 
     <news></news>
 
     <clientSection></clientSection>
-
     <FilterProjectsModal
       @sort="changeSort"
-      class="d-md-none notSort"
+      class="d-md-none"
     ></FilterProjectsModal>
   </div>
 </template>
